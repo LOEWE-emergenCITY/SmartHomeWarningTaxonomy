@@ -1,6 +1,14 @@
 {
     "name": "Test Simulation",
-    "events": {
-        "categorie": "highest"
-    }
+    "config": {
+        "date": "2022-03-25"
+    },
+    "user_data": {
+        "email": "marcwendelborn@web.de",
+        "phone": "015170065783"
+    },
+    "events": [
+        {"categorie": "highest", "time": "10:59:00"},
+        {"categorie": "middle", "time": "10:58:50"}
+    ]
 }
