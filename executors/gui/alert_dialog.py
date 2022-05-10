@@ -18,7 +18,7 @@ class Alert_Dialog:
 
         # Make root window full screen
         w, h = root.winfo_screenwidth(), root.winfo_screenheight()
-        #root.attributes('-fullscreen', True)
+        root.attributes('-fullscreen', True)
         root.geometry("%dx%d+0+0" % (w, h))
         root.bind("<Escape>", lambda e: root.quit())
 
@@ -50,6 +50,3 @@ class Alert_Dialog:
         button5.pack(side=LEFT, padx=20)
 
         root.mainloop()
-        
-#dialog = Alert_Dialog("Das ist ein Test")
-#dialog.create_dialog()

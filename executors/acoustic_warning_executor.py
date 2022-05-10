@@ -15,7 +15,6 @@ def play_sound(id, stop):
             break
 
 def execute_acoustic_warning(text):
-    print('start')
     stop_sound = False
     for id in range(0,1):
         sound = Thread(target=play_sound, args=(id, lambda: stop_sound))
