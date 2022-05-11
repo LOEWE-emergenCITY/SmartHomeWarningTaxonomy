@@ -59,6 +59,3 @@ class Alert_Dialog:
         button5.pack(side=LEFT, padx=20)
 
         root.mainloop()
-
-dialog = Alert_Dialog('test')
-dialog.create_dialog()
