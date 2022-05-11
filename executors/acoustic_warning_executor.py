@@ -23,11 +23,6 @@ def execute_acoustic_warning(text):
     dialog = Alert_Dialog("Das ist ein Test")
     dialog.create_dialog()
 
-    #parent = tkinter.Tk()  # Create the object
-    #parent.overrideredirect(1)
-    #parent.withdraw()  # Hide the window as we do not want to see this one
-    #answer = askyesno("test", "test 123", parent=parent)
-
     if dialog.stop_alert:
         stop_sound = True
 

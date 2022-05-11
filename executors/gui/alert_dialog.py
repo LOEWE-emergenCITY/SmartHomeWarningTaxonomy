@@ -9,6 +9,11 @@ class Alert_Dialog:
         self.stop_alert = False
 
     def store_rating(self, root):
+        # TODO: Store rating
+        self.stop_alert = True
+        root.destroy()
+
+    def switchOff_alert(self, root):
         self.stop_alert = True
         root.destroy()
     
@@ -22,8 +27,12 @@ class Alert_Dialog:
         root.geometry("%dx%d+0+0" % (w, h))
         root.bind("<Escape>", lambda e: root.quit())
 
+        abort_button = Button(root, command=lambda : self.switchOff_alert(root), text="Alarm ausschalten", background="#000000", foreground="white")   
+        abort_button.place(x=1200, y=310, width=120, height=50, anchor='ne')
+
         center_frame = tk.Frame(width=400, height=300)
-        center_frame.pack(expand=TRUE, ipady=100)
+        center_frame.pack(expand=TRUE, ipady=50)
+        abort_button.tkraise()
 
         label = Label(center_frame, text=self.event, font=("Calibri", 44))
         label.pack()
@@ -50,3 +59,6 @@ class Alert_Dialog:
         button5.pack(side=LEFT, padx=20)
 
         root.mainloop()
+
+dialog = Alert_Dialog('test')
+dialog.create_dialog()
