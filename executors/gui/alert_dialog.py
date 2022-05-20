@@ -27,15 +27,11 @@ class Alert_Dialog:
         root.geometry("%dx%d+0+0" % (w, h))
         root.bind("<Escape>", lambda e: root.quit())
 
-        abort_button = Button(root, command=lambda : self.switchOff_alert(root), text="Alarm ausschalten", background="#000000", foreground="white")   
-        abort_button.place(x=1200, y=310, width=120, height=50, anchor='ne')
-
         center_frame = tk.Frame(width=400, height=300)
         center_frame.pack(expand=TRUE, ipady=50)
-        abort_button.tkraise()
 
         label = Label(center_frame, text=self.event, font=("Calibri", 44))
-        label.pack()
+        label.pack(pady=20)
 
         rating_frame = tk.Frame(center_frame, width=400, height=100)
         rating_frame.pack(ipady=50)
@@ -58,4 +54,12 @@ class Alert_Dialog:
         button5 = Button(rating_frame, text='5', command=lambda : self.store_rating(root), width=4, height=3, background="#A53C3C", font=("Calibri", 25))
         button5.pack(side=LEFT, padx=20)
 
+        abort_button = Button(center_frame, command=lambda : self.switchOff_alert(root), text="Alarm ausschalten", background="#000000", foreground="white", font=("Calibri", 25))   
+        abort_button.pack(side=LEFT)
+        abort_button = Button(center_frame, command=lambda : self.switchOff_alert(root), text="Check-Out", background="#000000", foreground="white", font=("Calibri", 25))   
+        abort_button.pack(side=RIGHT)
+
         root.mainloop()
+
+#dialog = Alert_Dialog('Feueralarm, Heizungsraum')
+#dialog.create_dialog()
