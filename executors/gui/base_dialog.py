@@ -46,10 +46,10 @@ class Base_Dialog:
         img = PhotoImage(file='/home/pi/masterthesis/executors/gui/peasec_logo.png')
         #img = PhotoImage(file='executors\gui\peasec_logo.png')
         label = Label(center_frame, image=img)
-        label.pack(pady=20)
+        label.pack()
 
         text_frame = tk.Frame(center_frame)
-        text_frame.pack(pady=20)
+        text_frame.pack()
 
         label1 = Label(text_frame, text="Status: ", font=("Calibri", 20))
         label1.pack(pady=20, side=LEFT)
