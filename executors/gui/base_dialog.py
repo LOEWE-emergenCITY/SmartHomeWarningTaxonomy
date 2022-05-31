@@ -46,7 +46,7 @@ class Base_Dialog:
         img = PhotoImage(file='/home/pi/masterthesis/executors/gui/peasec_logo.png')
         #img = PhotoImage(file='executors\gui\peasec_logo.png')
         label = Label(center_frame, image=img)
-        label.pack()
+        label.pack(pady=10)
 
         text_frame = tk.Frame(center_frame)
         text_frame.pack()
@@ -56,7 +56,7 @@ class Base_Dialog:
         label2 = Label(text_frame, text="Studie läuft", fg="green", font=("Calibri", 20))
         label2.pack(pady=20, side=LEFT)
 
-        checkout_button = Button(center_frame, command=lambda : self.change_study_status(label2, checkout_button), text="Check-Out", background="#000000", foreground="white", font=("Calibri", 25))   
+        checkout_button = Button(center_frame, command=lambda : self.change_study_status(label2, checkout_button), text="Check-Out", height=2, background="#000000", foreground="white", font=("Calibri", 25))   
         checkout_button.pack(pady=20)
 
         root.mainloop()
