@@ -1,7 +1,8 @@
 from PyP100 import PyL530
-from gui.alert_dialog import Alert_Dialog
+from executors.gui.alert_dialog import Alert_Dialog
 import time
 from threading import Thread
+import logging
 
 ip = "192.168.178.73"
 username = "marcwendelborn@web.de"
@@ -17,6 +18,7 @@ def flash_light(id, l530, flash):
             break
 
 def execute_optical_warning(text):
+    logging.info("Optical_Warning_Executor    : Start execution of acoustic warning")
     l530 = PyL530.L530(ip, username, password) 
     l530.handshake() 
     l530.login()
@@ -32,4 +34,4 @@ def execute_optical_warning(text):
     if dialog.stop_alert:
         flash = True
 
-execute_optical_warning('test')
+#execute_optical_warning('test')

@@ -1,5 +1,6 @@
+from time import sleep
 import pygame
-from gui.alert_dialog import Alert_Dialog
+from executors.gui.alert_dialog import Alert_Dialog
 from threading import Thread
 
 # To make it run on pi via ssh: export DISPLAY=":0"
@@ -23,7 +24,8 @@ def execute_acoustic_warning(text):
     dialog = Alert_Dialog("Das ist ein Test")
     dialog.create_dialog()
 
-    if dialog.stop_alert:
-        stop_sound = True
+    print("Dialog closed")
 
-execute_acoustic_warning('test')
+    stop_sound = True
+
+#execute_acoustic_warning('test')

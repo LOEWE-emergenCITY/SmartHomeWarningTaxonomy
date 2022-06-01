@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import *
+from executors.gui.alert_dialog import Alert_Dialog
 
 # To make it run on pi via ssh: export DISPLAY=":0"
 
@@ -7,9 +8,18 @@ class Base_Dialog:
 
     state = "Studie läuft"
     
-    def __init__(self, event):
+    def __init__(self):
         self.study_runs = True
-        self.stop_alert = False
+        self.block_execution = False
+
+        # GUI components
+        self.window = tk.Toplevel()
+        self.center_frame = tk.Frame(self.window, width=400, height=300)
+        #self.img = PhotoImage(file='/home/pi/masterthesis/executors/gui/peasec_logo.png')
+        self.img = PhotoImage(file='executors\gui\peasec_logo.png')
+        self.img_label = Label(self.center_frame, image=self.img)
+
+        self.create_dialog()
 
     def change_study_status(self, label2, checkout_button):
         if (self.study_runs):
@@ -22,33 +32,33 @@ class Base_Dialog:
             label2["text"] = "Studie läuft"
             label2.config(fg="green")
             checkout_button["text"] = "Check Out"
+        self.window.update()
         #self.study_status = "Studie unterbrochen"
         #root.destroy()
 
-    def load_font_color(self):
-        if (self.study_status == "Studie läuft"):
-            return 'green'
-        return "red"
+    def trigger_mainloop(self):
+        self.window.mainloop()
+
+    def get_window(self):
+        return self.window
+
+    def dispatch_alert_dialog(self, event):
+        Alert_Dialog(event)
     
     def create_dialog(self):
-        root = tk.Tk()
-        root.title('Smart Home Systems Study')
+        self.window.title('Smart Home Systems Study')
 
         # Make root window full screen
-        w, h = root.winfo_screenwidth(), root.winfo_screenheight()
-        root.attributes('-fullscreen', True)
-        root.geometry("%dx%d+0+0" % (w, h))
-        root.bind("<Escape>", lambda e: root.quit())
+        w, h = self.window.winfo_screenwidth(), self.window.winfo_screenheight()
+        #self.window.attributes('-fullscreen', True)
+        self.window.geometry("%dx%d+0+0" % (w, h))
+        self.window.bind("<Escape>", lambda e: self.window.quit())
 
-        center_frame = tk.Frame(width=400, height=300)
-        center_frame.pack(expand=TRUE, ipady=50)
+        self.center_frame.pack(expand=TRUE, ipady=50)
 
-        img = PhotoImage(file='/home/pi/masterthesis/executors/gui/peasec_logo.png')
-        #img = PhotoImage(file='executors\gui\peasec_logo.png')
-        label = Label(center_frame, image=img)
-        label.pack(pady=10)
+        self.img_label.pack(pady=10)
 
-        text_frame = tk.Frame(center_frame)
+        text_frame = tk.Frame(self.center_frame)
         text_frame.pack()
 
         label1 = Label(text_frame, text="Status: ", font=("Calibri", 20))
@@ -56,10 +66,12 @@ class Base_Dialog:
         label2 = Label(text_frame, text="Studie läuft", fg="green", font=("Calibri", 20))
         label2.pack(pady=20, side=LEFT)
 
-        checkout_button = Button(center_frame, command=lambda : self.change_study_status(label2, checkout_button), text="Check-Out", height=2, background="#000000", foreground="white", font=("Calibri", 25))   
+        checkout_button = Button(self.center_frame, command=lambda : self.change_study_status(label2, checkout_button), text="Check-Out", height=2, background="#000000", foreground="white", font=("Calibri", 25))   
         checkout_button.pack(pady=20)
 
-        root.mainloop()
+        #self.window.mainloop()
 
-dialog = Base_Dialog('test')
-dialog.create_dialog()
+#root = tk.Tk()
+#root.withdraw()
+#dialog = Base_Dialog()
+#dialog.create_dialog()

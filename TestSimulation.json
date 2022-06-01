@@ -1,14 +1,14 @@
 {
     "name": "Test Simulation",
     "config": {
-        "date": "2022-03-25"
+        "date": "2022-06-01"
     },
     "user_data": {
         "email": "marcwendelborn@web.de",
         "phone": "015170065783"
     },
     "events": [
-        {"categorie": "highest", "time": "10:59:00"},
-        {"categorie": "middle", "time": "10:58:50"}
+        {"id": 1, "categorie": "highest", "time": "19:46:20", "alerts": ["acoustic"], "message": "Die Sicherung der Kaffeemaschine ist durchgebrannt!"},
+        {"id": 2, "categorie": "middle", "time": "19:46:50", "alerts": ["acoustic"], "message": "Die Sprinkleranlage funktioniert nicht mehr!"}
     ]
 }
