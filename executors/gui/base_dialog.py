@@ -44,6 +44,12 @@ class Base_Dialog:
 
     def dispatch_alert_dialog(self, event):
         Alert_Dialog(event)
+
+    def set_block_execution(self):
+        self.block_execution = True
+
+    def set_unblock_execution(self):
+        self.block_execution = False
     
     def create_dialog(self):
         self.window.title('Smart Home Systems Study')
