@@ -4,7 +4,7 @@ from tkinter.ttk import Progressbar
 import json
 import time
 
-QUESTIONS_FILE_NAME = "executors/gui/questions.json"
+QUESTIONS_FILE_NAME = "questions.json"
 
 class Feedback_Dialog():
     def __init__(self):
@@ -54,9 +54,9 @@ class Feedback_Dialog():
             self.feedback_dialog.withdraw()
 
     def load_questions(self):
-        questions_json = open(QUESTIONS_FILE_NAME)
-        questions = json.load(questions_json)
-        return questions['questions']
+        with open(QUESTIONS_FILE_NAME, encoding='utf-8') as questions_json:
+            questions = json.load(questions_json)
+            return questions['questions']
 
     def create_dialog(self):
         self.feedback_dialog.title("Feedback")
