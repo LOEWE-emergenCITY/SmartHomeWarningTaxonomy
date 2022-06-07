@@ -1,16 +1,19 @@
-from os import abort
-import tkinter as tk
-from tkinter import *
 import threading
-import json
 import time
 import datetime as dt
+
+import tkinter as tk
+from tkinter import *
+from tkinter.messagebox import *
+
 from alerts import trigger_acoustic_alert
 from alerts import trigger_optical_alert
 
+from feedback_dialog import Feedback_Dialog
+
+
 # To make it run on pi via ssh: export DISPLAY=":0"
 
-QUESTIONS_FILE_NAME = "executors/gui/questions.json"
 MAX_ALERT_RUNNING_TIME = 50
 
 class Alert_Dialog:
@@ -18,9 +21,10 @@ class Alert_Dialog:
         self.window = tk.Toplevel()
         self.event = {"id": 0, "categorie": "", "time": "", "alerts": [], "message": ""}
         self.alert_runs = False
+        self.collects_feedback = False
         self.stop_alert = False
         self.alert_threads = []
-        self.questions = self.load_questions()
+        self.feedback_dialog = Feedback_Dialog()
         self.create_dialog()
         self.window.withdraw()
 
@@ -35,10 +39,11 @@ class Alert_Dialog:
                 self.terminate_alert()
                 break
 
-    def dispatch_event(self, event):
+    def dispatch_event(self, event, feedback_dialog):
         print("Alert    : Dispatch event with ID {}".format(event["id"]))
         self.alert_runs = True
         self.stop_alert = False
+        self.feedback_dialog = feedback_dialog
         self.event = event
         self.text_label['text'] = event['message']
         self.text_label.update()
@@ -47,15 +52,15 @@ class Alert_Dialog:
         time_thread = threading.Thread(target=self.measure_alarm_time)
         time_thread.start()
 
-    def load_questions(self):
-        questions_json = open(QUESTIONS_FILE_NAME)
-        questions = json.load(questions_json)
-        return questions['questions']
-
-    def store_rating(self):
-        # TODO: Store rating
+    def perception_acknowledged(self):
+        self.switchOff_alerts()
+        self.feedback_dialog.collect_feedback(self.event)
         self.terminate_alert()
 
+    def abort_alert(self):
+        if askyesno("Alarm ausschalten", "Diese Funktion ist nur für Unbeteiligte gedacht, die sich durch den Alarm gestört fühlen. \n \n Sicher, dass der Alarm ausgeschaltet werden soll?"):
+            self.terminate_alert()
+        
     def switchOn_alerts(self, alerts):
         for alert in alerts:
             if alert == 'acoustic':
@@ -119,10 +124,10 @@ class Alert_Dialog:
         #button5 = Button(rating_frame, text='5', command=lambda : self.store_rating(), width=4, height=3, background="#A53C3C", font=("Calibri", 25))
         #button5.pack(side=LEFT, padx=20)
 
-        acknowledge_button = Button(center_frame, command=lambda : self.store_rating(), text="Alarm wurde wahrgenommen", background="#000000", foreground="white", font=("Calibri", 25))   
+        acknowledge_button = Button(center_frame, command=lambda : self.perception_acknowledged(), text="Alarm wurde wahrgenommen", background="#000000", foreground="white", font=("Calibri", 25))   
         acknowledge_button.pack(pady=50)
 
-        abort_button = Button(center_frame, command=lambda : self.switchOff_alert(self.window), text="Alarm ausschalten \n (Achtung! Nicht für Studienteilnehmer)", background="#7F7A7A", foreground="white", font=("Calibri", 25))   
+        abort_button = Button(center_frame, command=lambda : self.abort_alert(), text="Alarm ausschalten \n (Achtung! Nicht für Studienteilnehmer)", background="#7F7A7A", foreground="white", font=("Calibri", 25))   
         abort_button.pack()
         #checkout_button = Button(center_frame, command=lambda : self.switchOff_alert(root), text="Check-Out", background="#000000", foreground="white", font=("Calibri", 25))   
         #checkout_button.pack(side=RIGHT)

@@ -5,6 +5,7 @@ import threading
 import datetime as dt
 from tkinter import *
 from alert_dialog import Alert_Dialog
+from feedback_dialog import Feedback_Dialog
 from util import load_simulation
 from scheduler import Scheduler
 
@@ -21,13 +22,16 @@ class Main_Dialog:
         # GUI components
         self.window = tk.Toplevel()
         self.center_frame = tk.Frame(self.window, width=400, height=300)
-        self.checkout_button = Button(self.center_frame, command=lambda: self.change_study_status(
-            label2), text="Check-Out", height=2, background="#000000", foreground="white", font=("Calibri", 25))
+        self.text_frame = tk.Frame(self.center_frame)
+        self.label1 = Label(self.text_frame, text="Status: ", font=("Calibri", 20))
+        self.label2 = Label(self.text_frame, text="Studie läuft", fg="green", font=("Calibri", 20))
+        self.checkout_button = Button(self.center_frame, command=lambda: self.change_study_status(), text="Check-Out", height=2, background="#000000", foreground="white", font=("Calibri", 25))
         #self.img = PhotoImage(file='/home/pi/masterthesis/executors/gui/peasec_logo.png')
         self.img = PhotoImage(file='executors\gui\peasec_logo.png')
         self.img_label = Label(self.center_frame, image=self.img)
 
         self.alert_dialog = Alert_Dialog()
+        self.feedback_dialog = Feedback_Dialog()
         self.create_dialog()
 
         # Load Simulation
@@ -40,6 +44,10 @@ class Main_Dialog:
         if (self.alert_dialog.alert_runs):
             print("Main    : Event with ID {} was missed because another alarm was still running".format(event["id"]))
             return
+        # Check if feedback dialog is still open
+        if (self.feedback_dialog.runs):
+            print("Main    : Event with ID {} was missed because feedback collection from previous alarm was still running".format(event["id"]))
+            return
         # Check if execution time is in the past
         if ((execution_date + dt.timedelta(seconds=2)) < dt.datetime.now()):
             print("Main    : Event with ID {} was missed because the execution time is in the past".format(event["id"]))
@@ -48,7 +56,7 @@ class Main_Dialog:
         if (self.block_execution):
             print("Main    : Event with ID {} was missed because the study was paused".format(event["id"]))
         else:
-            self.alert_dialog.dispatch_event(event)
+            self.alert_dialog.dispatch_event(event, self.feedback_dialog)
 
     def setup_scheduler(self):
         schedule = Scheduler()
@@ -72,7 +80,10 @@ class Main_Dialog:
             time.sleep(1)
 
     def run_simulation_threat(self, start_button):
-        # Change button labels
+        # Change GUI
+        self.text_frame.pack()
+        self.label1.pack(pady=20, side=LEFT)
+        self.label2.pack(pady=20, side=LEFT)
         start_button.pack_forget()
         self.checkout_button.pack(pady=20)
 
@@ -80,16 +91,16 @@ class Main_Dialog:
         simulation_thread = threading.Thread(target=self.run_simulation)
         simulation_thread.start()
 
-    def change_study_status(self, label2):
+    def change_study_status(self):
         if (not self.block_execution):
             self.block_execution = True
-            label2["text"] = "Studie unterbrochen"
+            self.label2["text"] = "Studie unterbrochen"
             self.checkout_button["text"] = "Check In"
-            label2.config(fg="red")
+            self.label2.config(fg="red")
         else:
             self.block_execution = False
-            label2["text"] = "Studie läuft"
-            label2.config(fg="green")
+            self.label2["text"] = "Studie läuft"
+            self.label2.config(fg="green")
             self.checkout_button["text"] = "Check Out"
         self.window.update()
 
@@ -105,15 +116,6 @@ class Main_Dialog:
         self.center_frame.pack(expand=TRUE, ipady=50)
 
         self.img_label.pack(pady=10)
-
-        text_frame = tk.Frame(self.center_frame)
-        text_frame.pack()
-
-        label1 = Label(text_frame, text="Status: ", font=("Calibri", 20))
-        label1.pack(pady=20, side=LEFT)
-        label2 = Label(text_frame, text="Studie läuft",
-                       fg="green", font=("Calibri", 20))
-        label2.pack(pady=20, side=LEFT)
 
         start_button = Button(self.center_frame, command=lambda: self.run_simulation_threat(start_button), text="Studie starten", height=2, background="#000000", foreground="white", font=("Calibri", 25))
         start_button.pack(pady=20)
