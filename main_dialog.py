@@ -26,8 +26,8 @@ class Main_Dialog:
         self.label1 = Label(self.text_frame, text="Status: ", font=("Calibri", 20))
         self.label2 = Label(self.text_frame, text="Studie läuft", fg="green", font=("Calibri", 20))
         self.checkout_button = Button(self.center_frame, command=lambda: self.change_study_status(), text="Check-Out", height=2, background="#000000", foreground="white", font=("Calibri", 25))
-        #self.img = PhotoImage(file='/home/pi/masterthesis/executors/gui/peasec_logo.png')
-        self.img = PhotoImage(file='executors\gui\peasec_logo.png')
+        self.img = PhotoImage(file='/home/pi/masterthesis/executors/gui/peasec_logo.png')
+        #self.img = PhotoImage(file='executors\gui\peasec_logo.png')
         self.img_label = Label(self.center_frame, image=self.img)
 
         self.alert_dialog = Alert_Dialog()
@@ -109,7 +109,7 @@ class Main_Dialog:
 
         # Make root window full screen
         w, h = self.window.winfo_screenwidth(), self.window.winfo_screenheight()
-        #self.window.attributes('-fullscreen', True)
+        self.window.attributes('-fullscreen', True)
         self.window.geometry("%dx%d+0+0" % (w, h))
         self.window.bind("<Escape>", lambda e: self.window.destroy())
 
