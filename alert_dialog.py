@@ -1,4 +1,5 @@
 import threading
+import logging
 import time
 import datetime as dt
 
@@ -18,6 +19,7 @@ MAX_ALERT_RUNNING_TIME = 50
 
 class Alert_Dialog:
     def __init__(self):
+        self.logger = logging.getLogger('main')
         self.window = tk.Toplevel()
         self.event = {"id": 0, "categorie": "", "time": "", "alerts": [], "message": ""}
         self.alert_runs = False
@@ -35,12 +37,12 @@ class Alert_Dialog:
         while self.alert_runs:
             time.sleep(1)
             if (end_time < dt.datetime.now()):
-                print("Alert    : Alarm forced to terminate. Endtime: {}, Now: {}".format(end_time, dt.datetime.now()))
+                self.logger.info("Alert: Alarm forced to terminate. Start time: {}, Now: {}".format(start_time, dt.datetime.now()))
                 self.terminate_alert()
                 break
 
     def dispatch_event(self, event, feedback_dialog):
-        print("Alert    : Dispatch event with ID {}".format(event["id"]))
+        self.logger.info("Alert: Dispatch event with ID {}".format(event["id"]))
         self.alert_runs = True
         self.stop_alert = False
         self.feedback_dialog = feedback_dialog
@@ -59,6 +61,7 @@ class Alert_Dialog:
 
     def abort_alert(self):
         if askyesno("Alarm ausschalten", "Diese Funktion ist nur für Unbeteiligte gedacht, die sich durch den Alarm gestört fühlen. \n \n Sicher, dass der Alarm ausgeschaltet werden soll?"):
+            self.logger.warning("Alert: Alarm was stopped by a third person")
             self.terminate_alert()
         
     def switchOn_alerts(self, alerts):
@@ -86,7 +89,7 @@ class Alert_Dialog:
         self.alert_runs = False
         self.switchOff_alerts()
         self.window.withdraw()
-        print("Alert    : End event with ID {}".format(self.event["id"]))
+        self.logger.info("Alert: End event with ID {}".format(self.event["id"]))
     
     def create_dialog(self):
         self.window.title('Smart Home Systems Study')
@@ -103,36 +106,11 @@ class Alert_Dialog:
         self.text_label = Label(center_frame, text=self.event["message"], font=("Calibri", 44))
         self.text_label.pack(pady=20)
 
-        #rating_frame = tk.Frame(center_frame, width=400, height=100)
-        #rating_frame.pack(ipady=50)
-
-        # Rating Scale
-        #label1 = Label(rating_frame, text="Bitte bewerte, ob du den Warnkanal für das Ereignis als angemessen empfindest.", font=("Calibri", 14))
-        #label1.pack(side=TOP)
-
-        #label2 = Label(rating_frame, text="1 = völlig ungeeignet, 5 = absolut passend", font=("Calibri", 14))
-        #label2.pack(side=TOP)
-
-        #button1 = Button(rating_frame, text='1', command=lambda : self.store_rating(), width=4, height=3, background="#A53C3C", font=("Calibri", 25))
-        #button1.pack(side=LEFT, padx=20)
-        #button2 = Button(rating_frame, text='2', command=lambda : self.store_rating(), width=4, height=3, background="#A53C3C", font=("Calibri", 25))
-        #button2.pack(side=LEFT, padx=20)
-        #button3 = Button(rating_frame, text='3', command=lambda : self.store_rating(), width=4, height=3, background="#A53C3C", font=("Calibri", 25))
-        #button3.pack(side=LEFT, padx=20)
-        #button4 = Button(rating_frame, text='4', command=lambda : self.store_rating(), width=4, height=3, background="#A53C3C", font=("Calibri", 25))
-        #button4.pack(side=LEFT, padx=20)
-        #button5 = Button(rating_frame, text='5', command=lambda : self.store_rating(), width=4, height=3, background="#A53C3C", font=("Calibri", 25))
-        #button5.pack(side=LEFT, padx=20)
-
         acknowledge_button = Button(center_frame, command=lambda : self.perception_acknowledged(), text="Alarm wurde wahrgenommen", background="#000000", foreground="white", font=("Calibri", 25))   
         acknowledge_button.pack(pady=50)
 
         abort_button = Button(center_frame, command=lambda : self.abort_alert(), text="Alarm ausschalten \n (Achtung! Nicht für Studienteilnehmer)", background="#7F7A7A", foreground="white", font=("Calibri", 25))   
         abort_button.pack()
-        #checkout_button = Button(center_frame, command=lambda : self.switchOff_alert(root), text="Check-Out", background="#000000", foreground="white", font=("Calibri", 25))   
-        #checkout_button.pack(side=RIGHT)
-
-        #self.window.mainloop()
 
 #root = tk.Tk()
 #root.withdraw()

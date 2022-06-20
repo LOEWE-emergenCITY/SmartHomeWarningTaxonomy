@@ -1,7 +1,7 @@
 {
     "questions": [
-        "Wie nützlich fanden Sie die Warnkanäle?",
-        "Hat der Alarm sie während einer Tätigkeit gestört?",
-        "Haben sie die Alarmnachricht verstanden?"
+        {"id": 1, "question": "Wie nützlich fanden Sie die Warnkanäle?"},
+        {"id": 2, "question": "Hat der Alarm sie während einer Tätigkeit gestört?"},
+        {"id": 3, "question": "Haben sie die Alarmnachricht verstanden?"}
     ]
 }
