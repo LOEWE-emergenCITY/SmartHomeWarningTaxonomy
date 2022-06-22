@@ -32,7 +32,7 @@ def init_feedback_file():
     #print("Feedback    : Init feedback file")
     simulation = load_simulation()
     user_id = simulation['user_data']['id']
-    headers = ['user_id', 'event_id', 'answer', 'time']
+    headers = ['user_id', 'event_id', 'answer', 'time_triggerd', 'time_acknowledge', 'missed', 'ack_medium']
     
     file = open('resources/feedback_{}.csv'.format(user_id), 'w')
     writer = csv.writer(file)
@@ -52,17 +52,27 @@ def init_response_time_file():
     writer.writerow(headers)
     file.close()
 
-def save_feedback(event_id, answer):
+def save_feedback(event, answer, missed):
     logger = logging.getLogger('main')
-    logger.info("Store feedback for event {}".format(event_id))
+    logger.info("Store feedback for event {}".format(event['id']))
     simulation = load_simulation()
     time = datetime.datetime.now()
     user_id = simulation['user_data']['id']
     # TODO Calculate and store time user needed for perception
-    feedback = [user_id, event_id, answer, time]
+    feedback = [user_id, event['id'], answer, event['time_triggered'], event['time_acknowledge'], missed, 'display']
 
     #print("Feedback    : Store feedback for question {}".format(question_id))
     file = open('resources/feedback_{}.csv'.format(user_id), 'a+', newline='')
     writer = csv.writer(file)
     writer.writerow(feedback)
     file.close()
+
+def is_time_between(begin_time, end_time, check_time=None):
+    # If check time is not given, default to current UTC time
+    begin_time = datetime.time(int(begin_time.split(':')[0]), int(begin_time.split(':')[1]))
+    end_time = datetime.time(int(end_time.split(':')[0]), int(end_time.split(':')[1]))
+    check_time = check_time or datetime.datetime.now().time()
+    if begin_time < end_time:
+        return check_time >= begin_time and check_time <= end_time
+    else: # crosses midnight
+        return check_time >= begin_time or check_time <= end_time

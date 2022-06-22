@@ -12,6 +12,9 @@ from alerts import trigger_optical_alert
 
 from feedback_dialog import Feedback_Dialog
 
+from util import save_feedback
+
+
 
 # To make it run on pi via ssh: export DISPLAY=":0"
 
@@ -38,6 +41,8 @@ class Alert_Dialog:
             time.sleep(1)
             if (end_time < dt.datetime.now()):
                 self.logger.info("Alert: Alarm forced to terminate. Start time: {}, Now: {}".format(start_time, dt.datetime.now()))
+                self.event['time_acknowledge'] = None
+                save_feedback(self.event, [], True)
                 self.terminate_alert()
                 break
 
@@ -47,6 +52,7 @@ class Alert_Dialog:
         self.stop_alert = False
         self.feedback_dialog = feedback_dialog
         self.event = event
+        self.event['time_triggered'] = dt.datetime.now()
         self.text_label['text'] = event['message']
         self.text_label.update()
         self.window.deiconify()
@@ -55,6 +61,7 @@ class Alert_Dialog:
         time_thread.start()
 
     def perception_acknowledged(self):
+        self.event['time_acknowledge'] = dt.datetime.now()
         self.switchOff_alerts()
         self.feedback_dialog.collect_feedback(self.event)
         self.terminate_alert()

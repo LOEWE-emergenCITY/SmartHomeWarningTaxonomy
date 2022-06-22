@@ -49,7 +49,8 @@ class Feedback_Dialog():
         else:
             # Collect and store feedback
             self.feedback.append(answer)
-            save_feedback(self.event['id'], self.feedback)
+            save_feedback(self.event, self.feedback, False)
+            self.feedback = []
 
             # Adapt GUI
             self.question_label['text'] = self.questions[0]['question']

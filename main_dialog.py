@@ -34,6 +34,10 @@ class Main_Dialog:
         self.img = PhotoImage(file='executors\gui\peasec_logo.png')
         self.img_label = Label(self.center_frame, image=self.img)
 
+        # For demonstration
+        event = {"id": 1, "categorie": "highest", "time": "14:03:10", "alerts": ["acoustic", "optic"], "message": "Die Sicherung der Kaffeemaschine ist durchgebrannt!"}
+        self.trigger_button = Button(self.center_frame, command=lambda: self.dispatch_alarm(event, dt.datetime.now()), text="Trigger alarm", height=2, background="#000000", foreground="white", font=("Calibri", 25))
+
         self.alert_dialog = Alert_Dialog()
         self.feedback_dialog = Feedback_Dialog()
         self.create_dialog()
@@ -59,6 +63,10 @@ class Main_Dialog:
         # Check if study is paused
         if (self.block_execution):
             logger.info("Main: Event with ID {} was missed because the study was paused".format(event["id"]))
+            return
+        # Check if alarm is during rest time
+        if (is_time_between(self.simulation['user_data']['rest_time_start'], self.simulation['user_data']['rest_time_end'])):
+            logger.info("Main: Event with ID {} was missed because the alarm was during the rest time".format(event["id"]))
         else:
             self.alert_dialog.dispatch_event(event, self.feedback_dialog)
 
@@ -92,6 +100,8 @@ class Main_Dialog:
         self.label2.pack(pady=20, side=LEFT)
         start_button.pack_forget()
         self.checkout_button.pack(pady=20)
+
+        self.trigger_button.pack(pady=20)
 
         # Setup files
         init_feedback_file()
