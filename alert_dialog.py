@@ -9,6 +9,7 @@ from tkinter.messagebox import *
 
 from alerts import trigger_acoustic_alert
 from alerts import trigger_optical_alert
+from alerts import trigger_sms_alert
 
 from feedback_dialog import Feedback_Dialog
 
@@ -84,7 +85,9 @@ class Alert_Dialog:
             if alert == 'email':
                 return
             if alert == 'sms':
-                return
+                sms_threat = threading.Thread(target=trigger_sms_alert, args=(id, self.event['message']))
+                sms_threat.start()
+                self.alert_threads.append(sms_threat)
 
     def switchOff_alerts(self):
         self.stop_alert = True

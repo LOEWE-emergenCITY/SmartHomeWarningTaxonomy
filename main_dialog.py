@@ -42,6 +42,9 @@ class Main_Dialog:
         self.feedback_dialog = Feedback_Dialog()
         self.create_dialog()
 
+        # Connect to GSM hat
+        connect_to_gsm_hat()
+
         # Load Simulation
         self.simulation = load_simulation()
 

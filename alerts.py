@@ -1,9 +1,10 @@
 import logging
-from PyP100 import PyL530
-from threading import Thread
 import time
-from playsound import playsound
+import serial
 
+from util import *
+from PyP100 import PyL530
+from playsound import playsound
 
 ip = "192.168.178.73"
 username = "marcwendelborn@web.de"
@@ -45,4 +46,22 @@ def trigger_optical_alert(id, flash):
         except Exception as e:
             logger.error("Optical_Alert: Error while triggering optical alert. Error: {}".format(e))
             return
+
+def trigger_sms_alert(id, message):
+    try:
+        simulation = load_simulation()
+        number = simulation['user_data']['phone']
+
+        messageString = 'AT+CMGS="' + number  + '"\n' + message + '\x1A'
+
+        ser = serial.Serial('/dev/ttyS0', 115200)
+        ser.flushInput()
+
+        string = messageString + '\n'
+
+        ser.write(string.encode('iso-8859-1'))
+        ser.close()
+    except Exception as e:
+        logger.error("SMS_Alert: Error while triggering SMS alert. Error: {}".format(e))
+
 

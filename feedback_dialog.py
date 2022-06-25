@@ -6,6 +6,7 @@ import json
 import time
 import logging
 
+#QUESTIONS_FILE_NAME = "/home/pi/masterthesis/questions.json"
 QUESTIONS_FILE_NAME = "questions.json"
 
 class Feedback_Dialog():
@@ -72,7 +73,7 @@ class Feedback_Dialog():
     def create_dialog(self):
         self.feedback_dialog.title("Feedback")
         w, h = self.feedback_dialog.winfo_screenwidth(), self.feedback_dialog.winfo_screenheight()
-        #window.attributes('-fullscreen', True)
+        self.feedback_dialog.attributes('-fullscreen', True)
         self.feedback_dialog.geometry("%dx%d+0+0" % (w, h))
 
         self.center_frame.pack(expand=TRUE, ipady=50)

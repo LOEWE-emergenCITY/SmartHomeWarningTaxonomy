@@ -2,8 +2,11 @@ import logging
 import json
 import datetime
 import csv
+import RPi.GPIO as GPIO
+import time
 
 logger = logging.getLogger('main')
+#file_name = '/home/pi/masterthesis/TestSimulation.json'
 file_name = 'TestSimulation.json'
 
 def load_simulation():
@@ -76,3 +79,13 @@ def is_time_between(begin_time, end_time, check_time=None):
         return check_time >= begin_time and check_time <= end_time
     else: # crosses midnight
         return check_time >= begin_time or check_time <= end_time
+
+def connect_to_gsm_hat():
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(7, GPIO.OUT)
+    while True:
+        GPIO.output(7, GPIO.LOW)
+        time.sleep(4)
+        GPIO.output(7, GPIO.HIGH)
+        break
+    GPIO.cleanup()
