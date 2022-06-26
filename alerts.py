@@ -5,6 +5,7 @@ import serial
 from util import *
 from PyP100 import PyL530
 from playsound import playsound
+from gsmHat import GSMHat
 
 ip = "192.168.178.73"
 username = "marcwendelborn@web.de"
@@ -49,8 +50,11 @@ def trigger_optical_alert(id, flash):
 
 def trigger_sms_alert(id, message):
     try:
+        logger.info("Trigger optical alert")
         simulation = load_simulation()
         number = simulation['user_data']['phone']
+
+        gsm = GSMHat('/dev/ttyS0', 115200)
 
         messageString = 'AT+CMGS="' + number  + '"\n' + message + '\x1A'
 
