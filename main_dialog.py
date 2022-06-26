@@ -30,8 +30,8 @@ class Main_Dialog:
         self.label1 = Label(self.text_frame, text="Status: ", font=("Calibri", 20))
         self.label2 = Label(self.text_frame, text="Studie läuft", fg="green", font=("Calibri", 20))
         self.checkout_button = Button(self.center_frame, command=lambda: self.change_study_status(), text="Check-Out", height=2, background="#000000", foreground="white", font=("Calibri", 25))
-        #self.img = PhotoImage(file='/home/pi/masterthesis/executors/gui/peasec_logo.png')
-        self.img = PhotoImage(file='executors\gui\peasec_logo.png')
+        self.img = PhotoImage(file='/home/pi/masterthesis/executors/gui/peasec_logo.png')
+        #self.img = PhotoImage(file='executors\gui\peasec_logo.png')
         self.img_label = Label(self.center_frame, image=self.img)
 
         # For demonstration

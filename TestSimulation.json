@@ -1,7 +1,7 @@
 {
     "name": "Test Simulation",
     "config": {
-        "date": "2022-06-19",
+        "date": "2022-06-26",
         "gmail": {
             "email": "mw.rpi.alerts@gmail.com",
             "password": "apJWRpg2WXqwxwe"
@@ -15,9 +15,9 @@
         "rest_time_end": "08:00:00"
     },
     "events": [
-        {"id": 1, "time": "14:03:10", "alerts": ["acoustic", "optic"], "message": "Die Sicherung der Kaffeemaschine ist durchgebrannt"},
-        {"id": 2, "time": "14:03:40", "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
-        {"id": 2, "time": "15:03:40", "alerts": ["acoustic, 'sms"], "message": "Im Ort wurde ein Großbrand gemeldet"}
+        {"id": 1, "time": "22:35:10", "alerts": ["acoustic", "optic"], "message": "Die Sicherung der Kaffeemaschine ist durchgebrannt"},
+        {"id": 2, "time": "22:35:40", "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
+        {"id": 2, "time": "22:34:40", "alerts": ["acoustic, 'sms"], "message": "Im Ort wurde ein Großbrand gemeldet"}
     ]
 }
 

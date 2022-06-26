@@ -6,8 +6,8 @@ import RPi.GPIO as GPIO
 import time
 
 logger = logging.getLogger('main')
-#file_name = '/home/pi/masterthesis/TestSimulation.json'
-file_name = 'TestSimulation.json'
+file_name = '/home/pi/masterthesis/TestSimulation.json'
+#file_name = 'TestSimulation.json'
 
 def load_simulation():
     test_simulation_json = open(file_name)

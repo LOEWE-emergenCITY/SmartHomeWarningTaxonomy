@@ -6,8 +6,8 @@ import json
 import time
 import logging
 
-#QUESTIONS_FILE_NAME = "/home/pi/masterthesis/questions.json"
-QUESTIONS_FILE_NAME = "questions.json"
+QUESTIONS_FILE_NAME = "/home/pi/masterthesis/questions.json"
+#QUESTIONS_FILE_NAME = "questions.json"
 
 class Feedback_Dialog():
     def __init__(self):
