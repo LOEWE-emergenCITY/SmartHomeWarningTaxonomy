@@ -4,7 +4,8 @@ import serial
 
 from util import *
 from PyP100 import PyL530
-from playsound import playsound
+from pydub import AudioSegment
+from pydub.playback import play
 from gsmHat import GSMHat
 
 ip = "192.168.178.73"
@@ -16,8 +17,9 @@ logger = logging.getLogger('main')
 def trigger_acoustic_alert(id, stop):
     try:
         logger.info("Trigger acoustic alert")
+        song = AudioSegment.from_wav("mixkit-classic-alarm-995.wav")
         while True:
-            playsound('mixkit-classic-alarm-995.wav')
+            play(song)
             if stop():
                 logger.info("Stop acoustic alert")
                 break
@@ -50,7 +52,7 @@ def trigger_optical_alert(id, flash):
 
 def trigger_sms_alert(id, message):
     try:
-        logger.info("Trigger optical alert")
+        logger.info("Trigger SMS alert")
         simulation = load_simulation()
         number = simulation['user_data']['phone']
 
