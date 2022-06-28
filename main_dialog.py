@@ -102,9 +102,9 @@ class Main_Dialog:
         self.label1.pack(pady=20, side=LEFT)
         self.label2.pack(pady=20, side=LEFT)
         start_button.pack_forget()
-        self.checkout_button.pack(pady=20)
+        self.checkout_button.pack(LEFT, padx=20)
 
-        self.trigger_button.pack(pady=20)
+        self.trigger_button.pack(LEFT, padx=20)
 
         # Setup files
         init_feedback_file()
