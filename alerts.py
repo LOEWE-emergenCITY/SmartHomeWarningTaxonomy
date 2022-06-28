@@ -67,7 +67,6 @@ def trigger_sms_alert(id, ack_function, message):
         string = messageString + '\n'
 
         ser.write(string.encode('iso-8859-1'))
-        ser.close()
 
         threading.Thread(target=check_for_sms, args=(ack_function, gsm))
 
@@ -75,6 +74,7 @@ def trigger_sms_alert(id, ack_function, message):
         logger.error("SMS_Alert: Error while triggering SMS alert. Error: {}".format(e))
 
 def check_for_sms(ack_function, gsm):
+    logger.info('SMS_Alert: Start thread waiting for feedback...')
     # Check, if new SMS is available
     received_SMS = False
     while not received_SMS:
