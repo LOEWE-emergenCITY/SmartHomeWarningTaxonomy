@@ -1,6 +1,7 @@
 import logging
 import time
 import serial
+import threading
 
 from util import *
 from PyP100 import PyL530
@@ -50,7 +51,7 @@ def trigger_optical_alert(id, flash):
             logger.error("Optical_Alert: Error while triggering optical alert. Error: {}".format(e))
             return
 
-def trigger_sms_alert(id, message):
+def trigger_sms_alert(id, ack_function, message):
     try:
         logger.info("Trigger SMS alert")
         simulation = load_simulation()
@@ -67,7 +68,19 @@ def trigger_sms_alert(id, message):
 
         ser.write(string.encode('iso-8859-1'))
         ser.close()
+
+        threading.Thread(target=check_for_sms, args=(ack_function, gsm))
+
     except Exception as e:
         logger.error("SMS_Alert: Error while triggering SMS alert. Error: {}".format(e))
 
+def check_for_sms(ack_function, gsm):
+    # Check, if new SMS is available
+    received_SMS = False
+    while not received_SMS:
+        if gsm.SMS_available() > 0:
+            newSMS = gsm.SMS_read()
+            logger.info('SMS_Alert: Received SMS from {} at {} with message {}'.format(newSMS.Sender, newSMS.Date, newSMS.Message))
+            received_SMS = True
+    ack_function()
 

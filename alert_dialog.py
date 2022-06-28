@@ -85,7 +85,7 @@ class Alert_Dialog:
             if alert == 'email':
                 return
             if alert == 'sms':
-                sms_threat = threading.Thread(target=trigger_sms_alert, args=(id, self.event['message']))
+                sms_threat = threading.Thread(target=trigger_sms_alert, args=(id, self.perception_acknowledged, self.event['message']))
                 sms_threat.start()
                 self.alert_threads.append(sms_threat)
 
