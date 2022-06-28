@@ -8,6 +8,7 @@ from alert_dialog import Alert_Dialog
 from feedback_dialog import Feedback_Dialog
 from util import *
 from scheduler import Scheduler
+from os import listdir
 
 # To make it run on pi via ssh: export DISPLAY=":0"
 
@@ -33,6 +34,7 @@ class Main_Dialog:
         self.img = PhotoImage(file='/home/pi/masterthesis/executors/gui/peasec_logo.png')
         #self.img = PhotoImage(file='executors\gui\peasec_logo.png')
         self.img_label = Label(self.center_frame, image=self.img)
+        self.error_label = Label(self.center_frame)
 
         # For demonstration
         event = {"id": 1, "categorie": "highest", "time": "14:03:10", "alerts": ["acoustic", "optic"], "message": "Die Sicherung der Kaffeemaschine ist durchgebrannt!"}
@@ -95,6 +97,20 @@ class Main_Dialog:
             time.sleep(1)
 
     def run_simulation_threat(self, start_button):
+
+        # Check wether simulation with today as start date exist
+        allow_start = False
+        today_date = datetime.datetime.today().strftime('%Y%m%d')
+        simulations = [f for f in listdir('resources/simulations')]
+        for simulation in simulations:
+            if today_date in str(simulation):
+                allow_start = True
+        if (not allow_start):
+            self.error_label['text'] = 'No simulation found!'
+            self.error_label.pack(pady=2)
+            self.logger.error("Main: No simulation found!")
+            return
+
         self.logger.info("Main: Simulation started at {}".format(dt.datetime.now()))
 
         # Change GUI
@@ -102,9 +118,9 @@ class Main_Dialog:
         self.label1.pack(pady=20, side=LEFT)
         self.label2.pack(pady=20, side=LEFT)
         start_button.pack_forget()
-        self.checkout_button.pack(LEFT, padx=20)
+        self.checkout_button.pack(side=LEFT, padx=20)
 
-        self.trigger_button.pack(LEFT, padx=20)
+        self.trigger_button.pack(side=LEFT, padx=20)
 
         # Setup files
         init_feedback_file()
@@ -143,7 +159,8 @@ class Main_Dialog:
         self.img_label.pack(pady=10)
 
         start_button = Button(self.center_frame, command=lambda: self.run_simulation_threat(start_button), text="Studie starten", height=2, background="#000000", foreground="white", font=("Calibri", 25))
-        start_button.pack(pady=20)
+        start_button.pack(pady=10)
+
 
 
 root = tk.Tk()
