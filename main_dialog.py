@@ -134,7 +134,7 @@ class Main_Dialog:
 
         # Make root window full screen
         w, h = self.window.winfo_screenwidth(), self.window.winfo_screenheight()
-        #self.window.attributes('-fullscreen', True)
+        self.window.attributes('-fullscreen', True)
         self.window.geometry("%dx%d+0+0" % (w, h))
         self.window.bind("<Escape>", lambda e: self.window.destroy())
 
