@@ -19,6 +19,7 @@ class Feedback_Dialog():
         self.total_steps = len(self.questions)
         self.progress_value = 1/self.total_steps * 100
         self.feedback = []
+        self.media = ''
 
         # Create GUI
         self.feedback_dialog = Toplevel()
@@ -32,10 +33,11 @@ class Feedback_Dialog():
         self.create_dialog()
         self.feedback_dialog.withdraw()
         
-    def collect_feedback(self, event):
+    def collect_feedback(self, event, media):
         self.logger.info("Feedback: Start collecting feedback for event with ID {}".format(event["id"]))
         self.event = event
         self.runs = True
+        self.media = media
         self.feedback_dialog.deiconify()
         
     def store_rating(self, answer):
@@ -50,7 +52,7 @@ class Feedback_Dialog():
         else:
             # Collect and store feedback
             self.feedback.append(answer)
-            save_feedback(self.event, self.feedback, False)
+            save_feedback(self.event, self.feedback, False, self.media)
             self.feedback = []
 
             # Adapt GUI

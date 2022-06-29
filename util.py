@@ -55,14 +55,14 @@ def init_response_time_file():
     writer.writerow(headers)
     file.close()
 
-def save_feedback(event, answer, missed):
+def save_feedback(event, answer, missed, media):
     logger = logging.getLogger('main')
     logger.info("Store feedback for event {}".format(event['id']))
     simulation = load_simulation()
     time = datetime.datetime.now()
     user_id = simulation['user_data']['id']
     # TODO Calculate and store time user needed for perception
-    feedback = [user_id, event['id'], answer, event['time_triggered'], event['time_acknowledge'], missed, 'display']
+    feedback = [user_id, event['id'], answer, event['time_triggered'], event['time_acknowledge'], missed, media]
 
     #print("Feedback    : Store feedback for question {}".format(question_id))
     file = open('resources/feedback_{}.csv'.format(user_id), 'a+', newline='')

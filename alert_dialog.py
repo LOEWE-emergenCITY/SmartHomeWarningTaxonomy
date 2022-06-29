@@ -61,10 +61,10 @@ class Alert_Dialog:
         time_thread = threading.Thread(target=self.measure_alarm_time)
         time_thread.start()
 
-    def perception_acknowledged(self):
+    def perception_acknowledged(self, device):
         self.event['time_acknowledge'] = dt.datetime.now()
         self.switchOff_alerts()
-        self.feedback_dialog.collect_feedback(self.event)
+        self.feedback_dialog.collect_feedback(self.event, device)
         self.terminate_alert()
 
     def abort_alert(self):
@@ -116,7 +116,7 @@ class Alert_Dialog:
         self.text_label = Label(center_frame, text=self.event["message"], font=("Calibri", 44))
         self.text_label.pack(pady=20)
 
-        acknowledge_button = Button(center_frame, command=lambda : self.perception_acknowledged(), text="Alarm wurde wahrgenommen", background="#000000", foreground="white", font=("Calibri", 25))   
+        acknowledge_button = Button(center_frame, command=lambda : self.perception_acknowledged('display'), text="Alarm wurde wahrgenommen", background="#000000", foreground="white", font=("Calibri", 25))   
         acknowledge_button.pack(pady=50)
 
         abort_button = Button(center_frame, command=lambda : self.abort_alert(), text="Alarm ausschalten \n (Achtung! Nicht für Studienteilnehmer)", background="#7F7A7A", foreground="white", font=("Calibri", 25))   

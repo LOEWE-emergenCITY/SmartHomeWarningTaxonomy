@@ -57,7 +57,7 @@ def trigger_sms_alert(id, ack_function, message):
         simulation = load_simulation()
         number = simulation['user_data']['phone']
 
-        gsm = GSMHat('/dev/ttyS0', 115200)
+        #gsm = GSMHat('/dev/ttyS0', 115200)
 
         messageString = 'AT+CMGS="' + number  + '"\n' + message + '\x1A'
 
@@ -85,6 +85,6 @@ def check_for_sms(ack_function, id):
                 newSMS = gsm.SMS_read()
                 logger.info('SMS_Alert: Received SMS from {} at {} with message {}'.format(newSMS.Sender, newSMS.Date, newSMS.Message))
                 received_SMS = True
-        ack_function()
+        ack_function('phone')
     except Exception as e:
         logger.error("SMS_Alert: Error while waiting for an SMS response. Error: {}".format(e))
