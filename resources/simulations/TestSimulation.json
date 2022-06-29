@@ -1,7 +1,7 @@
 {
     "name": "Test Simulation",
     "config": {
-        "date": "2022-06-28",
+        "date": "2022-06-30",
         "gmail": {
             "email": "mw.rpi.alerts@gmail.com",
             "password": "apJWRpg2WXqwxwe"
@@ -15,9 +15,16 @@
         "rest_time_end": "08:00:00"
     },
     "events": [
-        {"id": 1, "time": "22:58:10", "alerts": ["acoustic", "optic"], "message": "Die Sicherung der Kaffeemaschine ist durchgebrannt"},
-        {"id": 2, "time": "22:58:40", "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
-        {"id": 3, "time": "15:10:40", "alerts": ["sms"], "message": "Im Ort wurde ein Großbrand gemeldet"}
+        {"id": 1, "time": "09:26:10", "alerts": ["optic"], "message": "Die Sicherung der Kaffeemaschine ist durchgebrannt"},
+        {"id": 2, "time": "10:17:40", "alerts": ["optic", "acoustic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
+        {"id": 3, "time": "11:42:40", "alerts": ["sms"], "message": "Im Ort wurde ein Großbrand gemeldet"},
+        {"id": 4, "time": "12:31:40", "alerts": ["acoustic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
+        {"id": 5, "time": "13:58:40", "alerts": ["optic", "acoustic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
+        {"id": 6, "time": "14:07:40", "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
+        {"id": 7, "time": "15:38:40", "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
+        {"id": 8, "time": "16:23:40", "alerts": ["acoustic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
+        {"id": 9, "time": "17:41:40", "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
+        {"id": 10, "time": "18:03:40", "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
     ]
 }
 
