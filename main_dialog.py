@@ -101,7 +101,7 @@ class Main_Dialog:
         # Check wether simulation with today as start date exist
         allow_start = False
         today_date = datetime.datetime.today().strftime('%Y%m%d')
-        simulations = [f for f in listdir('resources/simulations')]
+        simulations = [f for f in listdir('/home/pi/masterthesis/resources/simulations')]
         for simulation in simulations:
             if today_date in str(simulation):
                 allow_start = True

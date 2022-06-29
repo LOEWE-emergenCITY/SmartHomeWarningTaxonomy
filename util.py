@@ -20,7 +20,7 @@ def setup_logger():
     rootLogger.setLevel(logging.INFO)
 
     #fileHandler = logging.FileHandler("{0}/{1}.log".format('resources', 'log'))
-    fileHandler = logging.FileHandler("{0}/{1}.log".format('masterthesis/resources', 'log'))
+    fileHandler = logging.FileHandler("{0}/{1}.log".format('/home/pi/masterthesis/resources', 'log'))
     fileHandler.setFormatter(logFormatter)
     rootLogger.addHandler(fileHandler)
 
@@ -38,7 +38,7 @@ def init_feedback_file():
     user_id = simulation['user_data']['id']
     headers = ['user_id', 'event_id', 'answer', 'time_triggerd', 'time_acknowledge', 'missed', 'ack_medium']
     
-    file = open('resources/feedback_{}.csv'.format(user_id), 'w')
+    file = open('/home/pi/masterthesis/resources/feedback_{}.csv'.format(user_id), 'w')
     writer = csv.writer(file)
     writer.writerow(headers)
     file.close()
@@ -51,7 +51,7 @@ def init_response_time_file():
     user_id = simulation['user_data']['id']
     headers = ['user_id', 'alarm_id', 'start_time', 'response_time', 'missed', 'ack_medium']
 
-    file = open('resources/response_time_{}.csv'.format(user_id), 'w')
+    file = open('/home/pi/masterthesis/resources/response_time_{}.csv'.format(user_id), 'w')
     writer = csv.writer(file)
     writer.writerow(headers)
     file.close()
@@ -66,7 +66,7 @@ def save_feedback(event, answer, missed, media):
     feedback = [user_id, event['id'], answer, event['time_triggered'], event['time_acknowledge'], missed, media]
 
     #print("Feedback    : Store feedback for question {}".format(question_id))
-    file = open('resources/feedback_{}.csv'.format(user_id), 'a+', newline='')
+    file = open('/home/pi/masterthesis/resources/feedback_{}.csv'.format(user_id), 'a+', newline='')
     writer = csv.writer(file)
     writer.writerow(feedback)
     file.close()
