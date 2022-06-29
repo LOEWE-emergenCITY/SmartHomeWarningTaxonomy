@@ -19,7 +19,8 @@ def setup_logger():
     rootLogger = logging.getLogger('main')
     rootLogger.setLevel(logging.INFO)
 
-    fileHandler = logging.FileHandler("{0}/{1}.log".format('resources', 'log'))
+    #fileHandler = logging.FileHandler("{0}/{1}.log".format('resources', 'log'))
+    fileHandler = logging.FileHandler("{0}/{1}.log".format('masterthesis/resources', 'log'))
     fileHandler.setFormatter(logFormatter)
     rootLogger.addHandler(fileHandler)
 
