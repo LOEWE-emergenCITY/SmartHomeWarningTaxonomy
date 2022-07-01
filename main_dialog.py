@@ -35,7 +35,7 @@ class Main_Dialog:
         #self.img = PhotoImage(file='executors\gui\peasec_logo.png')
         self.img_label = Label(self.center_frame, image=self.img)
         self.error_label = Label(self.center_frame)
-        self.finish_label = Label(self.center_frame, text="Die Studie ist abgeschlossen. Vielen Dank für Ihre Teilnahme! \n Die Box kann nun von der Stromversorgung getrennt werden.", font=("Calibri", 20))
+        self.finish_label = Label(self.center_frame, text="Die Studie ist abgeschlossen. Vielen Dank für Ihre Teilnahme! \n Die Box kann nun von der Stromversorgung getrennt werden.", font=("Calibri", 17))
 
         # For demonstration
         event = {"id": 1, "categorie": "highest", "time": "14:03:10", "alerts": ['sms'], "message": "Die Sicherung der Kaffeemaschine ist durchgebrannt!"}
@@ -106,7 +106,7 @@ class Main_Dialog:
         self.text_frame.pack_forget()
         self.checkout_button.pack_forget()
         self.trigger_button.pack_forget()
-        self.finish_label.pack()
+        self.finish_label.pack(ipady=30)
 
         self.logger.info("Main: End program at {}".format(dt.datetime.now()))
 
