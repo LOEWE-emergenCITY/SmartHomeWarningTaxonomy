@@ -1,7 +1,7 @@
 {
     "name": "Test Simulation",
     "config": {
-        "date": "2022-06-30",
+        "date": "2022-07-01",
         "gmail": {
             "email": "mw.rpi.alerts@gmail.com",
             "password": "apJWRpg2WXqwxwe"
@@ -24,7 +24,7 @@
         {"id": 7, "time": "15:38:40", "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
         {"id": 8, "time": "16:23:40", "alerts": ["acoustic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
         {"id": 9, "time": "17:41:40", "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
-        {"id": 10, "time": "18:03:40", "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
+        {"id": 10, "time": "18:03:40", "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"}
     ]
 }
 
