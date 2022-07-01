@@ -43,7 +43,7 @@ class Alert_Dialog:
             if (end_time < dt.datetime.now()):
                 self.logger.info("Alert: Alarm forced to terminate. Start time: {}, Now: {}".format(start_time, dt.datetime.now()))
                 self.event['time_acknowledge'] = None
-                save_feedback(self.event, [], True)
+                save_feedback(self.event, [], True, '')
                 self.terminate_alert()
                 break
 
@@ -113,14 +113,17 @@ class Alert_Dialog:
         center_frame = tk.Frame(self.window, width=400, height=300)
         center_frame.pack(expand=TRUE, ipady=50)
 
-        self.text_label = Label(center_frame, text=self.event["message"], font=("Calibri", 44))
+        self.text_label = Label(center_frame, text=self.event["message"], font=("Calibri", 25))
         self.text_label.pack(pady=20)
 
-        acknowledge_button = Button(center_frame, command=lambda : self.perception_acknowledged('display'), text="Alarm wurde wahrgenommen", background="#000000", foreground="white", font=("Calibri", 25))   
-        acknowledge_button.pack(pady=50)
+        button_frame = tk.Frame(center_frame, width=300)
+        button_frame.pack(ipady=20)
 
-        abort_button = Button(center_frame, command=lambda : self.abort_alert(), text="Alarm ausschalten \n (Achtung! Nicht für Studienteilnehmer)", background="#7F7A7A", foreground="white", font=("Calibri", 25))   
-        abort_button.pack()
+        acknowledge_button = Button(button_frame, command=lambda : self.perception_acknowledged('display'), text="Alarm wahrgenommen", background="green", foreground="white", font=("Calibri", 25))   
+        acknowledge_button.pack(side=LEFT, padx=20)
+
+        abort_button = Button(button_frame, command=lambda : self.abort_alert(), text="Abbruch", background="red", foreground="white", font=("Calibri", 25))   
+        abort_button.pack(side=LEFT, padx=20)
 
 #root = tk.Tk()
 #root.withdraw()

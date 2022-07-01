@@ -92,6 +92,7 @@ class Main_Dialog:
     def run_simulation(self):
         schedule = Scheduler()
         schedule = self.setup_scheduler()
+        print(schedule.get_jobs())
         while True:
             schedule.exec_jobs()
             time.sleep(1)
