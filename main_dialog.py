@@ -35,6 +35,7 @@ class Main_Dialog:
         #self.img = PhotoImage(file='executors\gui\peasec_logo.png')
         self.img_label = Label(self.center_frame, image=self.img)
         self.error_label = Label(self.center_frame)
+        self.finish_label = Label(self.center_frame, text="Die Studie ist abgeschlossen. Vielen Dank für Ihre Teilnahme! \n Die Box kann nun von der Stromversorgung getrennt werden.")
 
         # For demonstration
         event = {"id": 1, "categorie": "highest", "time": "14:03:10", "alerts": ['sms'], "message": "Die Sicherung der Kaffeemaschine ist durchgebrannt!"}
@@ -90,12 +91,23 @@ class Main_Dialog:
         return schedule
 
     def run_simulation(self):
+        simulation_runs = True
         schedule = Scheduler()
         schedule = self.setup_scheduler()
-        print(schedule.get_jobs())
-        while True:
+        while simulation_runs:
             schedule.exec_jobs()
+            if (len(schedule.get_jobs()) == 0):
+                simulation_runs = False
             time.sleep(1)
+        self.finish_simulation()
+
+    def finish_simulation(self):
+        # Change GUI
+        self.text_frame.pack_forget()
+        self.checkout_button.pack_forget()
+        self.trigger_button.pack_forget()
+
+        self.finish_label.pack()
 
     def run_simulation_threat(self, start_button):
 
