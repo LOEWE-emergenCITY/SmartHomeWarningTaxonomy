@@ -4,14 +4,17 @@ import serial
 import threading
 
 from util import *
-from PyP100 import PyL530
 from pydub import AudioSegment
 from pydub.playback import play
 from gsmHat import GSMHat
+from requests import post
 
 ip = "192.168.178.73"
 username = "marcwendelborn@web.de"
 password = "Pinguin1"
+
+HOME_ASSISTANT_TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJkZTIxODNjMzk0NDE0NjM1OTg0NmNmZDhiOWNlMTU2NCIsImlhdCI6MTY1NzE4MTE2MiwiZXhwIjoxOTcyNTQxMTYyfQ.I2jlxAbumbuLndSRmMLlxC6ek0YfPVRo2k82uhGOExc'
+HOME_ASSISTANT_ENTITY_ID = 'light.light01_level_light_color_on_off'
 
 logger = logging.getLogger('main')
 
@@ -30,26 +33,21 @@ def trigger_acoustic_alert(id, stop):
 
 def trigger_optical_alert(id, flash):
     logger.info("Trigger optical alert")
-    l530 = PyL530.L530(ip, username, password) 
     try:
-        l530.handshake() 
-        l530.login()
-    except Exception as e:
-        logger.error("Optical_Alert: Error while initialising connection to smart light. Error: {}".format(e))
-        return
-
-    while True:
-        try:
-            l530.turnOn()
+        url_on = "http://localhost:8123/api/services/light/turn_on"
+        url_off = "http://localhost:8123/api/services/light/turn_off"
+        headers = {"Authorization": "Bearer {}".format(HOME_ASSISTANT_TOKEN)}
+        data = {"entity_id": HOME_ASSISTANT_ENTITY_ID}
+        while True:
+            post(url_on, headers=headers, json=data)
             time.sleep(1)
-            l530.turnOff()
-            time.sleep(1)
+            post(url_off, headers=headers, json=data)
             if flash():
                 logger.info("Stop optical alert")
                 break
-        except Exception as e:
-            logger.error("Optical_Alert: Error while triggering optical alert. Error: {}".format(e))
-            return
+    except Exception as e:
+        logger.error("Optical_Alert: Error while initialising connection to smart light. Error: {}".format(e))
+        return
 
 def trigger_sms_alert(id, ack_function, message):
     try:
