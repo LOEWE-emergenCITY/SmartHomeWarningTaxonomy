@@ -45,6 +45,7 @@ def trigger_optical_alert(id, flash):
             if flash():
                 logger.info("Stop optical alert")
                 break
+            time.sleep(1)
     except Exception as e:
         logger.error("Optical_Alert: Error while initialising connection to smart light. Error: {}".format(e))
         return
