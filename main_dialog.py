@@ -8,7 +8,6 @@ from alert_dialog import Alert_Dialog
 from feedback_dialog import Feedback_Dialog
 from util import *
 from scheduler import Scheduler
-from os import listdir
 
 # To make it run on pi via ssh: export DISPLAY=":0"
 
@@ -38,7 +37,7 @@ class Main_Dialog:
         self.finish_label = Label(self.center_frame, text="Die Studie ist abgeschlossen. Vielen Dank für Ihre Teilnahme! \n Die Box kann nun von der Stromversorgung getrennt werden.", font=("Calibri", 17))
 
         # For demonstration
-        event = {"id": 1, "categorie": "highest", "time": "14:03:10", "alerts": ['sms'], "message": "Die Sicherung der Kaffeemaschine ist durchgebrannt!"}
+        event = {"id": 1, "categorie": "highest", "time": "14:03:10", "alerts": ['optic', 'acoustic', 'sms'], "message": "Die Sicherung der Kaffeemaschine \n ist durchgebrannt!"}
         self.trigger_button = Button(self.center_frame, command=lambda: self.dispatch_alarm(event, dt.datetime.now()), text="Trigger alarm", height=2, background="#000000", foreground="white", font=("Calibri", 25))
 
         self.alert_dialog = Alert_Dialog()
@@ -111,20 +110,6 @@ class Main_Dialog:
         self.logger.info("Main: End program at {}".format(dt.datetime.now()))
 
     def run_simulation_threat(self, start_button):
-
-        # Check wether simulation with today as start date exist
-        allow_start = False
-        today_date = datetime.datetime.today().strftime('%Y%m%d')
-        simulations = [f for f in listdir('/home/pi/masterthesis/resources/simulations')]
-        for simulation in simulations:
-            if today_date in str(simulation):
-                allow_start = True
-        if (not allow_start):
-            self.error_label['text'] = 'No simulation found!'
-            self.error_label.pack(pady=2)
-            self.logger.error("Main: No simulation found!")
-            return
-
         self.logger.info("Main: Simulation started at {}".format(dt.datetime.now()))
 
         # Change GUI

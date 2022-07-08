@@ -4,14 +4,28 @@ import datetime
 import csv
 import RPi.GPIO as GPIO
 import time
+from os import listdir
 
 logger = logging.getLogger('main')
-file_name = '/home/pi/masterthesis/resources/simulations/TestSimulation.json'
+simulation_file_path = '/home/pi/masterthesis/resources/simulations/'
 #file_name = 'resources/simulations/TestSimulation.json'
 
-def load_simulation(file_name=file_name):
-    test_simulation_json = open(file_name)
-    simulation = json.load(test_simulation_json)
+def load_simulation():
+    file_exists = False
+    today_date = datetime.datetime.today().strftime('%Y%m%d')
+    simulations = [f for f in listdir('/home/pi/masterthesis/resources/simulations')]
+    for simulation in simulations:
+        if today_date in str(simulation):
+            file_exists = True
+            break
+
+    if file_exists:
+        file_name = simulation_file_path + '_' + today_date + '.json'
+    else:
+        file_name = simulation_file_path + 'TestSimulation.json'
+    simulation_json = open(file_name)
+    simulation = json.load(simulation_json)
+    logger.info("Load simulation file: {}".format(file_name))
     return simulation
 
 def setup_logger():
