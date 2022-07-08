@@ -20,7 +20,7 @@ from util import load_simulation
 
 # To make it run on pi via ssh: export DISPLAY=":0"
 
-MAX_ALERT_RUNNING_TIME = 50
+MAX_ALERT_RUNNING_TIME = 300
 
 class Alert_Dialog:
     def __init__(self, simulation_file_name):

@@ -80,8 +80,9 @@ def check_for_sms(ack_function, id):
         while not received_SMS:
             if gsm.SMS_available() > 0:
                 newSMS = gsm.SMS_read()
-                logger.info('SMS_Alert: Received SMS from {} at {} with message {}'.format(newSMS.Sender, newSMS.Date, newSMS.Message))
-                received_SMS = True
+                if (newSMS.Sender is not 'ALDI TALK'):
+                    logger.info('SMS_Alert: Received SMS from {} at {} with message {}'.format(newSMS.Sender, newSMS.Date, newSMS.Message))
+                    received_SMS = True
         ack_function('phone')
     except Exception as e:
         logger.error("SMS_Alert: Error while waiting for an SMS response. Error: {}".format(e))
