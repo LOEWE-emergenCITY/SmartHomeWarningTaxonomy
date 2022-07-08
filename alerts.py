@@ -80,7 +80,7 @@ def check_for_sms(ack_function, id):
         while not received_SMS:
             if gsm.SMS_available() > 0:
                 newSMS = gsm.SMS_read()
-                if (newSMS.Sender is not 'ALDI TALK'):
+                if (newSMS.Sender != 'ALDI TALK'):
                     logger.info('SMS_Alert: Received SMS from {} at {} with message {}'.format(newSMS.Sender, newSMS.Date, newSMS.Message))
                     received_SMS = True
         ack_function('phone')
