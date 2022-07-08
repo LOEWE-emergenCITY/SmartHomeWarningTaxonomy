@@ -50,13 +50,11 @@ def trigger_optical_alert(id, flash):
         logger.error("Optical_Alert: Error while initialising connection to smart light. Error: {}".format(e))
         return
 
-def trigger_sms_alert(id, ack_function, message):
+def trigger_sms_alert(id, ack_function, message, number):
     try:
         logger.info("Trigger SMS alert")
-        simulation = load_simulation()
-        number = simulation['user_data']['phone']
 
-        #gsm = GSMHat('/dev/ttyS0', 115200)
+        gsm = GSMHat('/dev/ttyS0', 115200)
 
         messageString = 'AT+CMGS="' + number  + '"\n' + message + '\x1A'
 

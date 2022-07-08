@@ -14,6 +14,7 @@ from alerts import trigger_sms_alert
 from feedback_dialog import Feedback_Dialog
 
 from util import save_feedback
+from util import load_simulation
 
 
 
@@ -22,8 +23,9 @@ from util import save_feedback
 MAX_ALERT_RUNNING_TIME = 50
 
 class Alert_Dialog:
-    def __init__(self):
+    def __init__(self, simulation_file_name):
         self.logger = logging.getLogger('main')
+        self.simulation_file_name = simulation_file_name
         self.window = tk.Toplevel()
         self.event = {"id": 0, "categorie": "", "time": "", "alerts": [], "message": ""}
         self.alert_runs = False
@@ -43,7 +45,7 @@ class Alert_Dialog:
             if (end_time < dt.datetime.now()):
                 self.logger.info("Alert: Alarm forced to terminate. Start time: {}, Now: {}".format(start_time, dt.datetime.now()))
                 self.event['time_acknowledge'] = None
-                save_feedback(self.event, [], True, '')
+                save_feedback(self.simulation_file_name, self.event, [], True, '')
                 self.terminate_alert()
                 break
 
@@ -85,7 +87,9 @@ class Alert_Dialog:
             if alert == 'email':
                 return
             if alert == 'sms':
-                sms_threat = threading.Thread(target=trigger_sms_alert, args=(id, self.perception_acknowledged, self.event['message']))
+                simulation = load_simulation(self.simulation_file_name)
+                number = simulation['user_data']['phone']
+                sms_threat = threading.Thread(target=trigger_sms_alert, args=(id, self.perception_acknowledged, self.event['message'], number))
                 sms_threat.start()
                 self.alert_threads.append(sms_threat)
 

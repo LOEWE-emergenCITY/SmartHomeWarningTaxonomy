@@ -36,21 +36,32 @@ class Main_Dialog:
         self.error_label = Label(self.center_frame)
         self.finish_label = Label(self.center_frame, text="Die Studie ist abgeschlossen. Vielen Dank für Ihre Teilnahme! \n Die Box kann nun von der Stromversorgung getrennt werden.", font=("Calibri", 17))
 
+         # Load Simulation
+        self.simulation_file_name = self.get_file_name()
+        self.simulation = load_simulation(self.simulation_file_name)
+
         # For demonstration
         event = {"id": 1, "categorie": "highest", "time": "14:03:10", "alerts": ['optic', 'acoustic', 'sms'], "message": "Die Sicherung der Kaffeemaschine \n ist durchgebrannt!"}
         self.trigger_button = Button(self.center_frame, command=lambda: self.dispatch_alarm(event, dt.datetime.now()), text="Trigger alarm", height=2, background="#000000", foreground="white", font=("Calibri", 25))
 
-        self.alert_dialog = Alert_Dialog()
-        self.feedback_dialog = Feedback_Dialog()
+        self.alert_dialog = Alert_Dialog(self.simulation_file_name)
+        self.feedback_dialog = Feedback_Dialog(self.simulation_file_name)
         self.create_dialog()
 
         # Connect to GSM hat
         connect_to_gsm_hat()
 
-        # Load Simulation
-        self.simulation = load_simulation()
-
         self.window.mainloop()
+
+    def get_file_name(self):
+        today_date = datetime.datetime.today().strftime('%Y%m%d')
+        simulations = [f for f in listdir('/home/pi/masterthesis/resources/simulations')]
+        for simulation in simulations:
+            if today_date in str(simulation):
+                self.logger.info("Load simulation file: {}".format(simulation_file_path + 'simulation_' + today_date + '.json'))
+                return simulation_file_path + 'simulation_' + today_date + '.json'
+        logger.info("Load simulation file: {}".format(simulation_file_path + 'simulation_' + today_date + '.json'))
+        return simulation_file_path + 'TestSimulation.json'
 
     def dispatch_alarm(self, event, execution_date):
         # Check if other alarm is running
@@ -122,8 +133,8 @@ class Main_Dialog:
         self.trigger_button.pack(side=LEFT, padx=20)
 
         # Setup files
-        init_feedback_file()
-        init_response_time_file()
+        init_feedback_file(self.simulation_file_name)
+        init_response_time_file(self.simulation_file_name)
 
         # Init and start thread
         simulation_thread = threading.Thread(target=self.run_simulation)

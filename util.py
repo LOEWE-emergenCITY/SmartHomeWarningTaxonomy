@@ -10,22 +10,9 @@ logger = logging.getLogger('main')
 simulation_file_path = '/home/pi/masterthesis/resources/simulations/'
 #file_name = 'resources/simulations/TestSimulation.json'
 
-def load_simulation():
-    file_exists = False
-    today_date = datetime.datetime.today().strftime('%Y%m%d')
-    simulations = [f for f in listdir('/home/pi/masterthesis/resources/simulations')]
-    for simulation in simulations:
-        if today_date in str(simulation):
-            file_exists = True
-            break
-
-    if file_exists:
-        file_name = simulation_file_path + '_' + today_date + '.json'
-    else:
-        file_name = simulation_file_path + 'TestSimulation.json'
-    simulation_json = open(file_name)
+def load_simulation(simulation_file_name):
+    simulation_json = open(simulation_file_name)
     simulation = json.load(simulation_json)
-    logger.info("Load simulation file: {}".format(file_name))
     return simulation
 
 def setup_logger():
@@ -44,11 +31,11 @@ def setup_logger():
 
     return rootLogger
 
-def init_feedback_file():
+def init_feedback_file(simulation_file_name):
     logger = logging.getLogger('main')
     logger.info("Init feedback file")
     #print("Feedback    : Init feedback file")
-    simulation = load_simulation()
+    simulation = load_simulation(simulation_file_name)
     user_id = simulation['user_data']['id']
     headers = ['user_id', 'event_id', 'answer', 'time_triggerd', 'time_acknowledge', 'missed', 'ack_medium']
     
@@ -57,11 +44,11 @@ def init_feedback_file():
     writer.writerow(headers)
     file.close()
 
-def init_response_time_file():
+def init_response_time_file(simulation_file_name):
     logger = logging.getLogger('main')
     logger.info("Init response_time file")
     #print("Feedback    : Init response_time file")
-    simulation = load_simulation()
+    simulation = load_simulation(simulation_file_name)
     user_id = simulation['user_data']['id']
     headers = ['user_id', 'alarm_id', 'start_time', 'response_time', 'missed', 'ack_medium']
 
@@ -70,11 +57,10 @@ def init_response_time_file():
     writer.writerow(headers)
     file.close()
 
-def save_feedback(event, answer, missed, media):
+def save_feedback(simulation_file_name, event, answer, missed, media):
     logger = logging.getLogger('main')
     logger.info("Store feedback for event {}".format(event['id']))
-    simulation = load_simulation()
-    time = datetime.datetime.now()
+    simulation = load_simulation(simulation_file_name)
     user_id = simulation['user_data']['id']
     # TODO Calculate and store time user needed for perception
     feedback = [user_id, event['id'], answer, event['time_triggered'], event['time_acknowledge'], missed, media]
