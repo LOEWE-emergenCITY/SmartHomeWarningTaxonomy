@@ -27,6 +27,7 @@ class Feedback_Dialog():
         self.center_frame = Frame(self.feedback_dialog, width=400, height=300)
         self.rating_frame = Frame(self.center_frame, width=400, height=100)
         self.question_label = Label(self.rating_frame, text=self.questions[0]['question'], font=("Calibri bold", 16))
+        self.scale_label = Label(self.rating_frame, text="1 = {}, 5 = {}".format(self.questions[0]['scale_start'], self.questions[0]['scale_end']), font=("Calibri", 14))
         self.progress_frame = Frame(self.center_frame)
         self.progress_bar = Progressbar(self.progress_frame, orient='horizontal', length=300, mode='determinate')
         self.progress_label = Label(self.progress_frame, text="Frage {} von {} ".format(self.step, self.total_steps))
@@ -45,6 +46,7 @@ class Feedback_Dialog():
         if self.step != self.total_steps:
             self.feedback.append(answer)
             self.question_label['text'] = self.questions[self.step]['question']
+            self.scale_label['text'] = "1 = {}, 5 = {}".format(self.questions[self.step]['scale_start'], self.questions[self.step]['scale_end'])
             self.step = self.step + 1
             self.progress_value = self.step/self.total_steps * 100
             self.progress_bar['value'] = self.progress_value
@@ -58,6 +60,7 @@ class Feedback_Dialog():
 
             # Adapt GUI
             self.question_label['text'] = self.questions[0]['question']
+            self.scale_label['text'] = "1 = {}, 5 = {}".format(self.questions[0]['scale_start'], self.questions[0]['scale_end'])
             self.step = 1
             self.progress_value = self.step/self.total_steps * 100
             self.progress_bar['value'] = self.progress_value
@@ -86,8 +89,7 @@ class Feedback_Dialog():
 
         self.question_label.pack(side=TOP, ipady=10)
 
-        label2 = Label(self.rating_frame, text="1 = völlig ungeeignet, 5 = absolut passend", font=("Calibri", 14))
-        label2.pack(side=TOP)
+        self.scale_label.pack(side=TOP)
 
         button1 = Button(self.rating_frame, text='1', command=lambda : self.store_rating(1), width=4, height=3, background="#A53C3C", font=("Calibri", 25))
         button1.pack(side=LEFT, padx=20)

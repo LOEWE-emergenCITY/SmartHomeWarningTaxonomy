@@ -1,7 +1,7 @@
 {
     "questions": [
-        {"id": 1, "question": "Wie nützlich fanden Sie die Warnkanäle?"},
-        {"id": 2, "question": "Hat der Alarm sie während einer Tätigkeit gestört?"},
-        {"id": 3, "question": "Haben sie die Alarmnachricht verstanden?"}
+        {"id": 1, "question": "Wie nützlich fanden Sie die Warnkanäle?", "scale_start": "Völlig unangemessen", "scale_end": "Genau passend"},
+        {"id": 2, "question": "Hat der Alarm sie während einer Tätigkeit gestört?", "scale_start": "Gar nicht", "scale_end": "Sehr"},
+        {"id": 3, "question": "Haben sie die Alarmnachricht verstanden?", "scale_start": "Gar nicht", "scale_end": "Voll und ganz"}
     ]
 }

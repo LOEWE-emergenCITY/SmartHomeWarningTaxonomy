@@ -88,11 +88,11 @@ class Main_Dialog:
 
     def setup_scheduler(self):
         schedule = Scheduler()
-        date_array = self.simulation['config']['date'].split('-')
         events = self.simulation['events']
 
         for event in events:
             time_array = event['time'].split(':')
+            date_array = event['date'].split('-')
             execution_date = dt.datetime(year=int(date_array[0]), month=int(date_array[1]), day=int(date_array[2]),
                           hour=int(time_array[0]), minute=int(time_array[1]), second=int(time_array[2]))
             schedule.once(execution_date, self.dispatch_alarm, args=(event, execution_date))
