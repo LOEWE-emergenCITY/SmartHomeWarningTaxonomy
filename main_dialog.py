@@ -134,7 +134,6 @@ class Main_Dialog:
 
         # Setup files
         init_feedback_file(self.simulation_file_name)
-        init_response_time_file(self.simulation_file_name)
 
         # Init and start thread
         simulation_thread = threading.Thread(target=self.run_simulation)

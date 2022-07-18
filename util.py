@@ -44,19 +44,6 @@ def init_feedback_file(simulation_file_name):
     writer.writerow(headers)
     file.close()
 
-def init_response_time_file(simulation_file_name):
-    logger = logging.getLogger('main')
-    logger.info("Init response_time file")
-    #print("Feedback    : Init response_time file")
-    simulation = load_simulation(simulation_file_name)
-    user_id = simulation['user_data']['id']
-    headers = ['user_id', 'alarm_id', 'start_time', 'response_time', 'missed', 'ack_medium']
-
-    file = open('/home/pi/masterthesis/resources/response_time_{}.csv'.format(user_id), 'w')
-    writer = csv.writer(file)
-    writer.writerow(headers)
-    file.close()
-
 def save_feedback(simulation_file_name, event, answer, missed, media):
     logger = logging.getLogger('main')
     logger.info("Store feedback for event {}".format(event['id']))
