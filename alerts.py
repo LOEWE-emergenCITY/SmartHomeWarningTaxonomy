@@ -37,11 +37,12 @@ def trigger_optical_alert(id, flash):
         url_on = "http://localhost:8123/api/services/light/turn_on"
         url_off = "http://localhost:8123/api/services/light/turn_off"
         headers = {"Authorization": "Bearer {}".format(HOME_ASSISTANT_TOKEN)}
-        data = {"entity_id": HOME_ASSISTANT_ENTITY_ID}
+        data_on = {"entity_id": HOME_ASSISTANT_ENTITY_ID, "rgb_color": [52,70,235]}
+        data_off = {"entity_id": HOME_ASSISTANT_ENTITY_ID}
         while True:
-            post(url_on, headers=headers, json=data)
+            post(url_on, headers=headers, json=data_on)
             time.sleep(1)
-            post(url_off, headers=headers, json=data)
+            post(url_off, headers=headers, json=data_off)
             if flash():
                 logger.info("Stop optical alert")
                 break
