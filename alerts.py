@@ -24,7 +24,7 @@ def trigger_acoustic_alert(id, stop, is_alarm):
         if is_alarm:
             song = AudioSegment.from_wav("sound_alarm.wav")
         else:
-            song = AudioSegment.from_wav("sound_normal.mp3")
+            song = AudioSegment.from_wav("sound_normal.wav")
         while True:
             play(song)
             if stop():
