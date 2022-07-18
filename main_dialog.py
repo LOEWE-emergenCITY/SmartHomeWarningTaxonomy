@@ -60,7 +60,7 @@ class Main_Dialog:
             if today_date in str(simulation):
                 self.logger.info("Load simulation file: {}".format(simulation_file_path + 'simulation_' + today_date + '.json'))
                 return simulation_file_path + 'simulation_' + today_date + '.json'
-        logger.info("Load simulation file: {}".format(simulation_file_path + 'simulation_' + today_date + '.json'))
+        logger.info("Load simulation file: {}".format(simulation_file_path + 'TestSimulation.json'))
         return simulation_file_path + 'TestSimulation.json'
 
     def dispatch_alarm(self, event, execution_date):
