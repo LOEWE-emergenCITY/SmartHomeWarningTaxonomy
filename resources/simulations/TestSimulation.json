@@ -27,16 +27,16 @@
         {"date_id": 10, "date": "2022-07-19", "time": "21:26:10"}
     ],
     "events": [
-        {"id": 1, "alerts": ["optic"], "message": "Die Sicherung der Kaffeemaschine ist durchgebrannt"},
-        {"id": 2, "alerts": ["optic", "acoustic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
+        {"id": 1, "alerts": ["optic_bl_red"], "message": "Die Sicherung der Kaffeemaschine ist durchgebrannt"},
+        {"id": 2, "alerts": ["optic_bl_blue", "acoustic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
         {"id": 3, "alerts": ["sms"], "message": "Im Ort wurde ein Großbrand gemeldet"},
         {"id": 4, "alerts": ["acoustic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
-        {"id": 5, "alerts": ["optic", "acoustic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
-        {"id": 6, "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
-        {"id": 7, "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
+        {"id": 5, "alerts": ["optic_red", "acoustic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
+        {"id": 6, "alerts": ["optic_blue"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
+        {"id": 7, "alerts": ["optic_bl_red"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
         {"id": 8, "alerts": ["acoustic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
-        {"id": 9, "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
-        {"id": 10, "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"}
+        {"id": 9, "alerts": ["optic_bl_red"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
+        {"id": 10, "alerts": ["optic_bl_red"], "message": "Die Sprinkleranlage funktioniert nicht mehr"}
     ]
 }
 

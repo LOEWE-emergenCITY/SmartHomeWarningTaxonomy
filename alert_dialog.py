@@ -80,8 +80,20 @@ class Alert_Dialog:
                 sound_threat = threading.Thread(target=trigger_acoustic_alert, args=(id, lambda: self.stop_alert))
                 sound_threat.start()
                 self.alert_threads.append(sound_threat)
-            if alert == 'optic':
-                optical_threat = threading.Thread(target=trigger_optical_alert, args=(id, lambda: self.stop_alert))
+            if alert == 'optic_red':
+                optical_threat = threading.Thread(target=trigger_optical_alert, args=(id, lambda: self.stop_alert, "red", False))
+                optical_threat.start()
+                self.alert_threads.append(optical_threat)
+            if alert == 'optic_blue':
+                optical_threat = threading.Thread(target=trigger_optical_alert, args=(id, lambda: self.stop_alert, "blue", False))
+                optical_threat.start()
+                self.alert_threads.append(optical_threat)
+            if alert == 'optic_bl_red':
+                optical_threat = threading.Thread(target=trigger_optical_alert, args=(id, lambda: self.stop_alert, "red", True))
+                optical_threat.start()
+                self.alert_threads.append(optical_threat)
+            if alert == 'optic_bl_blue':
+                optical_threat = threading.Thread(target=trigger_optical_alert, args=(id, lambda: self.stop_alert, "blue", True))
                 optical_threat.start()
                 self.alert_threads.append(optical_threat)
             if alert == 'email':

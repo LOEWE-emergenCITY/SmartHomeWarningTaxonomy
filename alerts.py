@@ -31,20 +31,27 @@ def trigger_acoustic_alert(id, stop):
         logger.error("Acoustic_Alert: Error while triggering acoustic alert. Error: {}".format(e))
         return
 
-def trigger_optical_alert(id, flash):
+def trigger_optical_alert(id, flash, color, blinking):
+    rgb_color = [255, 0, 0]
+    if color == "blue":
+        rgb_color = [52, 70, 235]
+
     logger.info("Trigger optical alert")
     try:
         url_on = "http://localhost:8123/api/services/light/turn_on"
         url_off = "http://localhost:8123/api/services/light/turn_off"
         headers = {"Authorization": "Bearer {}".format(HOME_ASSISTANT_TOKEN)}
-        data_on = {"entity_id": HOME_ASSISTANT_ENTITY_ID, "rgb_color": [52,70,235]}
+        data_on = {"entity_id": HOME_ASSISTANT_ENTITY_ID, "rgb_color": rgb_color}
         data_off = {"entity_id": HOME_ASSISTANT_ENTITY_ID}
         while True:
             post(url_on, headers=headers, json=data_on)
             time.sleep(1)
-            post(url_off, headers=headers, json=data_off)
+            if blinking:
+                post(url_off, headers=headers, json=data_off)
             if flash():
                 logger.info("Stop optical alert")
+                if not blinking:
+                    post(url_off, headers=headers, json=data_off)
                 break
             time.sleep(1)
     except Exception as e:
