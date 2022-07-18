@@ -18,10 +18,13 @@ HOME_ASSISTANT_ENTITY_ID = 'light.light01_level_light_color_on_off'
 
 logger = logging.getLogger('main')
 
-def trigger_acoustic_alert(id, stop):
+def trigger_acoustic_alert(id, stop, is_alarm):
     try:
         logger.info("Trigger acoustic alert")
-        song = AudioSegment.from_wav("mixkit-classic-alarm-995.wav")
+        if is_alarm:
+            song = AudioSegment.from_wav("sound_alarm.wav")
+        else:
+            song = AudioSegment.from_wav("sound_normal.mp3")
         while True:
             play(song)
             if stop():

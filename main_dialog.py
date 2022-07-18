@@ -42,7 +42,7 @@ class Main_Dialog:
         self.simulation = load_simulation(self.simulation_file_name)
 
         # For demonstration
-        event = {"id": 1, "categorie": "highest", "time": "14:03:10", "alerts": ['optic_bl_red'], "message": "Die Sicherung der Kaffeemaschine \n ist durchgebrannt!"}
+        event = {"id": 1, "categorie": "highest", "time": "14:03:10", "alerts": ['optic_bl_blue', 'acoustic'], "message": "Die Sicherung der Kaffeemaschine \n ist durchgebrannt!"}
         self.trigger_button = Button(self.center_frame, command=lambda: self.dispatch_alarm(event, dt.datetime.now()), text="Trigger alarm", height=2, background="#000000", foreground="white", font=("Calibri", 25))
 
         self.alert_dialog = Alert_Dialog(self.simulation_file_name)

@@ -77,7 +77,11 @@ class Alert_Dialog:
     def switchOn_alerts(self, alerts):
         for alert in alerts:
             if alert == 'acoustic':
-                sound_threat = threading.Thread(target=trigger_acoustic_alert, args=(id, lambda: self.stop_alert))
+                sound_threat = threading.Thread(target=trigger_acoustic_alert, args=(id, lambda: self.stop_alert, False))
+                sound_threat.start()
+                self.alert_threads.append(sound_threat)
+            if alert == 'acoustic_alarm':
+                sound_threat = threading.Thread(target=trigger_acoustic_alert, args=(id, lambda: self.stop_alert, True))
                 sound_threat.start()
                 self.alert_threads.append(sound_threat)
             if alert == 'optic_red':
