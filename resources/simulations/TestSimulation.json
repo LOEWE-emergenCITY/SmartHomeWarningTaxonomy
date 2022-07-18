@@ -14,17 +14,29 @@
         "rest_time_start": "22:00:00",
         "rest_time_end": "08:00:00"
     },
+    "dates": [
+        {"date_id": 1, "date": "2022-07-18", "time": "09:26:10"},
+        {"date_id": 2, "date": "2022-07-18", "time": "10:26:10"},
+        {"date_id": 3, "date": "2022-07-18", "time": "11:26:10"},
+        {"date_id": 4, "date": "2022-07-18", "time": "13:26:10"},
+        {"date_id": 5, "date": "2022-07-18", "time": "14:26:10"},
+        {"date_id": 6, "date": "2022-07-18", "time": "15:26:10"},
+        {"date_id": 7, "date": "2022-07-18", "time": "16:26:10"},
+        {"date_id": 8, "date": "2022-07-18", "time": "17:26:10"},
+        {"date_id": 9, "date": "2022-07-19", "time": "19:26:10"},
+        {"date_id": 10, "date": "2022-07-19", "time": "21:26:10"}
+    ],
     "events": [
-        {"id": 1, "date": "2022-07-10", "time": "09:26:10", "alerts": ["optic"], "message": "Die Sicherung der Kaffeemaschine ist durchgebrannt"},
-        {"id": 2, "date": "2022-07-10", "time": "10:17:40", "alerts": ["optic", "acoustic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
-        {"id": 3, "date": "2022-07-10",  "time": "11:42:40", "alerts": ["sms"], "message": "Im Ort wurde ein Großbrand gemeldet"},
-        {"id": 4, "date": "2022-07-10", "time": "12:31:40", "alerts": ["acoustic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
-        {"id": 5, "date": "2022-07-10", "time": "13:58:40", "alerts": ["optic", "acoustic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
-        {"id": 6, "date": "2022-07-10", "time": "14:07:40", "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
-        {"id": 7, "date": "2022-07-10", "time": "15:38:40", "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
-        {"id": 8, "date": "2022-07-10", "time": "16:23:40", "alerts": ["acoustic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
-        {"id": 9, "date": "2022-07-10", "time": "17:41:40", "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
-        {"id": 10, "date": "2022-07-10", "time": "18:03:40", "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"}
+        {"id": 1, "alerts": ["optic"], "message": "Die Sicherung der Kaffeemaschine ist durchgebrannt"},
+        {"id": 2, "alerts": ["optic", "acoustic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
+        {"id": 3, "alerts": ["sms"], "message": "Im Ort wurde ein Großbrand gemeldet"},
+        {"id": 4, "alerts": ["acoustic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
+        {"id": 5, "alerts": ["optic", "acoustic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
+        {"id": 6, "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
+        {"id": 7, "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
+        {"id": 8, "alerts": ["acoustic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
+        {"id": 9, "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"},
+        {"id": 10, "alerts": ["optic"], "message": "Die Sprinkleranlage funktioniert nicht mehr"}
     ]
 }
 

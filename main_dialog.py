@@ -88,14 +88,18 @@ class Main_Dialog:
 
     def setup_scheduler(self):
         schedule = Scheduler()
-        events = self.simulation['events']
 
-        for event in events:
-            time_array = event['time'].split(':')
-            date_array = event['date'].split('-')
+        # Match times with events
+        dates = self.simulation['dates']
+        events = self.simulation['events']
+        matches = match_times_with_events(dates, events)
+
+        for match in matches:
+            time_array = match[0]['time'].split(':')
+            date_array = match[0]['date'].split('-')
             execution_date = dt.datetime(year=int(date_array[0]), month=int(date_array[1]), day=int(date_array[2]),
                           hour=int(time_array[0]), minute=int(time_array[1]), second=int(time_array[2]))
-            schedule.once(execution_date, self.dispatch_alarm, args=(event, execution_date))
+            schedule.once(execution_date, self.dispatch_alarm, args=(match[1], execution_date))
 
         print(schedule)
         return schedule

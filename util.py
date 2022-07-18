@@ -4,7 +4,7 @@ import datetime
 import csv
 import RPi.GPIO as GPIO
 import time
-from os import listdir
+from random import shuffle
 
 logger = logging.getLogger('main')
 simulation_file_path = '/home/pi/masterthesis/resources/simulations/'
@@ -30,6 +30,11 @@ def setup_logger():
     rootLogger.addHandler(consoleHandler)
 
     return rootLogger
+
+def match_times_with_events(times, events):
+    shuffle(times)
+    merged_list = zip(times, events)
+    return tuple(merged_list)
 
 def init_feedback_file(simulation_file_name):
     logger = logging.getLogger('main')
@@ -77,3 +82,4 @@ def connect_to_gsm_hat():
         GPIO.output(7, GPIO.HIGH)
         break
     GPIO.cleanup()
+    
