@@ -45,7 +45,9 @@ def init_feedback_file(simulation_file_name):
     user_id = simulation['user_data']['id']
     headers = ['user_id', 'event_id', 'answer', 'time_triggerd', 'time_acknowledge', 'missed', 'ack_medium']
     
-    file = open('/home/pi/masterthesis/resources/feedbacks/feedback_{}.csv'.format(today_date = datetime.datetime.today().strftime('%Y%m%d')), 'w')
+    file_name = 'feedback_' + datetime.datetime.today().strftime('%Y%m%d') + '.csv'
+    file_path = '/home/pi/masterthesis/resources/feedbacks/' + file_name
+    file = open(file_path, 'w')
     writer = csv.writer(file)
     writer.writerow(headers)
     file.close()
