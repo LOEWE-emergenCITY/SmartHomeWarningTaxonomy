@@ -21,7 +21,7 @@ def setup_logger():
     rootLogger.setLevel(logging.INFO)
 
     #fileHandler = logging.FileHandler("{0}/{1}.log".format('resources', 'log'))
-    fileHandler = logging.FileHandler("{0}/{1}.log".format('/home/pi/masterthesis/resources', 'log'))
+    fileHandler = logging.FileHandler("{0}/{1}.log".format('/home/pi/masterthesis/resources/logs', 'log_{}'.format(today_date = datetime.datetime.today().strftime('%Y%m%d'))))
     fileHandler.setFormatter(logFormatter)
     rootLogger.addHandler(fileHandler)
 
@@ -44,7 +44,7 @@ def init_feedback_file(simulation_file_name):
     user_id = simulation['user_data']['id']
     headers = ['user_id', 'event_id', 'answer', 'time_triggerd', 'time_acknowledge', 'missed', 'ack_medium']
     
-    file = open('/home/pi/masterthesis/resources/feedback_{}.csv'.format(user_id), 'w')
+    file = open('/home/pi/masterthesis/resources/feedbacks/feedback_{}.csv'.format(today_date = datetime.datetime.today().strftime('%Y%m%d')), 'w')
     writer = csv.writer(file)
     writer.writerow(headers)
     file.close()
