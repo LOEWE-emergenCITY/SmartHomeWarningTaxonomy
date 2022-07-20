@@ -1,7 +1,10 @@
 {
     "questions": [
-        {"id": 1, "question": "Wie nützlich fanden Sie die Warnkanäle?", "scale_start": "Völlig unangemessen", "scale_end": "Genau passend"},
-        {"id": 2, "question": "Hat der Alarm sie während einer Tätigkeit gestört?", "scale_start": "Gar nicht", "scale_end": "Sehr"},
-        {"id": 3, "question": "Haben sie die Alarmnachricht verstanden?", "scale_start": "Gar nicht", "scale_end": "Voll und ganz"}
+        {"id": 1, "question": "Fühlten Sie sich durch die Warnung gestört?", "scale_start": "Hat mich gar nicht gestört", "scale_end": "Hat mich sehr stark gestört"},
+        {"id": 2, "question": "Würden Sie sich für das gleiche Event in Zukunft \n weitere Warnkanäle wünschen (z.B. zusätzlich per SMS oder Alarmsound)?" , "scale_start": "Viel weniger", "scale_end": "Viel mehr"},
+        {"id": 3, "question": "Würden Sie sich für das gleiche Event in Zukunft eine intensivere Warnung (z.B. zusätzlicher Kanal, lauter/heller) wünschen?", "scale_start": "Viel weniger intensiv", "scale_end": "Viel mehr intensiv"},
+        {"id": 4, "question": "War die Darbietung der optischen Warnung (Farbe, Blinken vs. nicht blinken) angemessen?", "scale_start": "Gar nicht angemessen", "scale_end": "Sehr angemessen"},
+        {"id": 5, "question": "War die Darbietung von Sound/kein Sound angemessen?", "scale_start": "Gar nicht angemessen", "scale_end": "Sehr angemessen"},
+        {"id": 6, "question": "War die Darbietung der mobilen Warnung /keine mobile Warnung angemessen?", "scale_start": "Gar nicht angemessen", "scale_end": "Sehr angemessen"}
     ]
 }

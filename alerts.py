@@ -38,6 +38,8 @@ def trigger_optical_alert(id, flash, color, blinking):
     rgb_color = [255, 0, 0]
     if color == "blue":
         rgb_color = [52, 70, 235]
+    if color == "white":
+        rgb_color = [255,255,255]
 
     logger.info("Trigger optical alert")
     try:

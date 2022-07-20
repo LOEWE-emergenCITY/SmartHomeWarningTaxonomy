@@ -92,12 +92,20 @@ class Alert_Dialog:
                 optical_threat = threading.Thread(target=trigger_optical_alert, args=(id, lambda: self.stop_alert, "blue", False))
                 optical_threat.start()
                 self.alert_threads.append(optical_threat)
+            if alert == 'optic_white':
+                optical_threat = threading.Thread(target=trigger_optical_alert, args=(id, lambda: self.stop_alert, "white", False))
+                optical_threat.start()
+                self.alert_threads.append(optical_threat)
             if alert == 'optic_bl_red':
                 optical_threat = threading.Thread(target=trigger_optical_alert, args=(id, lambda: self.stop_alert, "red", True))
                 optical_threat.start()
                 self.alert_threads.append(optical_threat)
             if alert == 'optic_bl_blue':
                 optical_threat = threading.Thread(target=trigger_optical_alert, args=(id, lambda: self.stop_alert, "blue", True))
+                optical_threat.start()
+                self.alert_threads.append(optical_threat)
+            if alert == 'optic_bl_white':
+                optical_threat = threading.Thread(target=trigger_optical_alert, args=(id, lambda: self.stop_alert, "white", True))
                 optical_threat.start()
                 self.alert_threads.append(optical_threat)
             if alert == 'email':
