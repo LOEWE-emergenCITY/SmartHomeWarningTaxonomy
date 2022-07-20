@@ -22,9 +22,9 @@ def trigger_acoustic_alert(id, stop, is_alarm):
     try:
         logger.info("Trigger acoustic alert")
         if is_alarm:
-            song = AudioSegment.from_wav("sound_alarm.wav")
+            song = AudioSegment.from_wav("/home/pi/masterthesis/sound_alarm.wav")
         else:
-            song = AudioSegment.from_wav("sound_normal.wav")
+            song = AudioSegment.from_wav("/home/pi/masterthesis/sound_normal.wav")
         while True:
             play(song)
             if stop():
