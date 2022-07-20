@@ -21,7 +21,8 @@ def setup_logger():
     rootLogger.setLevel(logging.INFO)
 
     #fileHandler = logging.FileHandler("{0}/{1}.log".format('resources', 'log'))
-    fileHandler = logging.FileHandler("{0}/{1}.log".format('/home/pi/masterthesis/resources/logs', 'log_{}'.format(today_date = datetime.datetime.today().strftime('%Y%m%d'))))
+    log_file_name = 'log_' + datetime.datetime.today().strftime('%Y%m%d')
+    fileHandler = logging.FileHandler("{0}/{1}.log".format('/home/pi/masterthesis/resources/logs', log_file_name))
     fileHandler.setFormatter(logFormatter)
     rootLogger.addHandler(fileHandler)
 
