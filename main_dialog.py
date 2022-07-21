@@ -149,7 +149,7 @@ class Main_Dialog:
         self.dispatch_alarm(event, dt.datetime.now())
 
         # Change GUI
-        #self.trigger_button.pack_forget()
+        self.trigger_button.pack_forget()
         self.start_button.pack(pady=10)
 
     def change_study_status(self):
