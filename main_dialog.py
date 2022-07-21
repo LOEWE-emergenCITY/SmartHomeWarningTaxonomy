@@ -145,7 +145,7 @@ class Main_Dialog:
 
     def test_warning(self):
         # Trigger test event
-        event = {"id": 0, "alerts": ['optic_bl_white', 'acoustic', 'sms'], "message": "Das ist ein Test Event. \n Im folgenden können Sie sich mit den \n Feedback Fragen vertraut machen."}
+        event = {"id": 0, "alerts": ['optic_red', 'acoustic', 'sms'], "message": "Das ist ein Test Event. \n Im folgenden können Sie sich mit den \n Feedback Fragen vertraut machen."}
         self.dispatch_alarm(event, dt.datetime.now())
 
         # Change GUI
