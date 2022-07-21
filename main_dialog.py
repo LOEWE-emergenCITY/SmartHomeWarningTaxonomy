@@ -44,7 +44,7 @@ class Main_Dialog:
 
         # For demonstration
         event = {"id": 1, "categorie": "highest", "time": "14:03:10", "alerts": ['optic_bl_white', 'acoustic', 'sms'], "message": "Die Sicherung der Kaffeemaschine \n ist durchgebrannt!"}
-        self.trigger_button = Button(self.center_frame, command=lambda: self.test_warning(), text="Test alarm", height=2, background="#000000", foreground="white", font=("Calibri", 25))
+        self.trigger_button = Button(self.center_frame, command=lambda: self.test_warning(), text="Warnung testen", height=2, background="#000000", foreground="white", font=("Calibri", 25))
 
         self.alert_dialog = Alert_Dialog(self.simulation_file_name)
         self.feedback_dialog = Feedback_Dialog(self.simulation_file_name)
@@ -145,11 +145,11 @@ class Main_Dialog:
 
     def test_warning(self):
         # Trigger test event
-        event = {"id": 0, "alerts": ['optic_bl_white', 'acoustic', 'sms'], "message": "Das ist ein Test Event. \n Im folgenden können Sie sich mit den Feedback fragen vertraut machen."}
+        event = {"id": 0, "alerts": ['optic_bl_white', 'acoustic', 'sms'], "message": "Das ist ein Test Event. \n Im folgenden können Sie sich mit den Feedback \n Fragen vertraut machen."}
         self.dispatch_alarm(event, dt.datetime.now())
 
         # Change GUI
-        self.trigger_button.pack_forget
+        self.trigger_button.pack_forget()
         self.start_button.pack(pady=10)
 
     def change_study_status(self):
@@ -181,7 +181,7 @@ class Main_Dialog:
         self.img_label.pack(pady=10)
 
         #self.start_button.pack(side=LEFT, pady=10, padx=10)
-        self.trigger_button.pack(side=LEFT, padx=20)
+        self.trigger_button.pack(side=LEFT, padx=10)
 
 
 
