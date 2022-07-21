@@ -134,7 +134,7 @@ class Main_Dialog:
         self.label1.pack(pady=20, side=LEFT)
         self.label2.pack(pady=20, side=LEFT)
         self.start_button.pack_forget()
-        self.checkout_button.pack(side=LEFT, padx=20)
+        self.checkout_button.pack(side=LEFT, padx=10)
 
         # Setup files
         init_feedback_file(self.simulation_file_name)
@@ -145,11 +145,11 @@ class Main_Dialog:
 
     def test_warning(self):
         # Trigger test event
-        event = {"id": 0, "alerts": ['optic_bl_white', 'acoustic', 'sms'], "message": "Das ist ein Test Event. \n Im folgenden können Sie sich mit den Feedback \n Fragen vertraut machen."}
+        event = {"id": 0, "alerts": ['optic_bl_white', 'acoustic', 'sms'], "message": "Das ist ein Test Event. \n Im folgenden können Sie sich mit den \n Feedback Fragen vertraut machen."}
         self.dispatch_alarm(event, dt.datetime.now())
 
         # Change GUI
-        self.trigger_button.pack_forget()
+        #self.trigger_button.pack_forget()
         self.start_button.pack(pady=10)
 
     def change_study_status(self):
