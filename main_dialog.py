@@ -134,7 +134,7 @@ class Main_Dialog:
         self.label1.pack(pady=20, side=LEFT)
         self.label2.pack(pady=20, side=LEFT)
         self.start_button.pack_forget()
-        self.checkout_button.pack(side=LEFT, padx=10)
+        self.checkout_button.pack()
 
         # Setup files
         init_feedback_file(self.simulation_file_name)
@@ -150,7 +150,7 @@ class Main_Dialog:
 
         # Change GUI
         self.trigger_button.pack_forget()
-        self.start_button.pack(pady=10)
+        self.start_button.pack()
 
     def change_study_status(self):
         if (not self.block_execution):
