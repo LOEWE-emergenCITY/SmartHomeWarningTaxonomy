@@ -33,6 +33,7 @@ class Main_Dialog:
         self.checkout_button = Button(self.center_frame, command=lambda: self.change_study_status(), text="Check-Out", height=2, background="#000000", foreground="white", font=("Calibri", 25))
         self.img = PhotoImage(file='/home/pi/masterthesis/executors/gui/peasec_logo.png')
         #self.img = PhotoImage(file='executors\gui\peasec_logo.png')
+        self.start_button = Button(self.center_frame, command=lambda: self.run_simulation_threat(), text="Studie starten", height=2, background="#000000", foreground="white", font=("Calibri", 25))
         self.img_label = Label(self.center_frame, image=self.img)
         self.error_label = Label(self.center_frame)
         self.finish_label = Label(self.center_frame, text="Die Studie ist abgeschlossen. Vielen Dank für Ihre Teilnahme! \n Die Box kann nun von der Stromversorgung getrennt werden.", font=("Calibri", 17))
@@ -43,7 +44,7 @@ class Main_Dialog:
 
         # For demonstration
         event = {"id": 1, "categorie": "highest", "time": "14:03:10", "alerts": ['optic_bl_white', 'acoustic', 'sms'], "message": "Die Sicherung der Kaffeemaschine \n ist durchgebrannt!"}
-        self.trigger_button = Button(self.center_frame, command=lambda: self.dispatch_alarm(event, dt.datetime.now()), text="Trigger alarm", height=2, background="#000000", foreground="white", font=("Calibri", 25))
+        self.trigger_button = Button(self.center_frame, command=lambda: self.test_warning(), text="Test alarm", height=2, background="#000000", foreground="white", font=("Calibri", 25))
 
         self.alert_dialog = Alert_Dialog(self.simulation_file_name)
         self.feedback_dialog = Feedback_Dialog(self.simulation_file_name)
@@ -125,17 +126,15 @@ class Main_Dialog:
 
         self.logger.info("Main: End program at {}".format(dt.datetime.now()))
 
-    def run_simulation_threat(self, start_button):
+    def run_simulation_threat(self):
         self.logger.info("Main: Simulation started at {}".format(dt.datetime.now()))
 
         # Change GUI
         self.text_frame.pack()
         self.label1.pack(pady=20, side=LEFT)
         self.label2.pack(pady=20, side=LEFT)
-        start_button.pack_forget()
+        self.start_button.pack_forget()
         self.checkout_button.pack(side=LEFT, padx=20)
-
-        self.trigger_button.pack(side=LEFT, padx=20)
 
         # Setup files
         init_feedback_file(self.simulation_file_name)
@@ -143,6 +142,15 @@ class Main_Dialog:
         # Init and start thread
         simulation_thread = threading.Thread(target=self.run_simulation)
         simulation_thread.start()
+
+    def test_warning(self):
+        # Trigger test event
+        event = {"id": 0, "alerts": ['optic_bl_white', 'acoustic', 'sms'], "message": "Das ist ein Test Event. \n Im folgenden können Sie sich mit den Feedback fragen vertraut machen."}
+        self.dispatch_alarm(event, dt.datetime.now())
+
+        # Change GUI
+        self.trigger_button.pack_forget
+        self.start_button.pack(pady=10)
 
     def change_study_status(self):
         if (not self.block_execution):
@@ -172,8 +180,8 @@ class Main_Dialog:
 
         self.img_label.pack(pady=10)
 
-        start_button = Button(self.center_frame, command=lambda: self.run_simulation_threat(start_button), text="Studie starten", height=2, background="#000000", foreground="white", font=("Calibri", 25))
-        start_button.pack(pady=10)
+        #self.start_button.pack(side=LEFT, pady=10, padx=10)
+        self.trigger_button.pack(side=LEFT, padx=20)
 
 
 
