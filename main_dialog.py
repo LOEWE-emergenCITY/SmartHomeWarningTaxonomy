@@ -150,7 +150,7 @@ class Main_Dialog:
 
         # Change GUI
         self.trigger_button.pack_forget()
-        self.start_button.pack()
+        self.start_button.pack(pady=10)
 
     def change_study_status(self):
         if (not self.block_execution):
