@@ -128,6 +128,10 @@ class Main_Dialog:
     def run_simulation_threat(self, start_button):
         self.logger.info("Main: Simulation started at {}".format(dt.datetime.now()))
 
+        # Activate SMS
+        trigger_event = {"id": 0, "alerts": ['sms'], "message": "[Smart Home Studie] Die Studie wurde gerade gestartet und läuft nun."}
+        self.dispatch_alarm(trigger_event, dt.datetime.now())
+
         # Change GUI
         self.text_frame.pack()
         self.label1.pack(pady=20, side=LEFT)

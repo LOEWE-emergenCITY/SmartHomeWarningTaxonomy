@@ -69,6 +69,8 @@ def trigger_sms_alert(id, ack_function, message, number):
 
         #gsm = GSMHat('/dev/ttyS0', 115200)
 
+        message = '[Smart Home Studie] ' + message
+
         messageString = 'AT+CMGS="' + number  + '"\n' + message + '\x1A'
 
         ser = serial.Serial('/dev/ttyS0', 115200)
