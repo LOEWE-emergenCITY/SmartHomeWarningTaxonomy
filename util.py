@@ -51,8 +51,8 @@ def init_feedback_file(simulation_file_name):
             if not exists(file_name):
                 break
     
-    logger.info("Init feedback file")
-    
+    logger.info("Init feedback file: " + file_name)
+
     file = open('/home/pi/masterthesis/resources/feedback_{}.csv'.format(user_id), 'w')
     writer = csv.writer(file)
     writer.writerow(headers)
