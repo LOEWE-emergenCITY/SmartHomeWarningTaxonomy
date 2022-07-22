@@ -23,9 +23,10 @@ from util import load_simulation
 MAX_ALERT_RUNNING_TIME = 300
 
 class Alert_Dialog:
-    def __init__(self, simulation_file_name):
+    def __init__(self, simulation_file_name, feedback_file_name):
         self.logger = logging.getLogger('main')
         self.simulation_file_name = simulation_file_name
+        self.feedback_file_name = feedback_file_name
         self.window = tk.Toplevel()
         self.event = {"id": 0, "categorie": "", "time": "", "alerts": [], "message": ""}
         self.alert_runs = False
@@ -45,7 +46,7 @@ class Alert_Dialog:
             if (end_time < dt.datetime.now()):
                 self.logger.info("Alert: Alarm forced to terminate. Start time: {}, Now: {}".format(start_time, dt.datetime.now()))
                 self.event['time_acknowledge'] = None
-                save_feedback(self.simulation_file_name, self.event, [], True, '')
+                save_feedback(self.simulation_file_name, self.feedback_file_name, self.event, [], True, '')
                 self.terminate_alert()
                 break
 

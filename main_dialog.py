@@ -42,12 +42,15 @@ class Main_Dialog:
         self.simulation_file_name = self.get_file_name()
         self.simulation = load_simulation(self.simulation_file_name)
 
+        # Setup files
+        self.feedback_file_name = init_feedback_file(self.simulation_file_name)
+
         # For demonstration
         event = {"id": 1, "categorie": "highest", "time": "14:03:10", "alerts": ['optic_bl_white', 'acoustic', 'sms'], "message": "Die Sicherung der Kaffeemaschine \n ist durchgebrannt!"}
         self.trigger_button = Button(self.center_frame, command=lambda: self.test_warning(), text="Warnung testen", height=2, background="#000000", foreground="white", font=("Calibri", 25))
 
-        self.alert_dialog = Alert_Dialog(self.simulation_file_name)
-        self.feedback_dialog = Feedback_Dialog(self.simulation_file_name)
+        self.alert_dialog = Alert_Dialog(self.simulation_file_name, self.feedback_file_name)
+        self.feedback_dialog = Feedback_Dialog(self.simulation_file_name, self.feedback_file_name)
         self.create_dialog()
 
         # Connect to GSM hat
@@ -135,9 +138,6 @@ class Main_Dialog:
         self.label2.pack(pady=20, side=LEFT)
         self.start_button.pack_forget()
         self.checkout_button.pack()
-
-        # Setup files
-        init_feedback_file(self.simulation_file_name)
 
         # Init and start thread
         simulation_thread = threading.Thread(target=self.run_simulation)

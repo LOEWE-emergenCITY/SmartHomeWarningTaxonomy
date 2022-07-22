@@ -10,10 +10,11 @@ QUESTIONS_FILE_NAME = "/home/pi/masterthesis/questions.json"
 #QUESTIONS_FILE_NAME = "questions.json"
 
 class Feedback_Dialog():
-    def __init__(self, simulation_file_name):
+    def __init__(self, simulation_file_name, feedback_file_name):
         self.logger = logging.getLogger('main')
         self.runs = False
         self.simulation_file_name = simulation_file_name
+        self.feedback_file_name = feedback_file_name
         self.questions = self.load_questions()
         self.event = {"id": 0, "categorie": "", "time": "", "alerts": [], "message": ""}
         self.step = 1
@@ -55,7 +56,7 @@ class Feedback_Dialog():
         else:
             # Collect and store feedback
             self.feedback.append(answer)
-            save_feedback(self.simulation_file_name, self.event, self.feedback, False, self.media)
+            save_feedback(self.simulation_file_name, self.feedback_file_name, self.event, self.feedback, False, self.media)
             self.feedback = []
 
             # Adapt GUI
