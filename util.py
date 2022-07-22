@@ -39,7 +39,6 @@ def match_times_with_events(times, events):
 
 def init_feedback_file(simulation_file_name):
     logger = logging.getLogger('main')
-    logger.info("Init feedback file")
     #print("Feedback    : Init feedback file")
     simulation = load_simulation(simulation_file_name)
     user_id = simulation['user_data']['id']
@@ -51,6 +50,8 @@ def init_feedback_file(simulation_file_name):
             file_name = '/home/pi/masterthesis/resources/feedback_{}_{}.csv'.format(user_id, i+1)
             if not exists(file_name):
                 break
+    
+    logger.info("Init feedback file")
     
     file = open('/home/pi/masterthesis/resources/feedback_{}.csv'.format(user_id), 'w')
     writer = csv.writer(file)
