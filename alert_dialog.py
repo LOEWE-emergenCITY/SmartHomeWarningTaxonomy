@@ -33,7 +33,7 @@ class Alert_Dialog:
         self.collects_feedback = False
         self.stop_alert = False
         self.alert_threads = []
-        self.feedback_dialog = Feedback_Dialog(simulation_file_name)
+        self.feedback_dialog = Feedback_Dialog(simulation_file_name, feedback_file_name)
         self.create_dialog()
         self.window.withdraw()
 
