@@ -1,21 +1,21 @@
 {
-    "name": "Simulation Alicia Herrera",
+    "name": "Simulation David Pietras",
     "config": {
-        "start_date": "2022-07-28",
+        "start_date": "2022-07-26",
         "gmail": {
             "email": "mw.rpi.alerts@gmail.com",
             "password": "apJWRpg2WXqwxwe"
         }
     },
     "user_data": {
-        "id": 11,
+        "id": 31,
         "email": "marcwendelborn@web.de",
-        "phone": "+4915758065450",
+        "phone": "+4917684517144",
         "rest_time_start": "22:00:00",
         "rest_time_end": "08:00:00"
     },
     "dates": [
-        {"date_id": 1, "date": "2022-07-26", "time": "08:42:10"},
+        {"date_id": 1, "date": "2022-07-26", "time": "19:42:10"},
         {"date_id": 2, "date": "2022-07-26", "time": "10:03:10"},
         {"date_id": 3, "date": "2022-07-26", "time": "10:37:10"},
         {"date_id": 4, "date": "2022-07-26", "time": "11:26:10"},
