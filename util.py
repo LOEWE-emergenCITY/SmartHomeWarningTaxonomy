@@ -4,6 +4,7 @@ import datetime
 import csv
 import RPi.GPIO as GPIO
 import time
+from os.path import exists
 from random import shuffle
 
 logger = logging.getLogger('main')
@@ -38,18 +39,29 @@ def match_times_with_events(times, events):
 
 def init_feedback_file(simulation_file_name):
     logger = logging.getLogger('main')
-    logger.info("Init feedback file")
     #print("Feedback    : Init feedback file")
     simulation = load_simulation(simulation_file_name)
     user_id = simulation['user_data']['id']
     headers = ['user_id', 'event_id', 'answer', 'time_triggerd', 'time_acknowledge', 'missed', 'ack_medium']
+
+    file_name = '/home/pi/masterthesis/resources/feedback_{}.csv'.format(user_id)
+    if exists(file_name):
+        for i in range(100):
+            file_name = '/home/pi/masterthesis/resources/feedback_{}_{}.csv'.format(user_id, i+1)
+            if not exists(file_name):
+                break
     
+    logger.info("Init feedback file: " + file_name)
+
     file = open('/home/pi/masterthesis/resources/feedback_{}.csv'.format(user_id), 'w')
     writer = csv.writer(file)
     writer.writerow(headers)
     file.close()
 
-def save_feedback(simulation_file_name, event, answer, missed, media):
+    return file_name
+    
+
+def save_feedback(simulation_file_name, feedback_file_name, event, answer, missed, media):
     logger = logging.getLogger('main')
     logger.info("Store feedback for event {}".format(event['id']))
     simulation = load_simulation(simulation_file_name)
@@ -58,7 +70,7 @@ def save_feedback(simulation_file_name, event, answer, missed, media):
     feedback = [user_id, event['id'], answer, event['time_triggered'], event['time_acknowledge'], missed, media]
 
     #print("Feedback    : Store feedback for question {}".format(question_id))
-    file = open('/home/pi/masterthesis/resources/feedback_{}.csv'.format(user_id), 'a+', newline='')
+    file = open(feedback_file_name, 'a+', newline='')
     writer = csv.writer(file)
     writer.writerow(feedback)
     file.close()
