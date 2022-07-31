@@ -69,8 +69,10 @@ class Main_Dialog:
         logger.info("Load simulation file: {}".format(simulation_file_path + 'TestSimulation.json'))
         return simulation_file_path + 'TestSimulation.json'
 
-    def dispatch_alarm(self, match, schedule):
+    def dispatch_alarm(self, match, schedule, is_test):
         event = match[1]
+        if is_test:
+            self.alert_dialog.dispatch_event(event, self.feedback_dialog)
         # Check if other alarm is running
         if (self.alert_dialog.alert_runs):
             logger.info("Main: Event with ID {} was missed because another alarm was still running".format(event["id"]))
@@ -115,7 +117,7 @@ class Main_Dialog:
             #execution_date = dt.datetime(year=int(date_array[0]), month=int(date_array[1]), day=int(date_array[2]),
             #              hour=int(time_array[0]), minute=int(time_array[1]), second=int(time_array[2]))
             timedelta = dt.timedelta(hours=int(time_array[0]), minutes=int(time_array[1]), seconds=int(time_array[2]))
-            schedule.once(timedelta, self.dispatch_alarm, args=(match, schedule))
+            schedule.once(timedelta, self.dispatch_alarm, args=(match, schedule, False))
 
         print(schedule)
         return schedule
@@ -157,7 +159,8 @@ class Main_Dialog:
     def test_warning(self):
         # Trigger test event
         event = {"id": 0, "alerts": ['optic_red', 'acoustic', 'sms'], "message": "Das ist ein Test Event. \n Im folgenden können Sie sich mit den \n Feedback Fragen vertraut machen."}
-        self.dispatch_alarm(event, dt.datetime.now())
+        match = [{}, event]
+        self.dispatch_alarm(match, {}, True)
 
         # Change GUI
         self.trigger_button.pack_forget()
