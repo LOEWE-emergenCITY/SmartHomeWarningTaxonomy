@@ -87,9 +87,10 @@ class Main_Dialog:
         #    return
         # Check if study is paused
         if (self.block_execution):
-            minutes = random.randint(20, 600)
+            minutes = random.randint(20, 120)
             new_timedelta = dt.timedelta(minutes=minutes)
             schedule.once(new_timedelta, self.dispatch_alarm, args=(match, schedule))
+            print(schedule)
             logger.info("Main: Event with ID {} was missed because the study was paused".format(event["id"]))
             logger.info("Main: Event with ID {} was rescheduled for {} minutes".format(event["id"], minutes))
             return
@@ -98,6 +99,7 @@ class Main_Dialog:
             minutes = random.randint(20, 600)
             new_timedelta = dt.timedelta(minutes=minutes)
             schedule.once(new_timedelta, self.dispatch_alarm, args=(match, schedule))
+            print(schedule)
             logger.info("Main: Event with ID {} was missed because the alarm was during the rest time".format(event["id"]))
             logger.info("Main: Event with ID {} was rescheduled for {} minutes".format(event["id"], minutes))
         else:
