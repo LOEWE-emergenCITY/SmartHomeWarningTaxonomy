@@ -9,6 +9,7 @@ from alert_dialog import Alert_Dialog
 from feedback_dialog import Feedback_Dialog
 from util import *
 from scheduler import Scheduler
+import random
 
 # To make it run on pi via ssh: export DISPLAY=":0"
 
@@ -68,7 +69,8 @@ class Main_Dialog:
         logger.info("Load simulation file: {}".format(simulation_file_path + 'TestSimulation.json'))
         return simulation_file_path + 'TestSimulation.json'
 
-    def dispatch_alarm(self, event, execution_date):
+    def dispatch_alarm(self, match, schedule):
+        event = match[1]
         # Check if other alarm is running
         if (self.alert_dialog.alert_runs):
             logger.info("Main: Event with ID {} was missed because another alarm was still running".format(event["id"]))
@@ -78,16 +80,24 @@ class Main_Dialog:
             logger.info("Main: Event with ID {} was missed because feedback collection from previous alarm was still running".format(event["id"]))
             return
         # Check if execution time is in the past
-        if ((execution_date + dt.timedelta(seconds=2)) < dt.datetime.now()):
-            logger.info("Main: Event with ID {} was missed because the execution time is in the past".format(event["id"]))
-            return
+        #if ((execution_date + dt.timedelta(seconds=2)) < dt.datetime.now()):
+        #    logger.info("Main: Event with ID {} was missed because the execution time is in the past".format(event["id"]))
+        #    return
         # Check if study is paused
         if (self.block_execution):
+            minutes = random.randint(20, 600)
+            new_timedelta = dt.timedelta(minutes=minutes)
+            schedule.once(new_timedelta, self.dispatch_alarm, args=(match, schedule))
             logger.info("Main: Event with ID {} was missed because the study was paused".format(event["id"]))
+            logger.info("Main: Event with ID {} was rescheduled for {} minutes".format(event["id"], minutes))
             return
         # Check if alarm is during rest time
         if (is_time_between(self.simulation['user_data']['rest_time_start'], self.simulation['user_data']['rest_time_end'])):
+            minutes = random.randint(20, 600)
+            new_timedelta = dt.timedelta(minutes=minutes)
+            schedule.once(new_timedelta, self.dispatch_alarm, args=(match, schedule))
             logger.info("Main: Event with ID {} was missed because the alarm was during the rest time".format(event["id"]))
+            logger.info("Main: Event with ID {} was rescheduled for {} minutes".format(event["id"], minutes))
         else:
             self.alert_dialog.dispatch_event(event, self.feedback_dialog)
 
@@ -100,11 +110,12 @@ class Main_Dialog:
         matches = match_times_with_events(dates, events)
 
         for match in matches:
-            time_array = match[0]['time'].split(':')
-            date_array = match[0]['date'].split('-')
-            execution_date = dt.datetime(year=int(date_array[0]), month=int(date_array[1]), day=int(date_array[2]),
-                          hour=int(time_array[0]), minute=int(time_array[1]), second=int(time_array[2]))
-            schedule.once(execution_date, self.dispatch_alarm, args=(match[1], execution_date))
+            time_array = match[0]['timedelta'].split(':')
+            #date_array = match[0]['date'].split('-')
+            #execution_date = dt.datetime(year=int(date_array[0]), month=int(date_array[1]), day=int(date_array[2]),
+            #              hour=int(time_array[0]), minute=int(time_array[1]), second=int(time_array[2]))
+            timedelta = dt.timedelta(hours=int(time_array[0]), minutes=int(time_array[1]), seconds=int(time_array[2]))
+            schedule.once(timedelta, self.dispatch_alarm, args=(match, schedule))
 
         print(schedule)
         return schedule
