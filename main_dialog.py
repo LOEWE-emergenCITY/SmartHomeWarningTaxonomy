@@ -95,13 +95,13 @@ class Main_Dialog:
             logger.info("Main: Event with ID {} was rescheduled for {} minutes".format(event["id"], minutes))
             return
         # Check if alarm is during rest time
-        if (is_time_between(self.simulation['user_data']['rest_time_start'], self.simulation['user_data']['rest_time_end'])):
-            minutes = random.randint(20, 600)
-            new_timedelta = dt.timedelta(minutes=minutes)
-            schedule.once(new_timedelta, self.dispatch_alarm, args=(match, schedule))
-            print(schedule)
-            logger.info("Main: Event with ID {} was missed because the alarm was during the rest time".format(event["id"]))
-            logger.info("Main: Event with ID {} was rescheduled for {} minutes".format(event["id"], minutes))
+        #if (is_time_between(self.simulation['user_data']['rest_time_start'], self.simulation['user_data']['rest_time_end'])):
+        #    minutes = random.randint(20, 600)
+        #    new_timedelta = dt.timedelta(minutes=minutes)
+        #    schedule.once(new_timedelta, self.dispatch_alarm, args=(match, schedule))
+        #    print(schedule)
+        #    logger.info("Main: Event with ID {} was missed because the alarm was during the rest time".format(event["id"]))
+        #    logger.info("Main: Event with ID {} was rescheduled for {} minutes".format(event["id"], minutes))
         else:
             self.alert_dialog.dispatch_event(event, self.feedback_dialog)
 
