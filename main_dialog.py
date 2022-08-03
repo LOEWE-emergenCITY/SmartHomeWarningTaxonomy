@@ -42,6 +42,7 @@ class Main_Dialog:
          # Load Simulation
         self.simulation_file_name = self.get_file_name()
         self.simulation = load_simulation(self.simulation_file_name)
+        self.missed_events = []
 
         # Setup files
         self.feedback_file_name = init_feedback_file(self.simulation_file_name)
@@ -87,12 +88,12 @@ class Main_Dialog:
         #    return
         # Check if study is paused
         if (self.block_execution):
-            minutes = random.randint(20, 120)
-            new_timedelta = dt.timedelta(minutes=minutes)
-            schedule.once(new_timedelta, self.dispatch_alarm, args=(match, schedule))
-            print(schedule)
+            self.missed_events.append(match)
+            #minutes = random.randint(20, 120)
+            #new_timedelta = dt.timedelta(minutes=minutes)
+            #schedule.once(new_timedelta, self.dispatch_alarm, args=(match, schedule))
+            #print(schedule)
             logger.info("Main: Event with ID {} was missed because the study was paused".format(event["id"]))
-            logger.info("Main: Event with ID {} was rescheduled for {} minutes".format(event["id"], minutes))
             return
         # Check if alarm is during rest time
         #if (is_time_between(self.simulation['user_data']['rest_time_start'], self.simulation['user_data']['rest_time_end'])):
@@ -129,6 +130,13 @@ class Main_Dialog:
         schedule = Scheduler()
         schedule = self.setup_scheduler()
         while simulation_runs:
+            if len(self.missed_events) != 0:
+                for match in self.missed_events:
+                    minutes = random.randint(1, 3)
+                    new_timedelta = dt.timedelta(minutes=minutes)
+                    schedule.once(new_timedelta, self.dispatch_alarm, args=(match, schedule))
+                    logger.info("Main: Event with ID {} was rescheduled for {} minutes".format(match[1]['id'], minutes))
+                    self.missed_events.remove(match)
             schedule.exec_jobs()
             if (len(schedule.get_jobs()) == 0):
                 simulation_runs = False

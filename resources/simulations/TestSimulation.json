@@ -16,8 +16,8 @@
     },
     "dates": [
         {"date_id": 1, "timedelta": "00:01:20"},
-        {"date_id": 2, "timedelta": "00:32:10"},
-        {"date_id": 3, "timedelta": "02:37:10"},
+        {"date_id": 2, "timedelta": "00:03:10"},
+        {"date_id": 3, "timedelta": "00:05:10"},
         {"date_id": 4, "timedelta": "03:26:10"},
         {"date_id": 5, "timedelta": "04:20:10"},
         {"date_id": 6, "timedelta": "05:11:10"},
