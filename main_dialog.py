@@ -76,10 +76,12 @@ class Main_Dialog:
             self.alert_dialog.dispatch_event(event, self.feedback_dialog)
         # Check if other alarm is running
         if (self.alert_dialog.alert_runs):
+            self.missed_events.append(match)
             logger.info("Main: Event with ID {} was missed because another alarm was still running".format(event["id"]))
             return
         # Check if feedback dialog is still open
         if (self.feedback_dialog.runs):
+            self.missed_events.append(match)
             logger.info("Main: Event with ID {} was missed because feedback collection from previous alarm was still running".format(event["id"]))
             return
         # Check if execution time is in the past
@@ -89,20 +91,8 @@ class Main_Dialog:
         # Check if study is paused
         if (self.block_execution):
             self.missed_events.append(match)
-            #minutes = random.randint(20, 120)
-            #new_timedelta = dt.timedelta(minutes=minutes)
-            #schedule.once(new_timedelta, self.dispatch_alarm, args=(match, schedule))
-            #print(schedule)
             logger.info("Main: Event with ID {} was missed because the study was paused".format(event["id"]))
             return
-        # Check if alarm is during rest time
-        #if (is_time_between(self.simulation['user_data']['rest_time_start'], self.simulation['user_data']['rest_time_end'])):
-        #    minutes = random.randint(20, 600)
-        #    new_timedelta = dt.timedelta(minutes=minutes)
-        #    schedule.once(new_timedelta, self.dispatch_alarm, args=(match, schedule))
-        #    print(schedule)
-        #    logger.info("Main: Event with ID {} was missed because the alarm was during the rest time".format(event["id"]))
-        #    logger.info("Main: Event with ID {} was rescheduled for {} minutes".format(event["id"], minutes))
         else:
             self.alert_dialog.dispatch_event(event, self.feedback_dialog)
 
@@ -132,7 +122,7 @@ class Main_Dialog:
         while simulation_runs:
             if len(self.missed_events) != 0:
                 for match in self.missed_events:
-                    minutes = random.randint(1, 3)
+                    minutes = random.randint(20, 180)
                     new_timedelta = dt.timedelta(minutes=minutes)
                     schedule.once(new_timedelta, self.dispatch_alarm, args=(match, schedule, False))
                     logger.info("Main: Event with ID {} was rescheduled for {} minutes".format(match[1]['id'], minutes))

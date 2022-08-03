@@ -15,9 +15,9 @@
         "rest_time_end": "08:00:00"
     },
     "dates": [
-        {"date_id": 1, "timedelta": "00:00:20"},
-        {"date_id": 2, "timedelta": "00:01:10"},
-        {"date_id": 3, "timedelta": "00:02:10"},
+        {"date_id": 1, "timedelta": "00:03:20"},
+        {"date_id": 2, "timedelta": "00:56:10"},
+        {"date_id": 3, "timedelta": "02:02:10"},
         {"date_id": 4, "timedelta": "03:26:10"},
         {"date_id": 5, "timedelta": "04:20:10"},
         {"date_id": 6, "timedelta": "05:11:10"},
