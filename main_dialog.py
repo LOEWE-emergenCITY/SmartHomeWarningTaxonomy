@@ -134,7 +134,7 @@ class Main_Dialog:
                 for match in self.missed_events:
                     minutes = random.randint(1, 3)
                     new_timedelta = dt.timedelta(minutes=minutes)
-                    schedule.once(new_timedelta, self.dispatch_alarm, args=(match, schedule))
+                    schedule.once(new_timedelta, self.dispatch_alarm, args=(match, schedule, False))
                     logger.info("Main: Event with ID {} was rescheduled for {} minutes".format(match[1]['id'], minutes))
                     self.missed_events.remove(match)
             schedule.exec_jobs()
