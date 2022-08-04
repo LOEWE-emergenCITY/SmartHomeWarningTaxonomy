@@ -74,6 +74,7 @@ class Main_Dialog:
         event = match[1]
         if is_test:
             self.alert_dialog.dispatch_event(event, self.feedback_dialog)
+            return
         # Check if other alarm is running
         if (self.alert_dialog.alert_runs):
             self.missed_events.append(match)
