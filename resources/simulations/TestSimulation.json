@@ -1,5 +1,5 @@
 {
-    "name": "Prototype 3",
+    "name": "Prototype 1",
     "config": {
         "start_date": "2022-08-05",
         "gmail": {
@@ -8,9 +8,9 @@
         }
     },
     "user_data": {
-        "id": 1,
+        "id": 14,
         "email": "marcwendelborn@web.de",
-        "phone": "+4915170065783",
+        "phone": "+4915786181628",
         "rest_time_start": "22:00:00",
         "rest_time_end": "08:00:00"
     },
