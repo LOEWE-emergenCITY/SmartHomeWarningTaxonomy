@@ -1,0 +1,1296 @@
+2022-08-04 17:17:14,554 [MainThread  ] [INFO ]  Main: Start program at 2022-08-04 17:17:14.554511
+2022-08-04 17:17:14,668 [MainThread  ] [INFO ]  Load simulation file: /home/pi/masterthesis/resources/simulations/TestSimulation.json
+2022-08-04 17:17:14,673 [MainThread  ] [INFO ]  Init feedback file: /home/pi/masterthesis/resources/feedback_23.csv
+2022-08-04 17:17:30,083 [MainThread  ] [INFO ]  Alert: Dispatch event with ID 0
+2022-08-04 17:17:30,104 [Thread-1    ] [INFO ]  Trigger optical alert
+2022-08-04 17:17:30,105 [Thread-2    ] [INFO ]  Trigger acoustic alert
+2022-08-04 17:17:30,110 [Thread-3    ] [INFO ]  Trigger SMS alert
+2022-08-04 17:17:31,154 [Thread-5    ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-04 17:17:44,420 [Thread-1    ] [INFO ]  Stop optical alert
+2022-08-04 17:17:45,014 [Thread-2    ] [INFO ]  Stop acoustic alert
+2022-08-04 17:17:45,030 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 0
+2022-08-04 17:17:45,059 [MainThread  ] [INFO ]  Alert: End event with ID 0
+2022-08-04 17:18:28,754 [MainThread  ] [INFO ]  Store feedback for event 0
+2022-08-04 17:18:28,823 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 0
+2022-08-04 17:18:31,247 [MainThread  ] [INFO ]  Main: Simulation started at 2022-08-04 17:18:31.246969
+2022-08-04 17:21:51,551 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 1
+2022-08-04 17:21:51,642 [Thread-8    ] [INFO ]  Trigger optical alert
+2022-08-04 17:22:02,550 [Thread-8    ] [INFO ]  Stop optical alert
+2022-08-04 17:22:02,566 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 1
+2022-08-04 17:22:02,599 [MainThread  ] [INFO ]  Alert: End event with ID 1
+2022-08-04 17:22:34,964 [MainThread  ] [INFO ]  Store feedback for event 1
+2022-08-04 17:22:35,027 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 1
+2022-08-04 18:23:41,763 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 7
+2022-08-04 18:23:41,811 [Thread-10   ] [INFO ]  Trigger optical alert
+2022-08-04 18:23:41,876 [Thread-11   ] [INFO ]  Trigger SMS alert
+2022-08-04 18:23:41,877 [Thread-12   ] [INFO ]  Trigger acoustic alert
+2022-08-04 18:23:42,927 [Thread-14   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-04 18:23:55,500 [Thread-10   ] [INFO ]  Stop optical alert
+2022-08-04 18:23:56,258 [Thread-12   ] [INFO ]  Stop acoustic alert
+2022-08-04 18:23:56,263 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 7
+2022-08-04 18:23:56,329 [MainThread  ] [INFO ]  Alert: End event with ID 7
+2022-08-04 18:24:19,830 [MainThread  ] [INFO ]  Store feedback for event 7
+2022-08-04 18:24:20,004 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 7
+2022-08-04 19:20:41,565 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 25
+2022-08-04 19:20:41,720 [Thread-16   ] [INFO ]  Trigger acoustic alert
+2022-08-04 19:21:02,424 [Thread-16   ] [INFO ]  Stop acoustic alert
+2022-08-04 19:21:02,441 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 25
+2022-08-04 19:21:02,477 [MainThread  ] [INFO ]  Alert: End event with ID 25
+2022-08-04 19:21:02,559 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 25
+2022-08-04 19:21:02,565 [MainThread  ] [INFO ]  Alert: End event with ID 25
+2022-08-04 19:21:16,452 [MainThread  ] [INFO ]  Store feedback for event 25
+2022-08-04 19:21:16,618 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 25
+2022-08-04 20:44:41,758 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 21
+2022-08-04 20:44:41,943 [Thread-18   ] [INFO ]  Trigger optical alert
+2022-08-04 20:44:58,198 [Thread-18   ] [INFO ]  Stop optical alert
+2022-08-04 20:44:58,203 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 21
+2022-08-04 20:44:58,235 [MainThread  ] [INFO ]  Alert: End event with ID 21
+2022-08-04 20:44:58,305 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 21
+2022-08-04 20:44:58,326 [MainThread  ] [INFO ]  Alert: End event with ID 21
+2022-08-04 20:45:15,326 [MainThread  ] [INFO ]  Store feedback for event 21
+2022-08-04 20:45:15,455 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 21
+2022-08-04 21:38:42,068 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 11
+2022-08-04 21:38:42,201 [Thread-20   ] [INFO ]  Trigger optical alert
+2022-08-04 21:38:42,223 [Thread-21   ] [INFO ]  Trigger SMS alert
+2022-08-04 21:38:42,229 [Thread-22   ] [INFO ]  Trigger acoustic alert
+2022-08-04 21:38:43,281 [Thread-24   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-04 21:38:58,692 [Thread-20   ] [INFO ]  Stop optical alert
+2022-08-04 21:38:58,822 [Thread-22   ] [INFO ]  Stop acoustic alert
+2022-08-04 21:38:58,831 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 11
+2022-08-04 21:38:58,870 [MainThread  ] [INFO ]  Alert: End event with ID 11
+2022-08-04 21:38:59,051 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 11
+2022-08-04 21:38:59,088 [MainThread  ] [INFO ]  Alert: End event with ID 11
+2022-08-04 21:39:18,317 [MainThread  ] [INFO ]  Store feedback for event 11
+2022-08-04 21:39:18,416 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 11
+2022-08-04 22:29:41,340 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 10
+2022-08-04 22:29:41,535 [Thread-26   ] [INFO ]  Trigger optical alert
+2022-08-04 22:29:41,594 [Thread-27   ] [INFO ]  Trigger SMS alert
+2022-08-04 22:29:41,617 [Thread-28   ] [INFO ]  Trigger acoustic alert
+2022-08-04 22:29:42,783 [Thread-30   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-04 22:29:54,843 [Thread-28   ] [INFO ]  Stop acoustic alert
+2022-08-04 22:29:56,304 [Thread-26   ] [INFO ]  Stop optical alert
+2022-08-04 22:29:56,330 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 10
+2022-08-04 22:29:56,364 [MainThread  ] [INFO ]  Alert: End event with ID 10
+2022-08-04 22:30:14,409 [MainThread  ] [INFO ]  Store feedback for event 10
+2022-08-04 22:30:14,606 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 10
+2022-08-04 23:12:41,485 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 9
+2022-08-04 23:12:41,766 [Thread-32   ] [INFO ]  Trigger optical alert
+2022-08-04 23:12:41,907 [Thread-33   ] [INFO ]  Trigger SMS alert
+2022-08-04 23:12:41,968 [Thread-34   ] [INFO ]  Trigger acoustic alert
+2022-08-04 23:12:43,280 [Thread-36   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-04 23:12:56,968 [Thread-32   ] [INFO ]  Stop optical alert
+2022-08-04 23:12:57,528 [Thread-34   ] [INFO ]  Stop acoustic alert
+2022-08-04 23:12:57,529 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 9
+2022-08-04 23:12:57,583 [MainThread  ] [INFO ]  Alert: End event with ID 9
+2022-08-04 23:13:27,724 [MainThread  ] [INFO ]  Store feedback for event 9
+2022-08-04 23:13:28,023 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 9
+2022-08-05 00:41:41,881 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 6
+2022-08-05 00:41:42,187 [Thread-38   ] [INFO ]  Trigger optical alert
+2022-08-05 00:41:42,212 [Thread-39   ] [INFO ]  Trigger SMS alert
+2022-08-05 00:41:43,430 [Thread-41   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-05 00:41:57,031 [Thread-38   ] [INFO ]  Stop optical alert
+2022-08-05 00:41:57,042 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 6
+2022-08-05 00:41:57,167 [MainThread  ] [INFO ]  Alert: End event with ID 6
+2022-08-05 00:42:17,164 [MainThread  ] [INFO ]  Store feedback for event 6
+2022-08-05 00:42:17,564 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 6
+2022-08-05 01:35:49,898 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-05 01:35:49.898718
+2022-08-05 01:55:55,930 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-05 01:55:55.930328
+2022-08-05 02:19:41,966 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 8
+2022-08-05 02:19:42,320 [Thread-43   ] [INFO ]  Trigger optical alert
+2022-08-05 02:19:42,437 [Thread-44   ] [INFO ]  Trigger SMS alert
+2022-08-05 02:19:42,553 [Thread-45   ] [INFO ]  Trigger acoustic alert
+2022-08-05 02:19:44,198 [Thread-47   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-05 02:19:57,982 [Thread-43   ] [INFO ]  Stop optical alert
+2022-08-05 02:19:58,437 [Thread-45   ] [INFO ]  Stop acoustic alert
+2022-08-05 02:19:58,437 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 8
+2022-08-05 02:19:58,522 [MainThread  ] [INFO ]  Alert: End event with ID 8
+2022-08-05 02:20:20,178 [MainThread  ] [INFO ]  Store feedback for event 8
+2022-08-05 02:20:20,543 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 8
+2022-08-05 03:12:42,859 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-05 03:12:42.859043
+2022-08-05 03:38:00,232 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-05 03:38:00.232627
+2022-08-05 05:02:41,606 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 23
+2022-08-05 05:02:41,937 [Thread-49   ] [INFO ]  Trigger optical alert
+2022-08-05 05:02:42,079 [Thread-50   ] [INFO ]  Trigger SMS alert
+2022-08-05 05:02:43,392 [Thread-52   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-05 05:02:59,581 [Thread-49   ] [INFO ]  Stop optical alert
+2022-08-05 05:02:59,582 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 23
+2022-08-05 05:02:59,812 [MainThread  ] [INFO ]  Alert: End event with ID 23
+2022-08-05 05:03:25,309 [MainThread  ] [INFO ]  Store feedback for event 23
+2022-08-05 05:03:25,488 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 23
+2022-08-05 07:31:03,091 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-05 07:31:03.091231
+2022-08-05 15:09:30,833 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-05 15:09:30.833811
+2022-08-05 18:09:57,163 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-05 18:09:57.163380
+2022-08-05 18:19:41,918 [Thread-7    ] [INFO ]  Main: Event with ID 30 was missed because the study was paused
+2022-08-05 18:19:42,930 [Thread-7    ] [INFO ]  Main: Event with ID 30 was rescheduled for 178 minutes
+2022-08-05 19:32:32,803 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-05 19:32:32.803573
+2022-08-05 19:32:32,946 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-05 19:32:32.946506
+2022-08-05 19:32:34,442 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-05 19:32:34.442135
+2022-08-05 20:00:41,289 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 13
+2022-08-05 20:00:41,669 [Thread-54   ] [INFO ]  Trigger optical alert
+2022-08-05 20:00:41,937 [Thread-55   ] [INFO ]  Trigger SMS alert
+2022-08-05 20:00:41,981 [Thread-56   ] [INFO ]  Trigger acoustic alert
+2022-08-05 20:00:43,376 [Thread-58   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-05 20:00:59,288 [Thread-56   ] [INFO ]  Stop acoustic alert
+2022-08-05 20:00:59,944 [Thread-54   ] [INFO ]  Stop optical alert
+2022-08-05 20:01:00,180 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 13
+2022-08-05 20:01:00,361 [MainThread  ] [INFO ]  Alert: End event with ID 13
+2022-08-05 20:01:21,686 [MainThread  ] [INFO ]  Store feedback for event 13
+2022-08-05 20:01:22,217 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 13
+2022-08-05 21:17:43,245 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 30
+2022-08-05 21:17:43,692 [Thread-60   ] [INFO ]  Trigger optical alert
+2022-08-05 21:17:43,897 [Thread-61   ] [INFO ]  Trigger SMS alert
+2022-08-05 21:17:45,028 [Thread-63   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-05 21:18:11,843 [Thread-60   ] [INFO ]  Stop optical alert
+2022-08-05 21:18:11,843 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 30
+2022-08-05 21:18:11,916 [MainThread  ] [INFO ]  Alert: End event with ID 30
+2022-08-05 21:18:33,697 [MainThread  ] [INFO ]  Store feedback for event 30
+2022-08-05 21:18:34,286 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 30
+2022-08-05 22:09:41,568 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 15
+2022-08-05 22:09:41,908 [Thread-65   ] [INFO ]  Trigger optical alert
+2022-08-05 22:09:42,214 [Thread-66   ] [INFO ]  Trigger SMS alert
+2022-08-05 22:09:42,220 [Thread-67   ] [INFO ]  Trigger acoustic alert
+2022-08-05 22:09:43,718 [Thread-69   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-05 22:10:04,626 [Thread-65   ] [INFO ]  Stop optical alert
+2022-08-05 22:10:06,232 [Thread-67   ] [INFO ]  Stop acoustic alert
+2022-08-05 22:10:06,233 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 15
+2022-08-05 22:10:06,370 [MainThread  ] [INFO ]  Alert: End event with ID 15
+2022-08-05 22:10:07,010 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 15
+2022-08-05 22:10:07,061 [MainThread  ] [INFO ]  Alert: End event with ID 15
+2022-08-05 22:10:19,762 [MainThread  ] [INFO ]  Store feedback for event 15
+2022-08-05 22:10:20,263 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 15
+2022-08-05 23:04:42,294 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 16
+2022-08-05 23:04:42,768 [Thread-71   ] [INFO ]  Trigger optical alert
+2022-08-05 23:04:42,788 [Thread-72   ] [INFO ]  Trigger acoustic alert
+2022-08-05 23:04:59,593 [Thread-71   ] [INFO ]  Stop optical alert
+2022-08-05 23:05:00,238 [Thread-72   ] [INFO ]  Stop acoustic alert
+2022-08-05 23:05:00,300 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 16
+2022-08-05 23:05:00,380 [MainThread  ] [INFO ]  Alert: End event with ID 16
+2022-08-05 23:05:30,758 [MainThread  ] [INFO ]  Store feedback for event 16
+2022-08-05 23:05:31,270 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 16
+2022-08-05 23:31:42,037 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 19
+2022-08-05 23:31:42,494 [Thread-74   ] [INFO ]  Trigger optical alert
+2022-08-05 23:31:42,738 [Thread-75   ] [INFO ]  Trigger acoustic alert
+2022-08-05 23:32:00,078 [Thread-75   ] [INFO ]  Stop acoustic alert
+2022-08-05 23:32:01,709 [Thread-74   ] [INFO ]  Stop optical alert
+2022-08-05 23:32:01,725 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 19
+2022-08-05 23:32:02,007 [MainThread  ] [INFO ]  Alert: End event with ID 19
+2022-08-05 23:32:17,854 [MainThread  ] [INFO ]  Store feedback for event 19
+2022-08-05 23:32:18,436 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 19
+2022-08-06 01:09:41,399 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 27
+2022-08-06 01:09:42,259 [Thread-77   ] [INFO ]  Trigger optical alert
+2022-08-06 01:10:09,275 [Thread-77   ] [INFO ]  Stop optical alert
+2022-08-06 01:10:09,439 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 27
+2022-08-06 01:10:09,511 [MainThread  ] [INFO ]  Alert: End event with ID 27
+2022-08-06 01:10:22,568 [MainThread  ] [INFO ]  Store feedback for event 27
+2022-08-06 01:10:22,746 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 27
+2022-08-06 01:53:41,301 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 12
+2022-08-06 01:53:41,703 [Thread-79   ] [INFO ]  Trigger optical alert
+2022-08-06 01:53:41,827 [Thread-80   ] [INFO ]  Trigger SMS alert
+2022-08-06 01:53:41,943 [Thread-81   ] [INFO ]  Trigger acoustic alert
+2022-08-06 01:53:43,239 [Thread-83   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-06 01:53:56,915 [Thread-79   ] [INFO ]  Stop optical alert
+2022-08-06 01:53:59,916 [Thread-81   ] [INFO ]  Stop acoustic alert
+2022-08-06 01:54:00,164 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 12
+2022-08-06 01:54:00,258 [MainThread  ] [INFO ]  Alert: End event with ID 12
+2022-08-06 01:54:00,489 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 12
+2022-08-06 01:54:00,511 [MainThread  ] [INFO ]  Alert: End event with ID 12
+2022-08-06 01:54:01,726 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 12
+2022-08-06 01:54:01,726 [MainThread  ] [INFO ]  Alert: End event with ID 12
+2022-08-06 01:54:14,565 [MainThread  ] [INFO ]  Store feedback for event 12
+2022-08-06 01:54:15,164 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 12
+2022-08-06 02:25:41,353 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 3
+2022-08-06 02:25:41,957 [Thread-85   ] [INFO ]  Trigger optical alert
+2022-08-06 02:26:00,755 [Thread-85   ] [INFO ]  Stop optical alert
+2022-08-06 02:26:01,126 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 3
+2022-08-06 02:26:01,194 [MainThread  ] [INFO ]  Alert: End event with ID 3
+2022-08-06 02:26:19,052 [MainThread  ] [INFO ]  Store feedback for event 3
+2022-08-06 02:26:19,562 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 3
+2022-08-06 04:07:42,277 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 17
+2022-08-06 04:07:42,506 [Thread-87   ] [INFO ]  Trigger optical alert
+2022-08-06 04:07:43,185 [Thread-88   ] [INFO ]  Trigger SMS alert
+2022-08-06 04:07:43,213 [Thread-89   ] [INFO ]  Trigger acoustic alert
+2022-08-06 04:07:44,455 [Thread-91   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-06 04:07:59,366 [Thread-87   ] [INFO ]  Stop optical alert
+2022-08-06 04:08:02,405 [Thread-89   ] [INFO ]  Stop acoustic alert
+2022-08-06 04:08:02,480 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 17
+2022-08-06 04:08:02,704 [MainThread  ] [INFO ]  Alert: End event with ID 17
+2022-08-06 04:08:02,812 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 17
+2022-08-06 04:08:02,812 [MainThread  ] [INFO ]  Alert: End event with ID 17
+2022-08-06 04:08:33,197 [MainThread  ] [INFO ]  Store feedback for event 17
+2022-08-06 04:08:34,053 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 17
+2022-08-06 05:13:42,031 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 20
+2022-08-06 05:13:42,747 [Thread-93   ] [INFO ]  Trigger optical alert
+2022-08-06 05:13:43,149 [Thread-94   ] [INFO ]  Trigger SMS alert
+2022-08-06 05:13:43,229 [Thread-95   ] [INFO ]  Trigger acoustic alert
+2022-08-06 05:13:44,656 [Thread-97   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-06 05:14:06,435 [Thread-93   ] [INFO ]  Stop optical alert
+2022-08-06 05:14:07,900 [Thread-95   ] [INFO ]  Stop acoustic alert
+2022-08-06 05:14:07,901 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 20
+2022-08-06 05:14:08,188 [MainThread  ] [INFO ]  Alert: End event with ID 20
+2022-08-06 05:14:08,723 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 20
+2022-08-06 05:14:08,825 [MainThread  ] [INFO ]  Alert: End event with ID 20
+2022-08-06 05:14:33,483 [MainThread  ] [INFO ]  Store feedback for event 20
+2022-08-06 05:14:33,839 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 20
+2022-08-06 07:33:59,213 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-06 07:33:59.213897
+2022-08-06 07:33:59,255 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-06 07:33:59.255683
+2022-08-06 07:34:02,910 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-06 07:34:02.910816
+2022-08-06 16:09:39,378 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-06 16:09:39.378275
+2022-08-06 17:20:18,157 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-06 17:20:18.157794
+2022-08-06 17:39:42,048 [Thread-7    ] [INFO ]  Main: Event with ID 28 was missed because the study was paused
+2022-08-06 17:39:43,218 [Thread-7    ] [INFO ]  Main: Event with ID 28 was rescheduled for 120 minutes
+2022-08-06 18:27:56,267 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-06 18:27:56.267801
+2022-08-06 18:44:41,998 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 29
+2022-08-06 18:44:43,077 [Thread-99   ] [INFO ]  Trigger optical alert
+2022-08-06 18:44:43,379 [Thread-100  ] [INFO ]  Trigger acoustic alert
+2022-08-06 18:44:56,868 [Thread-100  ] [INFO ]  Stop acoustic alert
+2022-08-06 18:44:58,203 [Thread-99   ] [INFO ]  Stop optical alert
+2022-08-06 18:44:58,417 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 29
+2022-08-06 18:44:58,812 [MainThread  ] [INFO ]  Alert: End event with ID 29
+2022-08-06 18:45:17,364 [MainThread  ] [INFO ]  Store feedback for event 29
+2022-08-06 18:45:17,772 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 29
+2022-08-06 19:39:43,552 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 28
+2022-08-06 19:39:44,474 [Thread-102  ] [INFO ]  Trigger optical alert
+2022-08-06 19:40:21,254 [Thread-102  ] [INFO ]  Stop optical alert
+2022-08-06 19:40:22,245 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 28
+2022-08-06 19:40:22,471 [MainThread  ] [INFO ]  Alert: End event with ID 28
+2022-08-06 19:40:48,103 [MainThread  ] [INFO ]  Store feedback for event 28
+2022-08-06 19:40:48,857 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 28
+2022-08-06 19:45:41,977 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 26
+2022-08-06 19:45:42,627 [Thread-104  ] [INFO ]  Trigger acoustic alert
+2022-08-06 19:46:05,296 [Thread-104  ] [INFO ]  Stop acoustic alert
+2022-08-06 19:46:05,364 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 26
+2022-08-06 19:46:05,426 [MainThread  ] [INFO ]  Alert: End event with ID 26
+2022-08-06 19:46:26,650 [MainThread  ] [INFO ]  Store feedback for event 26
+2022-08-06 19:46:26,867 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 26
+2022-08-06 20:56:42,318 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 4
+2022-08-06 20:56:43,118 [Thread-106  ] [INFO ]  Trigger optical alert
+2022-08-06 20:57:01,938 [Thread-106  ] [INFO ]  Stop optical alert
+2022-08-06 20:57:02,945 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 4
+2022-08-06 20:57:03,028 [MainThread  ] [INFO ]  Alert: End event with ID 4
+2022-08-06 20:57:39,423 [MainThread  ] [INFO ]  Store feedback for event 4
+2022-08-06 20:57:40,499 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 4
+2022-08-06 22:25:09,154 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-06 22:25:09.154110
+2022-08-06 22:37:41,296 [Thread-7    ] [INFO ]  Main: Event with ID 22 was missed because the study was paused
+2022-08-06 22:37:42,348 [Thread-7    ] [INFO ]  Main: Event with ID 22 was rescheduled for 76 minutes
+2022-08-06 23:53:42,871 [Thread-7    ] [INFO ]  Main: Event with ID 22 was missed because the study was paused
+2022-08-06 23:53:43,879 [Thread-7    ] [INFO ]  Main: Event with ID 22 was rescheduled for 167 minutes
+2022-08-06 23:59:41,907 [Thread-7    ] [INFO ]  Main: Event with ID 2 was missed because the study was paused
+2022-08-06 23:59:42,920 [Thread-7    ] [INFO ]  Main: Event with ID 2 was rescheduled for 166 minutes
+2022-08-07 00:29:16,214 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-07 00:29:16.214210
+2022-08-07 00:52:41,957 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 18
+2022-08-07 00:52:42,899 [Thread-108  ] [INFO ]  Trigger optical alert
+2022-08-07 00:52:42,935 [Thread-109  ] [INFO ]  Trigger SMS alert
+2022-08-07 00:52:43,067 [Thread-110  ] [INFO ]  Trigger acoustic alert
+2022-08-07 00:52:44,557 [Thread-112  ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-07 00:52:55,179 [Thread-108  ] [INFO ]  Stop optical alert
+2022-08-07 00:52:55,284 [Thread-110  ] [INFO ]  Stop acoustic alert
+2022-08-07 00:52:55,742 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 18
+2022-08-07 00:52:56,068 [MainThread  ] [INFO ]  Alert: End event with ID 18
+2022-08-07 00:53:16,829 [MainThread  ] [INFO ]  Store feedback for event 18
+2022-08-07 00:53:17,723 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 18
+2022-08-07 01:27:42,218 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 14
+2022-08-07 01:27:42,778 [Thread-114  ] [INFO ]  Trigger optical alert
+2022-08-07 01:27:43,828 [Thread-115  ] [INFO ]  Trigger SMS alert
+2022-08-07 01:27:44,090 [Thread-116  ] [INFO ]  Trigger acoustic alert
+2022-08-07 01:27:45,730 [Thread-118  ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-07 01:27:51,743 [Thread-114  ] [INFO ]  Stop optical alert
+2022-08-07 01:27:56,983 [Thread-116  ] [INFO ]  Stop acoustic alert
+2022-08-07 01:27:57,032 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 14
+2022-08-07 01:27:57,068 [MainThread  ] [INFO ]  Alert: End event with ID 14
+2022-08-07 01:27:58,198 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 14
+2022-08-07 01:27:58,198 [MainThread  ] [INFO ]  Alert: End event with ID 14
+2022-08-07 01:27:58,397 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 14
+2022-08-07 01:27:58,402 [MainThread  ] [INFO ]  Alert: End event with ID 14
+2022-08-07 01:28:01,244 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 14
+2022-08-07 01:28:01,250 [MainThread  ] [INFO ]  Alert: End event with ID 14
+2022-08-07 01:28:02,410 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 14
+2022-08-07 01:28:02,448 [MainThread  ] [INFO ]  Alert: End event with ID 14
+2022-08-07 01:28:03,406 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 14
+2022-08-07 01:28:03,417 [MainThread  ] [INFO ]  Alert: End event with ID 14
+2022-08-07 01:31:06,682 [MainThread  ] [INFO ]  Store feedback for event 14
+2022-08-07 01:31:07,044 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 14
+2022-08-07 02:39:42,115 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 5
+2022-08-07 02:39:43,240 [Thread-120  ] [INFO ]  Trigger optical alert
+2022-08-07 02:39:57,140 [Thread-120  ] [INFO ]  Stop optical alert
+2022-08-07 02:39:57,146 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 5
+2022-08-07 02:39:57,479 [MainThread  ] [INFO ]  Alert: End event with ID 5
+2022-08-07 02:40:18,384 [MainThread  ] [INFO ]  Store feedback for event 5
+2022-08-07 02:40:18,724 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 5
+2022-08-07 02:40:44,181 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 22
+2022-08-07 02:40:44,850 [Thread-122  ] [INFO ]  Trigger optical alert
+2022-08-07 02:41:09,489 [Thread-122  ] [INFO ]  Stop optical alert
+2022-08-07 02:41:10,012 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 22
+2022-08-07 02:41:10,218 [MainThread  ] [INFO ]  Alert: End event with ID 22
+2022-08-07 02:41:26,537 [MainThread  ] [INFO ]  Store feedback for event 22
+2022-08-07 02:41:26,877 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 22
+2022-08-07 02:45:43,168 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 2
+2022-08-07 02:45:44,008 [Thread-124  ] [INFO ]  Trigger optical alert
+2022-08-07 02:45:58,660 [Thread-124  ] [INFO ]  Stop optical alert
+2022-08-07 02:45:58,720 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 2
+2022-08-07 02:45:59,267 [MainThread  ] [INFO ]  Alert: End event with ID 2
+2022-08-07 02:46:18,073 [MainThread  ] [INFO ]  Store feedback for event 2
+2022-08-07 02:46:18,418 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 2
+2022-08-07 03:50:41,842 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 24
+2022-08-07 03:50:42,823 [Thread-126  ] [INFO ]  Trigger optical alert
+2022-08-07 03:50:45,659 [Thread-7    ] [INFO ]  Main: End program at 2022-08-07 03:50:45.659788
+2022-08-07 03:50:57,331 [Thread-126  ] [INFO ]  Stop optical alert
+2022-08-07 03:50:58,073 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 24
+2022-08-07 03:50:58,208 [MainThread  ] [INFO ]  Alert: End event with ID 24
+2022-08-07 03:50:58,573 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 24
+2022-08-07 03:50:58,573 [MainThread  ] [INFO ]  Alert: End event with ID 24
+2022-08-07 03:51:15,422 [MainThread  ] [INFO ]  Store feedback for event 24
+2022-08-07 03:51:16,437 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 24
+2022-08-07 03:17:14,751 [MainThread  ] [INFO ]  Main: Start program at 2022-08-07 03:17:14.751182
+2022-08-07 03:17:14,853 [MainThread  ] [INFO ]  Load simulation file: /home/pi/masterthesis/resources/simulations/TestSimulation.json
+2022-08-07 03:17:14,857 [MainThread  ] [INFO ]  Init feedback file: /home/pi/masterthesis/resources/feedback_23_1.csv
+2022-08-07 03:17:14,889 [MainThread  ] [INFO ]  Main: Start program at 2022-08-07 03:17:14.889798
+2022-08-07 03:17:15,026 [MainThread  ] [INFO ]  Load simulation file: /home/pi/masterthesis/resources/simulations/TestSimulation.json
+2022-08-07 03:17:15,032 [MainThread  ] [INFO ]  Init feedback file: /home/pi/masterthesis/resources/feedback_23_1.csv
+2022-08-07 03:17:14,758 [MainThread  ] [INFO ]  Main: Start program at 2022-08-07 03:17:14.758080
+2022-08-07 03:17:14,861 [MainThread  ] [INFO ]  Load simulation file: /home/pi/masterthesis/resources/simulations/TestSimulation.json
+2022-08-07 03:17:14,874 [MainThread  ] [INFO ]  Init feedback file: /home/pi/masterthesis/resources/feedback_21.csv
+2022-08-07 03:17:22,491 [MainThread  ] [INFO ]  Alert: Dispatch event with ID 0
+2022-08-07 03:17:22,501 [Thread-1    ] [INFO ]  Trigger optical alert
+2022-08-07 03:17:22,502 [Thread-2    ] [INFO ]  Trigger acoustic alert
+2022-08-07 03:17:22,505 [Thread-3    ] [INFO ]  Trigger SMS alert
+2022-08-07 03:17:22,538 [Thread-1    ] [ERROR]  Optical_Alert: Error while initialising connection to smart light. Error: HTTPConnectionPool(host='localhost', port=8123): Max retries exceeded with url: /api/services/light/turn_on (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb50289e8>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2022-08-07 03:17:23,537 [Thread-5    ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-07 03:17:45,249 [Thread-2    ] [INFO ]  Stop acoustic alert
+2022-08-07 03:17:45,265 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 0
+2022-08-07 03:17:45,289 [MainThread  ] [INFO ]  Alert: End event with ID 0
+2022-08-07 03:17:48,019 [MainThread  ] [INFO ]  Store feedback for event 0
+2022-08-07 03:17:48,099 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 0
+2022-08-07 03:17:14,800 [MainThread  ] [INFO ]  Main: Start program at 2022-08-07 03:17:14.800688
+2022-08-07 03:17:14,933 [MainThread  ] [INFO ]  Load simulation file: /home/pi/masterthesis/resources/simulations/TestSimulation.json
+2022-08-07 03:17:14,939 [MainThread  ] [INFO ]  Init feedback file: /home/pi/masterthesis/resources/feedback_21_1.csv
+2022-08-07 03:18:19,940 [MainThread  ] [INFO ]  Alert: Dispatch event with ID 0
+2022-08-07 03:18:19,961 [Thread-1    ] [INFO ]  Trigger optical alert
+2022-08-07 03:18:19,962 [Thread-2    ] [INFO ]  Trigger acoustic alert
+2022-08-07 03:18:19,967 [Thread-3    ] [INFO ]  Trigger SMS alert
+2022-08-07 03:18:21,012 [Thread-5    ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-07 03:18:25,617 [Thread-1    ] [INFO ]  Stop optical alert
+2022-08-07 03:18:26,492 [Thread-2    ] [INFO ]  Stop acoustic alert
+2022-08-07 03:18:26,508 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 0
+2022-08-07 03:18:26,537 [MainThread  ] [INFO ]  Alert: End event with ID 0
+2022-08-07 03:19:00,621 [MainThread  ] [INFO ]  Store feedback for event 0
+2022-08-07 03:19:00,707 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 0
+2022-08-07 03:19:02,069 [MainThread  ] [INFO ]  Main: Simulation started at 2022-08-07 03:19:02.069408
+2022-08-07 03:22:22,140 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 5
+2022-08-07 03:22:22,233 [Thread-8    ] [INFO ]  Trigger optical alert
+2022-08-07 03:22:33,175 [Thread-8    ] [INFO ]  Stop optical alert
+2022-08-07 03:22:33,196 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 5
+2022-08-07 03:22:33,224 [MainThread  ] [INFO ]  Alert: End event with ID 5
+2022-08-07 03:23:03,963 [MainThread  ] [INFO ]  Store feedback for event 5
+2022-08-07 03:23:04,026 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 5
+2022-08-07 04:24:12,224 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 10
+2022-08-07 04:24:12,297 [Thread-10   ] [INFO ]  Trigger optical alert
+2022-08-07 04:24:12,355 [Thread-11   ] [INFO ]  Trigger SMS alert
+2022-08-07 04:24:12,358 [Thread-12   ] [INFO ]  Trigger acoustic alert
+2022-08-07 04:24:13,444 [Thread-14   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-07 04:24:33,606 [Thread-10   ] [INFO ]  Stop optical alert
+2022-08-07 04:24:35,139 [Thread-12   ] [INFO ]  Stop acoustic alert
+2022-08-07 04:24:35,150 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 10
+2022-08-07 04:24:35,182 [MainThread  ] [INFO ]  Alert: End event with ID 10
+2022-08-07 04:25:00,715 [MainThread  ] [INFO ]  Store feedback for event 10
+2022-08-07 04:25:00,895 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 10
+2022-08-07 04:25:33,367 [Thread-14   ] [INFO ]  SMS_Alert: Received SMS from +491731898326 at 2022-08-09 11:55:33 with message Okay 
+2022-08-07 04:25:33,377 [Thread-14   ] [INFO ]  Feedback: Start collecting feedback for event with ID 10
+2022-08-07 04:25:33,433 [Thread-14   ] [INFO ]  Alert: End event with ID 10
+2022-08-07 04:32:35,600 [MainThread  ] [INFO ]  Store feedback for event 10
+2022-08-07 04:32:35,669 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 10
+2022-08-07 05:21:12,890 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 7
+2022-08-07 05:21:12,959 [Thread-16   ] [INFO ]  Trigger optical alert
+2022-08-07 05:21:13,014 [Thread-17   ] [INFO ]  Trigger SMS alert
+2022-08-07 05:21:13,067 [Thread-18   ] [INFO ]  Trigger acoustic alert
+2022-08-07 05:21:14,115 [Thread-20   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-07 05:21:38,996 [Thread-16   ] [INFO ]  Stop optical alert
+2022-08-07 05:21:40,362 [Thread-18   ] [INFO ]  Stop acoustic alert
+2022-08-07 05:21:40,378 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 7
+2022-08-07 05:21:40,432 [MainThread  ] [INFO ]  Alert: End event with ID 7
+2022-08-07 05:21:56,750 [MainThread  ] [INFO ]  Store feedback for event 7
+2022-08-07 05:21:56,880 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 7
+2022-08-07 06:45:13,098 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 3
+2022-08-07 06:45:13,191 [Thread-22   ] [INFO ]  Trigger optical alert
+2022-08-07 06:50:14,123 [Thread-23   ] [INFO ]  Alert: Alarm forced to terminate. Start time: 2022-08-07 06:45:13.215735, Now: 2022-08-07 06:50:14.123213
+2022-08-07 06:50:14,128 [Thread-23   ] [INFO ]  Store feedback for event 3
+2022-08-07 06:50:16,194 [Thread-22   ] [INFO ]  Stop optical alert
+2022-08-07 06:50:16,450 [Thread-23   ] [INFO ]  Alert: End event with ID 3
+2022-08-07 07:39:12,246 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 9
+2022-08-07 07:39:12,373 [Thread-24   ] [INFO ]  Trigger optical alert
+2022-08-07 07:39:12,410 [Thread-25   ] [INFO ]  Trigger SMS alert
+2022-08-07 07:39:12,416 [Thread-26   ] [INFO ]  Trigger acoustic alert
+2022-08-07 07:39:13,633 [Thread-28   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-07 07:39:29,532 [Thread-26   ] [INFO ]  Stop acoustic alert
+2022-08-07 07:39:31,751 [Thread-24   ] [INFO ]  Stop optical alert
+2022-08-07 07:39:31,772 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 9
+2022-08-07 07:39:31,800 [MainThread  ] [INFO ]  Alert: End event with ID 9
+2022-08-07 07:40:19,169 [MainThread  ] [INFO ]  Store feedback for event 9
+2022-08-07 07:40:19,328 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 9
+2022-08-07 07:40:42,024 [Thread-20   ] [INFO ]  SMS_Alert: Received SMS from +491731898326 at 2022-08-09 15:10:40 with message Okay 
+2022-08-07 07:40:42,034 [Thread-20   ] [INFO ]  Feedback: Start collecting feedback for event with ID 9
+2022-08-07 07:40:42,164 [Thread-20   ] [INFO ]  Alert: End event with ID 9
+2022-08-07 07:41:09,096 [MainThread  ] [INFO ]  Store feedback for event 9
+2022-08-07 07:41:09,225 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 9
+2022-08-07 08:30:12,953 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 22
+2022-08-07 08:30:13,175 [Thread-30   ] [INFO ]  Trigger optical alert
+2022-08-07 08:35:13,363 [Thread-31   ] [INFO ]  Alert: Alarm forced to terminate. Start time: 2022-08-07 08:30:13.196377, Now: 2022-08-07 08:35:13.362975
+2022-08-07 08:35:13,392 [Thread-31   ] [INFO ]  Store feedback for event 22
+2022-08-07 08:35:14,013 [Thread-30   ] [INFO ]  Stop optical alert
+2022-08-07 08:35:14,220 [Thread-31   ] [INFO ]  Alert: End event with ID 22
+2022-08-07 09:13:12,354 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 28
+2022-08-07 09:13:12,477 [Thread-32   ] [INFO ]  Trigger optical alert
+2022-08-07 09:13:29,485 [Thread-32   ] [INFO ]  Stop optical alert
+2022-08-07 09:13:29,673 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 28
+2022-08-07 09:13:29,714 [MainThread  ] [INFO ]  Alert: End event with ID 28
+2022-08-07 09:14:03,934 [MainThread  ] [INFO ]  Store feedback for event 28
+2022-08-07 09:14:04,073 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 28
+2022-08-07 10:42:12,773 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 4
+2022-08-07 10:42:12,929 [Thread-34   ] [INFO ]  Trigger optical alert
+2022-08-07 10:42:27,623 [Thread-34   ] [INFO ]  Stop optical alert
+2022-08-07 10:42:27,838 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 4
+2022-08-07 10:42:27,864 [MainThread  ] [INFO ]  Alert: End event with ID 4
+2022-08-07 10:42:53,936 [MainThread  ] [INFO ]  Store feedback for event 4
+2022-08-07 10:42:54,102 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 4
+2022-08-07 12:20:12,533 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 8
+2022-08-07 12:20:12,660 [Thread-36   ] [INFO ]  Trigger optical alert
+2022-08-07 12:20:12,726 [Thread-37   ] [INFO ]  Trigger SMS alert
+2022-08-07 12:20:12,769 [Thread-38   ] [INFO ]  Trigger acoustic alert
+2022-08-07 12:20:13,871 [Thread-40   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-07 12:20:49,808 [Thread-36   ] [INFO ]  Stop optical alert
+2022-08-07 12:20:50,397 [Thread-38   ] [INFO ]  Stop acoustic alert
+2022-08-07 12:20:50,415 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 8
+2022-08-07 12:20:50,474 [MainThread  ] [INFO ]  Alert: End event with ID 8
+2022-08-07 12:21:07,218 [MainThread  ] [INFO ]  Store feedback for event 8
+2022-08-07 12:21:07,537 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 8
+2022-08-07 15:03:12,580 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 18
+2022-08-07 15:03:12,772 [Thread-42   ] [INFO ]  Trigger optical alert
+2022-08-07 15:03:12,849 [Thread-43   ] [INFO ]  Trigger SMS alert
+2022-08-07 15:03:12,897 [Thread-44   ] [INFO ]  Trigger acoustic alert
+2022-08-07 15:03:14,090 [Thread-46   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-07 15:08:13,338 [Thread-45   ] [INFO ]  Alert: Alarm forced to terminate. Start time: 2022-08-07 15:03:12.908595, Now: 2022-08-07 15:08:13.338005
+2022-08-07 15:08:13,343 [Thread-45   ] [INFO ]  Store feedback for event 18
+2022-08-07 15:08:15,774 [Thread-42   ] [INFO ]  Stop optical alert
+2022-08-07 15:08:17,068 [Thread-44   ] [INFO ]  Stop acoustic alert
+2022-08-07 15:08:17,179 [Thread-45   ] [INFO ]  Alert: End event with ID 18
+2022-08-07 15:11:19,897 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-07 15:11:19.897233
+2022-08-08 01:30:02,784 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-08 01:30:02.784201
+2022-08-08 04:20:12,453 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 23
+2022-08-08 04:20:12,569 [Thread-48   ] [INFO ]  Trigger optical alert
+2022-08-08 04:20:12,597 [Thread-49   ] [INFO ]  Trigger SMS alert
+2022-08-08 04:20:13,809 [Thread-51   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-08 04:20:26,918 [Thread-48   ] [INFO ]  Stop optical alert
+2022-08-08 04:20:27,054 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 23
+2022-08-08 04:20:27,136 [MainThread  ] [INFO ]  Alert: End event with ID 23
+2022-08-08 04:20:27,330 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 23
+2022-08-08 04:20:27,444 [MainThread  ] [INFO ]  Alert: End event with ID 23
+2022-08-08 04:20:27,783 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 23
+2022-08-08 04:20:27,805 [MainThread  ] [INFO ]  Alert: End event with ID 23
+2022-08-08 04:20:45,985 [MainThread  ] [INFO ]  Store feedback for event 23
+2022-08-08 04:20:46,206 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 23
+2022-08-08 06:01:12,883 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 1
+2022-08-08 06:01:13,113 [Thread-53   ] [INFO ]  Trigger optical alert
+2022-08-08 06:03:36,733 [Thread-53   ] [INFO ]  Stop optical alert
+2022-08-08 06:03:36,764 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 1
+2022-08-08 06:03:36,892 [MainThread  ] [INFO ]  Alert: End event with ID 1
+2022-08-08 06:03:37,006 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 1
+2022-08-08 06:03:37,011 [MainThread  ] [INFO ]  Alert: End event with ID 1
+2022-08-08 06:04:14,098 [MainThread  ] [INFO ]  Store feedback for event 1
+2022-08-08 06:04:14,517 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 1
+2022-08-08 06:22:40,769 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-08 06:22:40.769330
+2022-08-08 06:22:41,006 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-08 06:22:41.006302
+2022-08-08 06:22:46,222 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-08 06:22:46.222042
+2022-08-08 08:10:12,466 [Thread-7    ] [INFO ]  Main: Event with ID 26 was missed because the study was paused
+2022-08-08 08:10:13,548 [Thread-7    ] [INFO ]  Main: Event with ID 26 was rescheduled for 178 minutes
+2022-08-08 09:05:12,837 [Thread-7    ] [INFO ]  Main: Event with ID 17 was missed because the study was paused
+2022-08-08 09:05:13,852 [Thread-7    ] [INFO ]  Main: Event with ID 17 was rescheduled for 161 minutes
+2022-08-08 09:32:13,119 [Thread-7    ] [INFO ]  Main: Event with ID 15 was missed because the study was paused
+2022-08-08 09:32:14,183 [Thread-7    ] [INFO ]  Main: Event with ID 15 was rescheduled for 49 minutes
+2022-08-08 10:21:15,203 [Thread-7    ] [INFO ]  Main: Event with ID 15 was missed because the study was paused
+2022-08-08 10:21:16,244 [Thread-7    ] [INFO ]  Main: Event with ID 15 was rescheduled for 82 minutes
+2022-08-08 11:08:14,350 [Thread-7    ] [INFO ]  Main: Event with ID 26 was missed because the study was paused
+2022-08-08 11:08:15,375 [Thread-7    ] [INFO ]  Main: Event with ID 26 was rescheduled for 140 minutes
+2022-08-08 11:10:12,622 [Thread-7    ] [INFO ]  Main: Event with ID 24 was missed because the study was paused
+2022-08-08 11:10:13,765 [Thread-7    ] [INFO ]  Main: Event with ID 24 was rescheduled for 103 minutes
+2022-08-08 11:43:16,462 [Thread-7    ] [INFO ]  Main: Event with ID 15 was missed because the study was paused
+2022-08-08 11:43:17,482 [Thread-7    ] [INFO ]  Main: Event with ID 15 was rescheduled for 30 minutes
+2022-08-08 11:46:14,452 [Thread-7    ] [INFO ]  Main: Event with ID 17 was missed because the study was paused
+2022-08-08 11:46:15,484 [Thread-7    ] [INFO ]  Main: Event with ID 17 was rescheduled for 133 minutes
+2022-08-08 11:54:12,649 [Thread-7    ] [INFO ]  Main: Event with ID 11 was missed because the study was paused
+2022-08-08 11:54:13,729 [Thread-7    ] [INFO ]  Main: Event with ID 11 was rescheduled for 80 minutes
+2022-08-08 12:13:17,789 [Thread-7    ] [INFO ]  Main: Event with ID 15 was missed because the study was paused
+2022-08-08 12:13:18,881 [Thread-7    ] [INFO ]  Main: Event with ID 15 was rescheduled for 106 minutes
+2022-08-08 12:26:12,193 [Thread-7    ] [INFO ]  Main: Event with ID 2 was missed because the study was paused
+2022-08-08 12:26:13,227 [Thread-7    ] [INFO ]  Main: Event with ID 2 was rescheduled for 112 minutes
+2022-08-08 12:53:13,915 [Thread-7    ] [INFO ]  Main: Event with ID 24 was missed because the study was paused
+2022-08-08 12:53:14,923 [Thread-7    ] [INFO ]  Main: Event with ID 24 was rescheduled for 52 minutes
+2022-08-08 13:07:53,708 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-08 13:07:53.708410
+2022-08-08 13:14:14,384 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 11
+2022-08-08 13:14:14,585 [Thread-55   ] [INFO ]  Trigger optical alert
+2022-08-08 13:14:14,741 [Thread-56   ] [INFO ]  Trigger SMS alert
+2022-08-08 13:14:14,765 [Thread-57   ] [INFO ]  Trigger acoustic alert
+2022-08-08 13:14:16,039 [Thread-59   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-08 13:14:24,688 [Thread-55   ] [INFO ]  Stop optical alert
+2022-08-08 13:14:26,384 [Thread-57   ] [INFO ]  Stop acoustic alert
+2022-08-08 13:14:26,400 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 11
+2022-08-08 13:14:26,459 [MainThread  ] [INFO ]  Alert: End event with ID 11
+2022-08-08 13:14:26,613 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 11
+2022-08-08 13:14:26,649 [MainThread  ] [INFO ]  Alert: End event with ID 11
+2022-08-08 13:14:52,273 [MainThread  ] [INFO ]  Store feedback for event 11
+2022-08-08 13:14:52,572 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 11
+2022-08-08 13:28:15,470 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 26
+2022-08-08 13:28:15,829 [Thread-61   ] [INFO ]  Trigger acoustic alert
+2022-08-08 13:28:49,127 [Thread-61   ] [INFO ]  Stop acoustic alert
+2022-08-08 13:28:49,164 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 26
+2022-08-08 13:28:49,289 [MainThread  ] [INFO ]  Alert: End event with ID 26
+2022-08-08 13:28:49,693 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 26
+2022-08-08 13:28:49,791 [MainThread  ] [INFO ]  Alert: End event with ID 26
+2022-08-08 13:28:50,173 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 26
+2022-08-08 13:28:50,207 [MainThread  ] [INFO ]  Alert: End event with ID 26
+2022-08-08 13:29:21,286 [MainThread  ] [INFO ]  Store feedback for event 26
+2022-08-08 13:29:21,753 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 26
+2022-08-08 13:45:15,824 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 24
+2022-08-08 13:45:16,567 [Thread-63   ] [INFO ]  Trigger optical alert
+2022-08-08 13:45:25,262 [Thread-63   ] [INFO ]  Stop optical alert
+2022-08-08 13:45:25,585 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 24
+2022-08-08 13:45:25,628 [MainThread  ] [INFO ]  Alert: End event with ID 24
+2022-08-08 13:45:56,666 [MainThread  ] [INFO ]  Store feedback for event 24
+2022-08-08 13:45:57,021 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 24
+2022-08-08 13:59:16,202 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 17
+2022-08-08 13:59:16,532 [Thread-65   ] [INFO ]  Trigger optical alert
+2022-08-08 13:59:16,643 [Thread-66   ] [INFO ]  Trigger SMS alert
+2022-08-08 13:59:16,684 [Thread-67   ] [INFO ]  Trigger acoustic alert
+2022-08-08 13:59:17,886 [Thread-69   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-08 13:59:19,838 [Thread-7    ] [INFO ]  Main: Event with ID 15 was missed because another alarm was still running
+2022-08-08 13:59:20,959 [Thread-7    ] [INFO ]  Main: Event with ID 15 was rescheduled for 96 minutes
+2022-08-08 13:59:37,959 [Thread-65   ] [INFO ]  Stop optical alert
+2022-08-08 13:59:39,312 [Thread-67   ] [INFO ]  Stop acoustic alert
+2022-08-08 13:59:39,333 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 17
+2022-08-08 13:59:39,406 [MainThread  ] [INFO ]  Alert: End event with ID 17
+2022-08-08 13:59:39,667 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 17
+2022-08-08 13:59:39,703 [MainThread  ] [INFO ]  Alert: End event with ID 17
+2022-08-08 13:59:40,244 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 17
+2022-08-08 13:59:40,250 [MainThread  ] [INFO ]  Alert: End event with ID 17
+2022-08-08 14:00:20,987 [MainThread  ] [INFO ]  Store feedback for event 17
+2022-08-08 14:00:21,617 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 17
+2022-08-08 14:05:29,464 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-08 14:05:29.464091
+2022-08-08 14:08:12,912 [Thread-7    ] [INFO ]  Main: Event with ID 20 was missed because the study was paused
+2022-08-08 14:08:13,923 [Thread-7    ] [INFO ]  Main: Event with ID 20 was rescheduled for 98 minutes
+2022-08-08 14:18:14,031 [Thread-7    ] [INFO ]  Main: Event with ID 2 was missed because the study was paused
+2022-08-08 14:18:15,048 [Thread-7    ] [INFO ]  Main: Event with ID 2 was rescheduled for 119 minutes
+2022-08-08 15:14:13,032 [Thread-7    ] [INFO ]  Main: Event with ID 21 was missed because the study was paused
+2022-08-08 15:14:14,086 [Thread-7    ] [INFO ]  Main: Event with ID 21 was rescheduled for 90 minutes
+2022-08-08 15:35:21,835 [Thread-7    ] [INFO ]  Main: Event with ID 15 was missed because the study was paused
+2022-08-08 15:35:22,856 [Thread-7    ] [INFO ]  Main: Event with ID 15 was rescheduled for 41 minutes
+2022-08-08 15:46:14,726 [Thread-7    ] [INFO ]  Main: Event with ID 20 was missed because the study was paused
+2022-08-08 15:46:15,740 [Thread-7    ] [INFO ]  Main: Event with ID 20 was rescheduled for 61 minutes
+2022-08-08 16:16:23,790 [Thread-7    ] [INFO ]  Main: Event with ID 15 was missed because the study was paused
+2022-08-08 16:16:24,794 [Thread-7    ] [INFO ]  Main: Event with ID 15 was rescheduled for 25 minutes
+2022-08-08 16:17:15,873 [Thread-7    ] [INFO ]  Main: Event with ID 2 was missed because the study was paused
+2022-08-08 16:17:16,955 [Thread-7    ] [INFO ]  Main: Event with ID 2 was rescheduled for 77 minutes
+2022-08-08 16:41:25,472 [Thread-7    ] [INFO ]  Main: Event with ID 15 was missed because the study was paused
+2022-08-08 16:41:26,558 [Thread-7    ] [INFO ]  Main: Event with ID 15 was rescheduled for 128 minutes
+2022-08-08 16:44:14,603 [Thread-7    ] [INFO ]  Main: Event with ID 21 was missed because the study was paused
+2022-08-08 16:44:15,624 [Thread-7    ] [INFO ]  Main: Event with ID 21 was rescheduled for 23 minutes
+2022-08-08 16:47:16,074 [Thread-7    ] [INFO ]  Main: Event with ID 20 was missed because the study was paused
+2022-08-08 16:47:17,094 [Thread-7    ] [INFO ]  Main: Event with ID 20 was rescheduled for 180 minutes
+2022-08-08 17:07:15,982 [Thread-7    ] [INFO ]  Main: Event with ID 21 was missed because the study was paused
+2022-08-08 17:07:17,165 [Thread-7    ] [INFO ]  Main: Event with ID 21 was rescheduled for 61 minutes
+2022-08-08 17:34:17,002 [Thread-7    ] [INFO ]  Main: Event with ID 2 was missed because the study was paused
+2022-08-08 17:34:18,022 [Thread-7    ] [INFO ]  Main: Event with ID 2 was rescheduled for 25 minutes
+2022-08-08 17:59:18,886 [Thread-7    ] [INFO ]  Main: Event with ID 2 was missed because the study was paused
+2022-08-08 17:59:19,932 [Thread-7    ] [INFO ]  Main: Event with ID 2 was rescheduled for 143 minutes
+2022-08-08 18:08:17,709 [Thread-7    ] [INFO ]  Main: Event with ID 21 was missed because the study was paused
+2022-08-08 18:08:18,801 [Thread-7    ] [INFO ]  Main: Event with ID 21 was rescheduled for 29 minutes
+2022-08-08 18:37:19,344 [Thread-7    ] [INFO ]  Main: Event with ID 21 was missed because the study was paused
+2022-08-08 18:37:20,349 [Thread-7    ] [INFO ]  Main: Event with ID 21 was rescheduled for 62 minutes
+2022-08-08 18:39:48,495 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-08 18:39:48.494931
+2022-08-08 18:49:27,402 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 15
+2022-08-08 18:49:27,747 [Thread-71   ] [INFO ]  Trigger optical alert
+2022-08-08 18:49:27,961 [Thread-72   ] [INFO ]  Trigger SMS alert
+2022-08-08 18:49:28,090 [Thread-73   ] [INFO ]  Trigger acoustic alert
+2022-08-08 18:49:29,168 [Thread-75   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-08 18:49:37,588 [Thread-71   ] [INFO ]  Stop optical alert
+2022-08-08 18:49:39,504 [Thread-73   ] [INFO ]  Stop acoustic alert
+2022-08-08 18:49:39,520 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 15
+2022-08-08 18:49:39,747 [MainThread  ] [INFO ]  Alert: End event with ID 15
+2022-08-08 18:49:40,097 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 15
+2022-08-08 18:49:40,142 [MainThread  ] [INFO ]  Alert: End event with ID 15
+2022-08-08 18:49:40,561 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 15
+2022-08-08 18:49:40,613 [MainThread  ] [INFO ]  Alert: End event with ID 15
+2022-08-08 18:49:41,329 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 15
+2022-08-08 18:49:41,431 [MainThread  ] [INFO ]  Alert: End event with ID 15
+2022-08-08 18:50:13,685 [MainThread  ] [INFO ]  Store feedback for event 15
+2022-08-08 18:50:14,011 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 15
+2022-08-08 19:39:21,101 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 21
+2022-08-08 19:39:21,617 [Thread-77   ] [INFO ]  Trigger optical alert
+2022-08-08 19:44:22,698 [Thread-78   ] [INFO ]  Alert: Alarm forced to terminate. Start time: 2022-08-08 19:39:21.756948, Now: 2022-08-08 19:44:22.698874
+2022-08-08 19:44:22,699 [Thread-78   ] [INFO ]  Store feedback for event 21
+2022-08-08 19:44:25,668 [Thread-77   ] [INFO ]  Stop optical alert
+2022-08-08 19:44:25,695 [Thread-78   ] [INFO ]  Alert: End event with ID 21
+2022-08-08 19:47:17,813 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 20
+2022-08-08 19:47:18,227 [Thread-79   ] [INFO ]  Trigger optical alert
+2022-08-08 19:47:18,384 [Thread-80   ] [INFO ]  Trigger SMS alert
+2022-08-08 19:47:18,456 [Thread-81   ] [INFO ]  Trigger acoustic alert
+2022-08-08 19:47:19,450 [Thread-83   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-08 19:52:19,428 [Thread-82   ] [INFO ]  Alert: Alarm forced to terminate. Start time: 2022-08-08 19:47:18.528879, Now: 2022-08-08 19:52:19.428208
+2022-08-08 19:52:19,452 [Thread-82   ] [INFO ]  Store feedback for event 20
+2022-08-08 19:52:20,904 [Thread-79   ] [INFO ]  Stop optical alert
+2022-08-08 19:52:25,252 [Thread-81   ] [INFO ]  Stop acoustic alert
+2022-08-08 19:52:25,326 [Thread-82   ] [INFO ]  Alert: End event with ID 20
+2022-08-08 20:22:20,857 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 2
+2022-08-08 20:22:21,545 [Thread-85   ] [INFO ]  Trigger optical alert
+2022-08-08 20:27:22,358 [Thread-86   ] [INFO ]  Alert: Alarm forced to terminate. Start time: 2022-08-08 20:22:21.763307, Now: 2022-08-08 20:27:22.358880
+2022-08-08 20:27:22,359 [Thread-86   ] [INFO ]  Store feedback for event 2
+2022-08-08 20:27:22,581 [Thread-85   ] [INFO ]  Stop optical alert
+2022-08-08 20:27:22,724 [Thread-86   ] [INFO ]  Alert: End event with ID 2
+2022-08-09 03:40:12,687 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 29
+2022-08-09 03:40:13,205 [Thread-87   ] [INFO ]  Trigger optical alert
+2022-08-09 03:40:13,281 [Thread-88   ] [INFO ]  Trigger acoustic alert
+2022-08-09 03:40:25,183 [Thread-87   ] [INFO ]  Stop optical alert
+2022-08-09 03:40:26,227 [Thread-88   ] [INFO ]  Stop acoustic alert
+2022-08-09 03:40:26,293 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 29
+2022-08-09 03:40:26,610 [MainThread  ] [INFO ]  Alert: End event with ID 29
+2022-08-09 03:40:27,134 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 29
+2022-08-09 03:40:27,135 [MainThread  ] [INFO ]  Alert: End event with ID 29
+2022-08-09 03:40:27,379 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 29
+2022-08-09 03:40:27,384 [MainThread  ] [INFO ]  Alert: End event with ID 29
+2022-08-09 03:40:50,692 [MainThread  ] [INFO ]  Store feedback for event 29
+2022-08-09 03:40:50,842 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 29
+2022-08-09 04:45:12,446 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 25
+2022-08-09 04:45:13,072 [Thread-90   ] [INFO ]  Trigger acoustic alert
+2022-08-09 04:45:29,621 [Thread-90   ] [INFO ]  Stop acoustic alert
+2022-08-09 04:45:29,627 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 25
+2022-08-09 04:45:29,789 [MainThread  ] [INFO ]  Alert: End event with ID 25
+2022-08-09 04:45:58,531 [MainThread  ] [INFO ]  Store feedback for event 25
+2022-08-09 04:45:58,762 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 25
+2022-08-09 05:46:12,225 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 16
+2022-08-09 05:46:12,854 [Thread-92   ] [INFO ]  Trigger optical alert
+2022-08-09 05:46:12,915 [Thread-93   ] [INFO ]  Trigger acoustic alert
+2022-08-09 05:46:59,271 [Thread-93   ] [INFO ]  Stop acoustic alert
+2022-08-09 05:46:59,626 [Thread-92   ] [INFO ]  Stop optical alert
+2022-08-09 05:46:59,627 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 16
+2022-08-09 05:46:59,753 [MainThread  ] [INFO ]  Alert: End event with ID 16
+2022-08-09 05:47:23,369 [MainThread  ] [INFO ]  Store feedback for event 16
+2022-08-09 05:47:23,977 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 16
+2022-08-09 06:57:12,498 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 12
+2022-08-09 06:57:13,033 [Thread-95   ] [INFO ]  Trigger optical alert
+2022-08-09 06:57:13,301 [Thread-96   ] [INFO ]  Trigger SMS alert
+2022-08-09 06:57:13,506 [Thread-97   ] [INFO ]  Trigger acoustic alert
+2022-08-09 06:57:14,685 [Thread-99   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-09 06:57:26,644 [Thread-95   ] [INFO ]  Stop optical alert
+2022-08-09 06:57:30,644 [Thread-97   ] [INFO ]  Stop acoustic alert
+2022-08-09 06:57:30,655 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 12
+2022-08-09 06:57:30,817 [MainThread  ] [INFO ]  Alert: End event with ID 12
+2022-08-09 06:57:31,389 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 12
+2022-08-09 06:57:31,409 [MainThread  ] [INFO ]  Alert: End event with ID 12
+2022-08-09 06:57:48,226 [MainThread  ] [INFO ]  Store feedback for event 12
+2022-08-09 06:57:48,470 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 12
+2022-08-09 08:38:12,902 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 30
+2022-08-09 08:38:13,446 [Thread-101  ] [INFO ]  Trigger optical alert
+2022-08-09 08:38:13,564 [Thread-102  ] [INFO ]  Trigger SMS alert
+2022-08-09 08:38:14,913 [Thread-104  ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-09 08:39:06,777 [Thread-101  ] [INFO ]  Stop optical alert
+2022-08-09 08:39:06,788 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 30
+2022-08-09 08:39:06,920 [MainThread  ] [INFO ]  Alert: End event with ID 30
+2022-08-09 08:39:27,676 [MainThread  ] [INFO ]  Store feedback for event 30
+2022-08-09 08:39:27,950 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 30
+2022-08-09 10:00:12,750 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 14
+2022-08-09 10:00:13,121 [Thread-106  ] [INFO ]  Trigger optical alert
+2022-08-09 10:00:13,199 [Thread-107  ] [INFO ]  Trigger SMS alert
+2022-08-09 10:00:13,427 [Thread-108  ] [INFO ]  Trigger acoustic alert
+2022-08-09 10:00:14,540 [Thread-110  ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-09 10:00:30,579 [Thread-106  ] [INFO ]  Stop optical alert
+2022-08-09 10:00:31,334 [Thread-108  ] [INFO ]  Stop acoustic alert
+2022-08-09 10:00:31,360 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 14
+2022-08-09 10:00:31,492 [MainThread  ] [INFO ]  Alert: End event with ID 14
+2022-08-09 10:00:32,045 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 14
+2022-08-09 10:00:32,051 [MainThread  ] [INFO ]  Alert: End event with ID 14
+2022-08-09 10:00:32,535 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 14
+2022-08-09 10:00:32,540 [MainThread  ] [INFO ]  Alert: End event with ID 14
+2022-08-09 10:00:33,078 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 14
+2022-08-09 10:00:33,099 [MainThread  ] [INFO ]  Alert: End event with ID 14
+2022-08-09 10:00:51,738 [MainThread  ] [INFO ]  Store feedback for event 14
+2022-08-09 10:00:52,252 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 14
+2022-08-09 10:21:49,942 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-09 10:21:49.942727
+2022-08-09 10:36:25,152 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-09 10:36:25.152262
+2022-08-09 10:53:12,955 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 19
+2022-08-09 10:53:13,670 [Thread-112  ] [INFO ]  Trigger optical alert
+2022-08-09 10:53:13,779 [Thread-113  ] [INFO ]  Trigger acoustic alert
+2022-08-09 10:53:21,711 [Thread-113  ] [INFO ]  Stop acoustic alert
+2022-08-09 10:53:21,817 [Thread-112  ] [INFO ]  Stop optical alert
+2022-08-09 10:53:21,833 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 19
+2022-08-09 10:53:21,990 [MainThread  ] [INFO ]  Alert: End event with ID 19
+2022-08-09 10:53:22,273 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 19
+2022-08-09 10:53:22,274 [MainThread  ] [INFO ]  Alert: End event with ID 19
+2022-08-09 10:53:34,433 [MainThread  ] [INFO ]  Store feedback for event 19
+2022-08-09 10:53:34,932 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 19
+2022-08-09 11:28:12,593 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 13
+2022-08-09 11:28:13,193 [Thread-115  ] [INFO ]  Trigger optical alert
+2022-08-09 11:28:13,238 [Thread-116  ] [INFO ]  Trigger SMS alert
+2022-08-09 11:28:13,587 [Thread-117  ] [INFO ]  Trigger acoustic alert
+2022-08-09 11:28:15,130 [Thread-119  ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-09 11:33:14,090 [Thread-118  ] [INFO ]  Alert: Alarm forced to terminate. Start time: 2022-08-09 11:28:13.766110, Now: 2022-08-09 11:33:14.090591
+2022-08-09 11:33:14,152 [Thread-118  ] [INFO ]  Store feedback for event 13
+2022-08-09 11:33:14,487 [Thread-115  ] [INFO ]  Stop optical alert
+2022-08-09 11:33:19,794 [Thread-117  ] [INFO ]  Stop acoustic alert
+2022-08-09 11:33:20,019 [Thread-118  ] [INFO ]  Alert: End event with ID 13
+2022-08-09 12:32:48,318 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-09 12:32:48.318462
+2022-08-09 12:40:13,050 [Thread-7    ] [INFO ]  Main: Event with ID 6 was missed because the study was paused
+2022-08-09 12:40:14,074 [Thread-7    ] [INFO ]  Main: Event with ID 6 was rescheduled for 62 minutes
+2022-08-09 12:53:45,517 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-09 12:53:45.517499
+2022-08-09 13:42:14,501 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 6
+2022-08-09 13:42:15,003 [Thread-121  ] [INFO ]  Trigger optical alert
+2022-08-09 13:42:15,540 [Thread-122  ] [INFO ]  Trigger SMS alert
+2022-08-09 13:42:17,008 [Thread-124  ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-09 13:42:27,999 [Thread-121  ] [INFO ]  Stop optical alert
+2022-08-09 13:42:27,999 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 6
+2022-08-09 13:42:28,355 [MainThread  ] [INFO ]  Alert: End event with ID 6
+2022-08-09 13:42:28,756 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 6
+2022-08-09 13:42:28,842 [MainThread  ] [INFO ]  Alert: End event with ID 6
+2022-08-09 13:42:51,621 [MainThread  ] [INFO ]  Store feedback for event 6
+2022-08-09 13:42:51,807 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 6
+2022-08-09 13:42:53,442 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-09 13:42:53.442613
+2022-08-09 13:42:53,474 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-09 13:42:53.474245
+2022-08-09 13:42:56,934 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-09 13:42:56.934796
+2022-08-09 13:42:57,768 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-09 13:42:57.768169
+2022-08-09 13:42:59,323 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-09 13:42:59.323526
+2022-08-09 13:51:12,191 [Thread-7    ] [INFO ]  Main: Event with ID 27 was missed because the study was paused
+2022-08-09 13:51:13,925 [Thread-7    ] [INFO ]  Main: End program at 2022-08-09 13:51:13.924970
+2022-08-09 14:17:16,218 [MainThread  ] [INFO ]  Main: Start program at 2022-08-09 14:17:16.218889
+2022-08-09 14:17:16,369 [MainThread  ] [INFO ]  Load simulation file: /home/pi/masterthesis/resources/simulations/TestSimulation.json
+2022-08-09 14:17:16,379 [MainThread  ] [INFO ]  Init feedback file: /home/pi/masterthesis/resources/feedback_21_2.csv
+2022-08-09 14:17:15,166 [MainThread  ] [INFO ]  Main: Start program at 2022-08-09 14:17:15.166084
+2022-08-09 14:17:15,278 [MainThread  ] [INFO ]  Load simulation file: /home/pi/masterthesis/resources/simulations/TestSimulation.json
+2022-08-09 14:17:15,287 [MainThread  ] [INFO ]  Init feedback file: /home/pi/masterthesis/resources/feedback_22.csv
+2022-08-09 14:17:45,961 [MainThread  ] [INFO ]  Alert: Dispatch event with ID 0
+2022-08-09 14:17:45,999 [Thread-1    ] [INFO ]  Trigger optical alert
+2022-08-09 14:17:46,000 [Thread-2    ] [INFO ]  Trigger acoustic alert
+2022-08-09 14:17:46,005 [Thread-3    ] [INFO ]  Trigger SMS alert
+2022-08-09 14:17:47,053 [Thread-5    ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-09 14:17:54,535 [Thread-2    ] [INFO ]  Stop acoustic alert
+2022-08-09 14:17:56,040 [Thread-1    ] [INFO ]  Stop optical alert
+2022-08-09 14:17:56,207 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 0
+2022-08-09 14:17:56,242 [MainThread  ] [INFO ]  Alert: End event with ID 0
+2022-08-09 14:18:41,677 [MainThread  ] [INFO ]  Store feedback for event 0
+2022-08-09 14:18:41,684 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 0
+2022-08-09 14:18:43,438 [MainThread  ] [INFO ]  Main: Simulation started at 2022-08-09 14:18:43.438441
+2022-08-09 14:18:48,366 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-09 14:18:48.366173
+2022-08-09 14:18:49,646 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-09 14:18:49.646244
+2022-08-09 14:22:03,703 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 30
+2022-08-09 14:22:03,820 [Thread-8    ] [INFO ]  Trigger optical alert
+2022-08-09 14:22:03,919 [Thread-9    ] [INFO ]  Trigger SMS alert
+2022-08-09 14:22:05,025 [Thread-11   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-09 14:22:35,229 [Thread-8    ] [INFO ]  Stop optical alert
+2022-08-09 14:22:35,245 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 30
+2022-08-09 14:22:35,280 [MainThread  ] [INFO ]  Alert: End event with ID 30
+2022-08-09 14:22:35,390 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 30
+2022-08-09 14:22:35,411 [MainThread  ] [INFO ]  Alert: End event with ID 30
+2022-08-09 14:23:14,136 [MainThread  ] [INFO ]  Store feedback for event 30
+2022-08-09 14:23:14,240 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 30
+2022-08-09 15:23:54,030 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 27
+2022-08-09 15:23:54,273 [Thread-13   ] [INFO ]  Trigger optical alert
+2022-08-09 15:24:10,663 [Thread-13   ] [INFO ]  Stop optical alert
+2022-08-09 15:24:10,690 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 27
+2022-08-09 15:24:10,711 [MainThread  ] [INFO ]  Alert: End event with ID 27
+2022-08-09 15:24:42,696 [MainThread  ] [INFO ]  Store feedback for event 27
+2022-08-09 15:24:42,892 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 27
+2022-08-09 16:19:18,866 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-09 16:19:18.866110
+2022-08-09 16:20:53,476 [Thread-7    ] [INFO ]  Main: Event with ID 11 was missed because the study was paused
+2022-08-09 16:20:54,506 [Thread-7    ] [INFO ]  Main: Event with ID 11 was rescheduled for 159 minutes
+2022-08-09 16:40:37,309 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-09 16:40:37.309307
+2022-08-09 16:44:41,100 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-09 16:44:41.100808
+2022-08-09 16:50:50,916 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-09 16:50:50.916662
+2022-08-09 17:44:54,184 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 10
+2022-08-09 17:44:54,214 [Thread-15   ] [INFO ]  Trigger optical alert
+2022-08-09 17:44:54,244 [Thread-16   ] [INFO ]  Trigger SMS alert
+2022-08-09 17:44:54,269 [Thread-17   ] [INFO ]  Trigger acoustic alert
+2022-08-09 17:44:55,346 [Thread-19   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-09 17:45:29,579 [Thread-15   ] [INFO ]  Stop optical alert
+2022-08-09 17:45:30,708 [Thread-17   ] [INFO ]  Stop acoustic alert
+2022-08-09 17:45:30,724 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 10
+2022-08-09 17:45:30,841 [MainThread  ] [INFO ]  Alert: End event with ID 10
+2022-08-09 17:45:31,042 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 10
+2022-08-09 17:45:31,072 [MainThread  ] [INFO ]  Alert: End event with ID 10
+2022-08-09 17:45:59,954 [MainThread  ] [INFO ]  Store feedback for event 10
+2022-08-09 17:46:00,120 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 10
+2022-08-09 18:38:53,810 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 25
+2022-08-09 18:38:54,102 [Thread-21   ] [INFO ]  Trigger acoustic alert
+2022-08-09 18:39:17,461 [Thread-21   ] [INFO ]  Stop acoustic alert
+2022-08-09 18:39:17,467 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 25
+2022-08-09 18:39:17,494 [MainThread  ] [INFO ]  Alert: End event with ID 25
+2022-08-09 18:39:56,512 [MainThread  ] [INFO ]  Store feedback for event 25
+2022-08-09 18:39:56,714 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 25
+2022-08-09 18:59:54,669 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 11
+2022-08-09 18:59:54,926 [Thread-23   ] [INFO ]  Trigger optical alert
+2022-08-09 18:59:55,005 [Thread-24   ] [INFO ]  Trigger SMS alert
+2022-08-09 18:59:55,027 [Thread-25   ] [INFO ]  Trigger acoustic alert
+2022-08-09 18:59:56,257 [Thread-27   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-09 19:00:17,210 [Thread-27   ] [INFO ]  SMS_Alert: Received SMS from +491622079610 at 2022-08-12 16:26:39 with message Okay
+2022-08-09 19:00:17,296 [Thread-25   ] [INFO ]  Stop acoustic alert
+2022-08-09 19:00:17,555 [Thread-23   ] [INFO ]  Stop optical alert
+2022-08-09 19:00:17,566 [Thread-27   ] [INFO ]  Feedback: Start collecting feedback for event with ID 11
+2022-08-09 19:00:17,867 [Thread-27   ] [INFO ]  Alert: End event with ID 11
+2022-08-09 19:02:12,214 [MainThread  ] [INFO ]  Store feedback for event 11
+2022-08-09 19:02:12,395 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 11
+2022-08-09 19:06:39,400 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-09 19:06:39.400076
+2022-08-09 19:29:54,437 [Thread-7    ] [INFO ]  Main: Event with ID 7 was missed because the study was paused
+2022-08-09 19:29:55,466 [Thread-7    ] [INFO ]  Main: Event with ID 7 was rescheduled for 97 minutes
+2022-08-09 19:29:57,664 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-09 19:29:57.664911
+2022-08-09 20:12:54,188 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 9
+2022-08-09 20:12:54,417 [Thread-29   ] [INFO ]  Trigger optical alert
+2022-08-09 20:12:54,438 [Thread-30   ] [INFO ]  Trigger SMS alert
+2022-08-09 20:12:54,455 [Thread-31   ] [INFO ]  Trigger acoustic alert
+2022-08-09 20:12:55,569 [Thread-33   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-09 20:13:18,280 [Thread-31   ] [INFO ]  Stop acoustic alert
+2022-08-09 20:13:19,814 [Thread-29   ] [INFO ]  Stop optical alert
+2022-08-09 20:13:19,897 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 9
+2022-08-09 20:13:19,933 [MainThread  ] [INFO ]  Alert: End event with ID 9
+2022-08-09 20:13:53,050 [MainThread  ] [INFO ]  Store feedback for event 9
+2022-08-09 20:13:53,269 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 9
+2022-08-09 21:06:56,350 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 7
+2022-08-09 21:06:56,695 [Thread-35   ] [INFO ]  Trigger optical alert
+2022-08-09 21:06:56,789 [Thread-36   ] [INFO ]  Trigger SMS alert
+2022-08-09 21:06:56,805 [Thread-37   ] [INFO ]  Trigger acoustic alert
+2022-08-09 21:06:58,139 [Thread-39   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-09 21:07:17,500 [Thread-35   ] [INFO ]  Stop optical alert
+2022-08-09 21:07:19,030 [Thread-37   ] [INFO ]  Stop acoustic alert
+2022-08-09 21:07:19,035 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 7
+2022-08-09 21:07:19,119 [MainThread  ] [INFO ]  Alert: End event with ID 7
+2022-08-09 21:07:19,431 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 7
+2022-08-09 21:07:19,442 [MainThread  ] [INFO ]  Alert: End event with ID 7
+2022-08-09 21:08:13,412 [MainThread  ] [INFO ]  Store feedback for event 7
+2022-08-09 21:08:13,530 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 7
+2022-08-09 21:41:54,089 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 15
+2022-08-09 21:41:54,429 [Thread-41   ] [INFO ]  Trigger optical alert
+2022-08-09 21:41:54,576 [Thread-42   ] [INFO ]  Trigger SMS alert
+2022-08-09 21:41:54,644 [Thread-43   ] [INFO ]  Trigger acoustic alert
+2022-08-09 21:41:55,808 [Thread-45   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-09 21:42:22,931 [Thread-43   ] [INFO ]  Stop acoustic alert
+2022-08-09 21:42:24,372 [Thread-41   ] [INFO ]  Stop optical alert
+2022-08-09 21:42:24,377 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 15
+2022-08-09 21:42:24,460 [MainThread  ] [INFO ]  Alert: End event with ID 15
+2022-08-09 21:42:24,977 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 15
+2022-08-09 21:42:25,049 [MainThread  ] [INFO ]  Alert: End event with ID 15
+2022-08-09 21:42:52,417 [MainThread  ] [INFO ]  Store feedback for event 15
+2022-08-09 21:42:52,568 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 15
+2022-08-09 23:19:53,803 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 17
+2022-08-09 23:19:53,960 [Thread-47   ] [INFO ]  Trigger optical alert
+2022-08-09 23:19:54,066 [Thread-48   ] [INFO ]  Trigger SMS alert
+2022-08-09 23:19:54,083 [Thread-49   ] [INFO ]  Trigger acoustic alert
+2022-08-09 23:19:55,349 [Thread-51   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-09 23:20:09,553 [Thread-47   ] [INFO ]  Stop optical alert
+2022-08-09 23:20:10,782 [Thread-49   ] [INFO ]  Stop acoustic alert
+2022-08-09 23:20:10,788 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 17
+2022-08-09 23:20:10,974 [MainThread  ] [INFO ]  Alert: End event with ID 17
+2022-08-09 23:20:11,571 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 17
+2022-08-09 23:20:11,586 [MainThread  ] [INFO ]  Alert: End event with ID 17
+2022-08-09 23:20:40,797 [MainThread  ] [INFO ]  Store feedback for event 17
+2022-08-09 23:20:41,015 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 17
+2022-08-10 00:31:44,322 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-10 00:31:44.322095
+2022-08-10 02:02:54,406 [Thread-7    ] [INFO ]  Main: Event with ID 26 was missed because the study was paused
+2022-08-10 02:02:55,464 [Thread-7    ] [INFO ]  Main: Event with ID 26 was rescheduled for 130 minutes
+2022-08-10 04:12:55,927 [Thread-7    ] [INFO ]  Main: Event with ID 26 was missed because the study was paused
+2022-08-10 04:12:56,946 [Thread-7    ] [INFO ]  Main: Event with ID 26 was rescheduled for 77 minutes
+2022-08-10 05:29:57,017 [Thread-7    ] [INFO ]  Main: Event with ID 26 was missed because the study was paused
+2022-08-10 05:29:58,056 [Thread-7    ] [INFO ]  Main: Event with ID 26 was rescheduled for 161 minutes
+2022-08-10 08:10:58,150 [Thread-7    ] [INFO ]  Main: Event with ID 26 was missed because the study was paused
+2022-08-10 08:10:59,163 [Thread-7    ] [INFO ]  Main: Event with ID 26 was rescheduled for 71 minutes
+2022-08-10 09:21:59,626 [Thread-7    ] [INFO ]  Main: Event with ID 26 was missed because the study was paused
+2022-08-10 09:22:00,668 [Thread-7    ] [INFO ]  Main: Event with ID 26 was rescheduled for 43 minutes
+2022-08-10 10:05:01,667 [Thread-7    ] [INFO ]  Main: Event with ID 26 was missed because the study was paused
+2022-08-10 10:05:02,709 [Thread-7    ] [INFO ]  Main: Event with ID 26 was rescheduled for 153 minutes
+2022-08-10 12:38:03,098 [Thread-7    ] [INFO ]  Main: Event with ID 26 was missed because the study was paused
+2022-08-10 12:38:04,119 [Thread-7    ] [INFO ]  Main: Event with ID 26 was rescheduled for 71 minutes
+2022-08-10 13:49:04,280 [Thread-7    ] [INFO ]  Main: Event with ID 26 was missed because the study was paused
+2022-08-10 13:49:05,324 [Thread-7    ] [INFO ]  Main: Event with ID 26 was rescheduled for 110 minutes
+2022-08-10 15:19:53,548 [Thread-7    ] [INFO ]  Main: Event with ID 5 was missed because the study was paused
+2022-08-10 15:19:54,715 [Thread-7    ] [INFO ]  Main: Event with ID 5 was rescheduled for 95 minutes
+2022-08-10 15:39:05,629 [Thread-7    ] [INFO ]  Main: Event with ID 26 was missed because the study was paused
+2022-08-10 15:39:06,637 [Thread-7    ] [INFO ]  Main: Event with ID 26 was rescheduled for 172 minutes
+2022-08-10 16:30:34,901 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-10 16:30:34.901630
+2022-08-10 16:54:55,309 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 5
+2022-08-10 16:54:55,585 [Thread-53   ] [INFO ]  Trigger optical alert
+2022-08-10 16:59:55,865 [Thread-54   ] [INFO ]  Alert: Alarm forced to terminate. Start time: 2022-08-10 16:54:55.736517, Now: 2022-08-10 16:59:55.865844
+2022-08-10 16:59:55,928 [Thread-54   ] [INFO ]  Store feedback for event 5
+2022-08-10 16:59:58,855 [Thread-53   ] [INFO ]  Stop optical alert
+2022-08-10 16:59:59,089 [Thread-54   ] [INFO ]  Alert: End event with ID 5
+2022-08-10 17:00:53,687 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 8
+2022-08-10 17:00:53,967 [Thread-55   ] [INFO ]  Trigger optical alert
+2022-08-10 17:00:54,069 [Thread-56   ] [INFO ]  Trigger SMS alert
+2022-08-10 17:00:54,249 [Thread-57   ] [INFO ]  Trigger acoustic alert
+2022-08-10 17:00:55,565 [Thread-59   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-10 17:02:42,712 [Thread-57   ] [INFO ]  Stop acoustic alert
+2022-08-10 17:02:44,459 [Thread-55   ] [INFO ]  Stop optical alert
+2022-08-10 17:02:44,561 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 8
+2022-08-10 17:02:44,669 [MainThread  ] [INFO ]  Alert: End event with ID 8
+2022-08-10 17:02:45,181 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 8
+2022-08-10 17:02:45,192 [MainThread  ] [INFO ]  Alert: End event with ID 8
+2022-08-10 17:02:45,899 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 8
+2022-08-10 17:02:45,904 [MainThread  ] [INFO ]  Alert: End event with ID 8
+2022-08-10 17:03:21,129 [MainThread  ] [INFO ]  Store feedback for event 8
+2022-08-10 17:03:21,326 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 8
+2022-08-10 18:31:07,347 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 26
+2022-08-10 18:31:07,711 [Thread-61   ] [INFO ]  Trigger acoustic alert
+2022-08-10 18:31:35,493 [Thread-61   ] [INFO ]  Stop acoustic alert
+2022-08-10 18:31:35,498 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 26
+2022-08-10 18:31:35,555 [MainThread  ] [INFO ]  Alert: End event with ID 26
+2022-08-10 18:32:08,817 [MainThread  ] [INFO ]  Store feedback for event 26
+2022-08-10 18:32:09,262 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 26
+2022-08-10 19:09:53,536 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 18
+2022-08-10 19:09:53,921 [Thread-63   ] [INFO ]  Trigger optical alert
+2022-08-10 19:09:53,967 [Thread-64   ] [INFO ]  Trigger SMS alert
+2022-08-10 19:09:53,994 [Thread-65   ] [INFO ]  Trigger acoustic alert
+2022-08-10 19:09:55,517 [Thread-67   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-10 19:10:16,918 [Thread-67   ] [INFO ]  SMS_Alert: Received SMS from +491622079610 at 2022-08-13 16:36:32 with message Okay
+2022-08-10 19:10:16,968 [Thread-65   ] [INFO ]  Stop acoustic alert
+2022-08-10 19:10:17,317 [Thread-63   ] [INFO ]  Stop optical alert
+2022-08-10 19:10:17,510 [Thread-67   ] [INFO ]  Feedback: Start collecting feedback for event with ID 18
+2022-08-10 19:10:18,574 [Thread-67   ] [INFO ]  Alert: End event with ID 18
+2022-08-10 19:11:27,935 [MainThread  ] [INFO ]  Store feedback for event 18
+2022-08-10 19:11:28,110 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 18
+2022-08-10 20:04:54,012 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 21
+2022-08-10 20:04:54,440 [Thread-69   ] [INFO ]  Trigger optical alert
+2022-08-10 20:09:55,478 [Thread-70   ] [INFO ]  Alert: Alarm forced to terminate. Start time: 2022-08-10 20:04:54.490637, Now: 2022-08-10 20:09:55.478530
+2022-08-10 20:09:55,479 [Thread-70   ] [INFO ]  Store feedback for event 21
+2022-08-10 20:09:56,493 [Thread-69   ] [INFO ]  Stop optical alert
+2022-08-10 20:09:56,559 [Thread-70   ] [INFO ]  Alert: End event with ID 21
+2022-08-10 20:31:53,648 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 4
+2022-08-10 20:31:53,974 [Thread-71   ] [INFO ]  Trigger optical alert
+2022-08-10 20:36:54,522 [Thread-72   ] [INFO ]  Alert: Alarm forced to terminate. Start time: 2022-08-10 20:31:54.010359, Now: 2022-08-10 20:36:54.522876
+2022-08-10 20:36:54,533 [Thread-72   ] [INFO ]  Store feedback for event 4
+2022-08-10 20:36:56,567 [Thread-71   ] [INFO ]  Stop optical alert
+2022-08-10 20:36:57,206 [Thread-72   ] [INFO ]  Alert: End event with ID 4
+2022-08-10 21:16:14,965 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-10 21:16:14.965290
+2022-08-10 21:16:15,117 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-10 21:16:15.117897
+2022-08-10 21:16:18,652 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-10 21:16:18.652195
+2022-08-10 21:16:19,368 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-10 21:16:19.368911
+2022-08-10 21:16:21,297 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-10 21:16:21.297706
+2022-08-10 22:09:53,899 [Thread-7    ] [INFO ]  Main: Event with ID 1 was missed because the study was paused
+2022-08-10 22:09:54,919 [Thread-7    ] [INFO ]  Main: Event with ID 1 was rescheduled for 109 minutes
+2022-08-10 22:53:53,807 [Thread-7    ] [INFO ]  Main: Event with ID 22 was missed because the study was paused
+2022-08-10 22:53:54,828 [Thread-7    ] [INFO ]  Main: Event with ID 22 was rescheduled for 99 minutes
+2022-08-10 23:25:54,349 [Thread-7    ] [INFO ]  Main: Event with ID 14 was missed because the study was paused
+2022-08-10 23:25:55,466 [Thread-7    ] [INFO ]  Main: Event with ID 14 was rescheduled for 128 minutes
+2022-08-10 23:58:55,696 [Thread-7    ] [INFO ]  Main: Event with ID 1 was missed because the study was paused
+2022-08-10 23:58:56,748 [Thread-7    ] [INFO ]  Main: Event with ID 1 was rescheduled for 135 minutes
+2022-08-11 00:32:54,886 [Thread-7    ] [INFO ]  Main: Event with ID 22 was missed because the study was paused
+2022-08-11 00:32:55,978 [Thread-7    ] [INFO ]  Main: Event with ID 22 was rescheduled for 66 minutes
+2022-08-11 01:07:53,665 [Thread-7    ] [INFO ]  Main: Event with ID 12 was missed because the study was paused
+2022-08-11 01:07:54,818 [Thread-7    ] [INFO ]  Main: Event with ID 12 was rescheduled for 150 minutes
+2022-08-11 01:33:55,628 [Thread-7    ] [INFO ]  Main: Event with ID 14 was missed because the study was paused
+2022-08-11 01:33:56,635 [Thread-7    ] [INFO ]  Main: Event with ID 14 was rescheduled for 65 minutes
+2022-08-11 01:38:56,037 [Thread-7    ] [INFO ]  Main: Event with ID 22 was missed because the study was paused
+2022-08-11 01:38:57,041 [Thread-7    ] [INFO ]  Main: Event with ID 22 was rescheduled for 150 minutes
+2022-08-11 02:13:54,442 [Thread-7    ] [INFO ]  Main: Event with ID 13 was missed because the study was paused
+2022-08-11 02:13:55,477 [Thread-7    ] [INFO ]  Main: Event with ID 13 was rescheduled for 36 minutes
+2022-08-11 02:13:57,528 [Thread-7    ] [INFO ]  Main: Event with ID 1 was missed because the study was paused
+2022-08-11 02:13:58,547 [Thread-7    ] [INFO ]  Main: Event with ID 1 was rescheduled for 118 minutes
+2022-08-11 02:38:57,361 [Thread-7    ] [INFO ]  Main: Event with ID 14 was missed because the study was paused
+2022-08-11 02:38:58,379 [Thread-7    ] [INFO ]  Main: Event with ID 14 was rescheduled for 144 minutes
+2022-08-11 02:49:55,966 [Thread-7    ] [INFO ]  Main: Event with ID 13 was missed because the study was paused
+2022-08-11 02:49:57,049 [Thread-7    ] [INFO ]  Main: Event with ID 13 was rescheduled for 94 minutes
+2022-08-11 03:37:54,886 [Thread-7    ] [INFO ]  Main: Event with ID 12 was missed because the study was paused
+2022-08-11 03:37:55,907 [Thread-7    ] [INFO ]  Main: Event with ID 12 was rescheduled for 179 minutes
+2022-08-11 04:08:57,654 [Thread-7    ] [INFO ]  Main: Event with ID 22 was missed because the study was paused
+2022-08-11 04:08:58,731 [Thread-7    ] [INFO ]  Main: Event with ID 22 was rescheduled for 68 minutes
+2022-08-11 04:11:59,072 [Thread-7    ] [INFO ]  Main: Event with ID 1 was missed because the study was paused
+2022-08-11 04:12:00,226 [Thread-7    ] [INFO ]  Main: Event with ID 1 was rescheduled for 42 minutes
+2022-08-11 04:23:57,057 [Thread-7    ] [INFO ]  Main: Event with ID 13 was missed because the study was paused
+2022-08-11 04:23:58,130 [Thread-7    ] [INFO ]  Main: Event with ID 13 was rescheduled for 59 minutes
+2022-08-11 04:54:00,574 [Thread-7    ] [INFO ]  Main: Event with ID 1 was missed because the study was paused
+2022-08-11 04:54:01,683 [Thread-7    ] [INFO ]  Main: Event with ID 1 was rescheduled for 67 minutes
+2022-08-11 05:02:58,898 [Thread-7    ] [INFO ]  Main: Event with ID 14 was missed because the study was paused
+2022-08-11 05:02:59,930 [Thread-7    ] [INFO ]  Main: Event with ID 14 was rescheduled for 104 minutes
+2022-08-11 05:16:58,838 [Thread-7    ] [INFO ]  Main: Event with ID 22 was missed because the study was paused
+2022-08-11 05:16:59,846 [Thread-7    ] [INFO ]  Main: Event with ID 22 was rescheduled for 83 minutes
+2022-08-11 05:22:58,421 [Thread-7    ] [INFO ]  Main: Event with ID 13 was missed because the study was paused
+2022-08-11 05:22:59,430 [Thread-7    ] [INFO ]  Main: Event with ID 13 was rescheduled for 172 minutes
+2022-08-11 06:01:02,463 [Thread-7    ] [INFO ]  Main: Event with ID 1 was missed because the study was paused
+2022-08-11 06:01:03,585 [Thread-7    ] [INFO ]  Main: Event with ID 1 was rescheduled for 55 minutes
+2022-08-11 06:36:56,743 [Thread-7    ] [INFO ]  Main: Event with ID 12 was missed because the study was paused
+2022-08-11 06:36:57,756 [Thread-7    ] [INFO ]  Main: Event with ID 12 was rescheduled for 85 minutes
+2022-08-11 06:40:00,519 [Thread-7    ] [INFO ]  Main: Event with ID 22 was missed because the study was paused
+2022-08-11 06:40:01,548 [Thread-7    ] [INFO ]  Main: Event with ID 22 was rescheduled for 177 minutes
+2022-08-11 06:47:00,362 [Thread-7    ] [INFO ]  Main: Event with ID 14 was missed because the study was paused
+2022-08-11 06:47:01,408 [Thread-7    ] [INFO ]  Main: Event with ID 14 was rescheduled for 127 minutes
+2022-08-11 06:56:04,326 [Thread-7    ] [INFO ]  Main: Event with ID 1 was missed because the study was paused
+2022-08-11 06:56:05,347 [Thread-7    ] [INFO ]  Main: Event with ID 1 was rescheduled for 149 minutes
+2022-08-11 08:01:57,856 [Thread-7    ] [INFO ]  Main: Event with ID 12 was missed because the study was paused
+2022-08-11 08:01:58,887 [Thread-7    ] [INFO ]  Main: Event with ID 12 was rescheduled for 120 minutes
+2022-08-11 08:15:00,232 [Thread-7    ] [INFO ]  Main: Event with ID 13 was missed because the study was paused
+2022-08-11 08:15:01,261 [Thread-7    ] [INFO ]  Main: Event with ID 13 was rescheduled for 164 minutes
+2022-08-11 08:54:01,437 [Thread-7    ] [INFO ]  Main: Event with ID 14 was missed because the study was paused
+2022-08-11 08:54:02,440 [Thread-7    ] [INFO ]  Main: Event with ID 14 was rescheduled for 171 minutes
+2022-08-11 09:25:05,986 [Thread-7    ] [INFO ]  Main: Event with ID 1 was missed because the study was paused
+2022-08-11 09:25:07,004 [Thread-7    ] [INFO ]  Main: Event with ID 1 was rescheduled for 37 minutes
+2022-08-11 09:37:01,769 [Thread-7    ] [INFO ]  Main: Event with ID 22 was missed because the study was paused
+2022-08-11 09:37:02,816 [Thread-7    ] [INFO ]  Main: Event with ID 22 was rescheduled for 43 minutes
+2022-08-11 10:01:58,986 [Thread-7    ] [INFO ]  Main: Event with ID 12 was missed because the study was paused
+2022-08-11 10:01:59,993 [Thread-7    ] [INFO ]  Main: Event with ID 12 was rescheduled for 35 minutes
+2022-08-11 10:02:07,228 [Thread-7    ] [INFO ]  Main: Event with ID 1 was missed because the study was paused
+2022-08-11 10:02:08,339 [Thread-7    ] [INFO ]  Main: Event with ID 1 was rescheduled for 66 minutes
+2022-08-11 10:20:03,285 [Thread-7    ] [INFO ]  Main: Event with ID 22 was missed because the study was paused
+2022-08-11 10:20:04,309 [Thread-7    ] [INFO ]  Main: Event with ID 22 was rescheduled for 137 minutes
+2022-08-11 10:37:00,538 [Thread-7    ] [INFO ]  Main: Event with ID 12 was missed because the study was paused
+2022-08-11 10:37:01,547 [Thread-7    ] [INFO ]  Main: Event with ID 12 was rescheduled for 21 minutes
+2022-08-11 10:58:01,980 [Thread-7    ] [INFO ]  Main: Event with ID 12 was missed because the study was paused
+2022-08-11 10:58:03,004 [Thread-7    ] [INFO ]  Main: Event with ID 12 was rescheduled for 170 minutes
+2022-08-11 10:59:02,292 [Thread-7    ] [INFO ]  Main: Event with ID 13 was missed because the study was paused
+2022-08-11 10:59:03,342 [Thread-7    ] [INFO ]  Main: Event with ID 13 was rescheduled for 82 minutes
+2022-08-11 11:08:09,050 [Thread-7    ] [INFO ]  Main: Event with ID 1 was missed because the study was paused
+2022-08-11 11:08:10,057 [Thread-7    ] [INFO ]  Main: Event with ID 1 was rescheduled for 122 minutes
+2022-08-11 11:45:02,756 [Thread-7    ] [INFO ]  Main: Event with ID 14 was missed because the study was paused
+2022-08-11 11:45:03,783 [Thread-7    ] [INFO ]  Main: Event with ID 14 was rescheduled for 74 minutes
+2022-08-11 12:21:04,226 [Thread-7    ] [INFO ]  Main: Event with ID 13 was missed because the study was paused
+2022-08-11 12:21:05,245 [Thread-7    ] [INFO ]  Main: Event with ID 13 was rescheduled for 95 minutes
+2022-08-11 12:37:04,362 [Thread-7    ] [INFO ]  Main: Event with ID 22 was missed because the study was paused
+2022-08-11 12:37:05,472 [Thread-7    ] [INFO ]  Main: Event with ID 22 was rescheduled for 79 minutes
+2022-08-11 12:59:04,054 [Thread-7    ] [INFO ]  Main: Event with ID 14 was missed because the study was paused
+2022-08-11 12:59:05,089 [Thread-7    ] [INFO ]  Main: Event with ID 14 was rescheduled for 170 minutes
+2022-08-11 13:10:10,987 [Thread-7    ] [INFO ]  Main: Event with ID 1 was missed because the study was paused
+2022-08-11 13:10:12,048 [Thread-7    ] [INFO ]  Main: Event with ID 1 was rescheduled for 144 minutes
+2022-08-11 13:48:03,383 [Thread-7    ] [INFO ]  Main: Event with ID 12 was missed because the study was paused
+2022-08-11 13:48:04,426 [Thread-7    ] [INFO ]  Main: Event with ID 12 was rescheduled for 159 minutes
+2022-08-11 13:56:06,199 [Thread-7    ] [INFO ]  Main: Event with ID 13 was missed because the study was paused
+2022-08-11 13:56:06,210 [Thread-7    ] [INFO ]  Main: Event with ID 22 was missed because the study was paused
+2022-08-11 13:56:07,356 [Thread-7    ] [INFO ]  Main: Event with ID 13 was rescheduled for 150 minutes
+2022-08-11 13:56:08,427 [Thread-7    ] [INFO ]  Main: Event with ID 22 was rescheduled for 101 minutes
+2022-08-11 14:39:53,776 [Thread-7    ] [INFO ]  Main: Event with ID 28 was missed because the study was paused
+2022-08-11 14:39:54,779 [Thread-7    ] [INFO ]  Main: Event with ID 28 was rescheduled for 21 minutes
+2022-08-11 15:00:55,247 [Thread-7    ] [INFO ]  Main: Event with ID 28 was missed because the study was paused
+2022-08-11 15:00:56,335 [Thread-7    ] [INFO ]  Main: Event with ID 28 was rescheduled for 20 minutes
+2022-08-11 15:20:56,451 [Thread-7    ] [INFO ]  Main: Event with ID 28 was missed because the study was paused
+2022-08-11 15:20:57,456 [Thread-7    ] [INFO ]  Main: Event with ID 28 was rescheduled for 165 minutes
+2022-08-11 15:34:12,167 [Thread-7    ] [INFO ]  Main: Event with ID 1 was missed because the study was paused
+2022-08-11 15:34:13,176 [Thread-7    ] [INFO ]  Main: Event with ID 1 was rescheduled for 48 minutes
+2022-08-11 15:37:08,534 [Thread-7    ] [INFO ]  Main: Event with ID 22 was missed because the study was paused
+2022-08-11 15:37:09,554 [Thread-7    ] [INFO ]  Main: Event with ID 22 was rescheduled for 103 minutes
+2022-08-11 15:44:54,183 [Thread-7    ] [INFO ]  Main: Event with ID 3 was missed because the study was paused
+2022-08-11 15:44:55,266 [Thread-7    ] [INFO ]  Main: Event with ID 3 was rescheduled for 173 minutes
+2022-08-11 15:49:05,484 [Thread-7    ] [INFO ]  Main: Event with ID 14 was missed because the study was paused
+2022-08-11 15:49:06,506 [Thread-7    ] [INFO ]  Main: Event with ID 14 was rescheduled for 141 minutes
+2022-08-11 16:22:13,830 [Thread-7    ] [INFO ]  Main: Event with ID 1 was missed because the study was paused
+2022-08-11 16:22:14,851 [Thread-7    ] [INFO ]  Main: Event with ID 1 was rescheduled for 51 minutes
+2022-08-11 16:26:08,127 [Thread-7    ] [INFO ]  Main: Event with ID 13 was missed because the study was paused
+2022-08-11 16:26:09,136 [Thread-7    ] [INFO ]  Main: Event with ID 13 was rescheduled for 93 minutes
+2022-08-11 16:27:05,350 [Thread-7    ] [INFO ]  Main: Event with ID 12 was missed because the study was paused
+2022-08-11 16:27:06,364 [Thread-7    ] [INFO ]  Main: Event with ID 12 was rescheduled for 81 minutes
+2022-08-11 16:45:54,309 [Thread-7    ] [INFO ]  Main: Event with ID 19 was missed because the study was paused
+2022-08-11 16:45:55,328 [Thread-7    ] [INFO ]  Main: Event with ID 19 was rescheduled for 34 minutes
+2022-08-11 17:13:15,798 [Thread-7    ] [INFO ]  Main: Event with ID 1 was missed because the study was paused
+2022-08-11 17:13:16,810 [Thread-7    ] [INFO ]  Main: Event with ID 1 was rescheduled for 164 minutes
+2022-08-11 17:19:55,831 [Thread-7    ] [INFO ]  Main: Event with ID 19 was missed because the study was paused
+2022-08-11 17:19:56,966 [Thread-7    ] [INFO ]  Main: Event with ID 19 was rescheduled for 119 minutes
+2022-08-11 17:20:10,376 [Thread-7    ] [INFO ]  Main: Event with ID 22 was missed because the study was paused
+2022-08-11 17:20:11,428 [Thread-7    ] [INFO ]  Main: Event with ID 22 was rescheduled for 146 minutes
+2022-08-11 17:48:07,319 [Thread-7    ] [INFO ]  Main: Event with ID 12 was missed because the study was paused
+2022-08-11 17:48:08,327 [Thread-7    ] [INFO ]  Main: Event with ID 12 was rescheduled for 91 minutes
+2022-08-11 17:56:53,754 [Thread-7    ] [INFO ]  Main: Event with ID 6 was missed because the study was paused
+2022-08-11 17:56:54,766 [Thread-7    ] [INFO ]  Main: Event with ID 6 was rescheduled for 55 minutes
+2022-08-11 17:59:09,970 [Thread-7    ] [INFO ]  Main: Event with ID 13 was missed because the study was paused
+2022-08-11 17:59:11,128 [Thread-7    ] [INFO ]  Main: Event with ID 13 was rescheduled for 178 minutes
+2022-08-11 18:05:58,266 [Thread-7    ] [INFO ]  Main: Event with ID 28 was missed because the study was paused
+2022-08-11 18:05:59,365 [Thread-7    ] [INFO ]  Main: Event with ID 28 was rescheduled for 126 minutes
+2022-08-11 18:10:07,485 [Thread-7    ] [INFO ]  Main: Event with ID 14 was missed because the study was paused
+2022-08-11 18:10:08,503 [Thread-7    ] [INFO ]  Main: Event with ID 14 was rescheduled for 153 minutes
+2022-08-11 18:30:42,137 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-11 18:30:42.136996
+2022-08-11 18:37:55,607 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 3
+2022-08-11 18:37:55,866 [Thread-73   ] [INFO ]  Trigger optical alert
+2022-08-11 18:38:22,428 [Thread-73   ] [INFO ]  Stop optical alert
+2022-08-11 18:38:22,637 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 3
+2022-08-11 18:38:22,789 [MainThread  ] [INFO ]  Alert: End event with ID 3
+2022-08-11 18:38:23,487 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 3
+2022-08-11 18:38:23,488 [MainThread  ] [INFO ]  Alert: End event with ID 3
+2022-08-11 18:38:55,341 [MainThread  ] [INFO ]  Store feedback for event 3
+2022-08-11 18:38:55,700 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 3
+2022-08-11 18:49:33,167 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-11 18:49:33.167323
+2022-08-11 18:49:33,485 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-11 18:49:33.485147
+2022-08-11 18:49:37,741 [MainThread  ] [INFO ]  Main: Study paused at 2022-08-11 18:49:37.741790
+2022-08-11 18:51:55,236 [Thread-7    ] [INFO ]  Main: Event with ID 6 was missed because the study was paused
+2022-08-11 18:51:56,323 [Thread-7    ] [INFO ]  Main: Event with ID 6 was rescheduled for 136 minutes
+2022-08-11 19:18:57,767 [Thread-7    ] [INFO ]  Main: Event with ID 19 was missed because the study was paused
+2022-08-11 19:18:58,790 [Thread-7    ] [INFO ]  Main: Event with ID 19 was rescheduled for 97 minutes
+2022-08-11 19:19:09,073 [Thread-7    ] [INFO ]  Main: Event with ID 12 was missed because the study was paused
+2022-08-11 19:19:10,088 [Thread-7    ] [INFO ]  Main: Event with ID 12 was rescheduled for 142 minutes
+2022-08-11 19:37:53,839 [Thread-7    ] [INFO ]  Main: Event with ID 20 was missed because the study was paused
+2022-08-11 19:37:54,897 [Thread-7    ] [INFO ]  Main: Event with ID 20 was rescheduled for 82 minutes
+2022-08-11 19:46:11,780 [Thread-7    ] [INFO ]  Main: Event with ID 22 was missed because the study was paused
+2022-08-11 19:46:12,800 [Thread-7    ] [INFO ]  Main: Event with ID 22 was rescheduled for 161 minutes
+2022-08-11 19:57:17,563 [Thread-7    ] [INFO ]  Main: Event with ID 1 was missed because the study was paused
+2022-08-11 19:57:18,690 [Thread-7    ] [INFO ]  Main: Event with ID 1 was rescheduled for 114 minutes
+2022-08-11 20:11:59,566 [Thread-7    ] [INFO ]  Main: Event with ID 28 was missed because the study was paused
+2022-08-11 20:12:00,587 [Thread-7    ] [INFO ]  Main: Event with ID 28 was rescheduled for 75 minutes
+2022-08-11 20:43:08,716 [Thread-7    ] [INFO ]  Main: Event with ID 14 was missed because the study was paused
+2022-08-11 20:43:09,762 [Thread-7    ] [INFO ]  Main: Event with ID 14 was rescheduled for 79 minutes
+2022-08-11 20:55:58,816 [Thread-7    ] [INFO ]  Main: Event with ID 19 was missed because the study was paused
+2022-08-11 20:55:59,837 [Thread-7    ] [INFO ]  Main: Event with ID 19 was rescheduled for 144 minutes
+2022-08-11 20:57:11,758 [Thread-7    ] [INFO ]  Main: Event with ID 13 was missed because the study was paused
+2022-08-11 20:57:12,771 [Thread-7    ] [INFO ]  Main: Event with ID 13 was rescheduled for 33 minutes
+2022-08-11 20:59:53,853 [Thread-7    ] [INFO ]  Main: Event with ID 2 was missed because the study was paused
+2022-08-11 20:59:54,858 [Thread-7    ] [INFO ]  Main: Event with ID 2 was rescheduled for 117 minutes
+2022-08-11 20:59:55,931 [Thread-7    ] [INFO ]  Main: Event with ID 20 was missed because the study was paused
+2022-08-11 20:59:56,949 [Thread-7    ] [INFO ]  Main: Event with ID 20 was rescheduled for 137 minutes
+2022-08-11 21:07:56,935 [Thread-7    ] [INFO ]  Main: Event with ID 6 was missed because the study was paused
+2022-08-11 21:07:57,950 [Thread-7    ] [INFO ]  Main: Event with ID 6 was rescheduled for 86 minutes
+2022-08-11 21:27:00,876 [Thread-7    ] [INFO ]  Main: Event with ID 28 was missed because the study was paused
+2022-08-11 21:27:01,899 [Thread-7    ] [INFO ]  Main: Event with ID 28 was rescheduled for 32 minutes
+2022-08-11 21:30:12,937 [Thread-7    ] [INFO ]  Main: Event with ID 13 was missed because the study was paused
+2022-08-11 21:30:13,949 [Thread-7    ] [INFO ]  Main: Event with ID 13 was rescheduled for 161 minutes
+2022-08-11 21:41:10,702 [Thread-7    ] [INFO ]  Main: Event with ID 12 was missed because the study was paused
+2022-08-11 21:41:11,720 [Thread-7    ] [INFO ]  Main: Event with ID 12 was rescheduled for 28 minutes
+2022-08-11 21:49:19,471 [MainThread  ] [INFO ]  Main: Study continued at 2022-08-11 21:49:19.471433
+2022-08-11 21:51:19,112 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 1
+2022-08-11 21:51:19,442 [Thread-75   ] [INFO ]  Trigger optical alert
+2022-08-11 21:51:49,541 [Thread-75   ] [INFO ]  Stop optical alert
+2022-08-11 21:51:49,541 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 1
+2022-08-11 21:51:49,596 [MainThread  ] [INFO ]  Alert: End event with ID 1
+2022-08-11 21:52:20,147 [MainThread  ] [INFO ]  Store feedback for event 1
+2022-08-11 21:52:20,287 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 1
+2022-08-11 21:52:53,910 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 29
+2022-08-11 21:52:54,446 [Thread-77   ] [INFO ]  Trigger optical alert
+2022-08-11 21:52:54,698 [Thread-78   ] [INFO ]  Trigger acoustic alert
+2022-08-11 21:53:05,570 [Thread-77   ] [INFO ]  Stop optical alert
+2022-08-11 21:53:05,837 [Thread-78   ] [INFO ]  Stop acoustic alert
+2022-08-11 21:53:05,872 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 29
+2022-08-11 21:53:06,097 [MainThread  ] [INFO ]  Alert: End event with ID 29
+2022-08-11 21:53:06,741 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 29
+2022-08-11 21:53:07,005 [MainThread  ] [INFO ]  Alert: End event with ID 29
+2022-08-11 21:53:33,607 [MainThread  ] [INFO ]  Store feedback for event 29
+2022-08-11 21:53:33,854 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 29
+2022-08-11 21:59:02,132 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 28
+2022-08-11 21:59:02,396 [Thread-80   ] [INFO ]  Trigger optical alert
+2022-08-11 21:59:19,946 [Thread-80   ] [INFO ]  Stop optical alert
+2022-08-11 21:59:20,398 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 28
+2022-08-11 21:59:20,435 [MainThread  ] [INFO ]  Alert: End event with ID 28
+2022-08-11 21:59:55,890 [MainThread  ] [INFO ]  Store feedback for event 28
+2022-08-11 21:59:56,180 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 28
+2022-08-11 22:02:10,327 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 14
+2022-08-11 22:02:10,743 [Thread-82   ] [INFO ]  Trigger optical alert
+2022-08-11 22:02:10,895 [Thread-83   ] [INFO ]  Trigger SMS alert
+2022-08-11 22:02:10,936 [Thread-84   ] [INFO ]  Trigger acoustic alert
+2022-08-11 22:02:12,370 [Thread-86   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-11 22:02:21,238 [Thread-82   ] [INFO ]  Stop optical alert
+2022-08-11 22:02:22,747 [Thread-84   ] [INFO ]  Stop acoustic alert
+2022-08-11 22:02:22,753 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 14
+2022-08-11 22:02:23,004 [MainThread  ] [INFO ]  Alert: End event with ID 14
+2022-08-11 22:02:23,278 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 14
+2022-08-11 22:02:23,311 [MainThread  ] [INFO ]  Alert: End event with ID 14
+2022-08-11 22:02:39,305 [MainThread  ] [INFO ]  Store feedback for event 14
+2022-08-11 22:02:39,629 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 14
+2022-08-11 22:09:12,159 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 12
+2022-08-11 22:09:12,506 [Thread-88   ] [INFO ]  Trigger optical alert
+2022-08-11 22:09:12,575 [Thread-89   ] [INFO ]  Trigger SMS alert
+2022-08-11 22:09:12,601 [Thread-90   ] [INFO ]  Trigger acoustic alert
+2022-08-11 22:09:14,296 [Thread-92   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-11 22:09:24,404 [Thread-90   ] [INFO ]  Stop acoustic alert
+2022-08-11 22:09:26,023 [Thread-88   ] [INFO ]  Stop optical alert
+2022-08-11 22:09:26,060 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 12
+2022-08-11 22:09:26,311 [MainThread  ] [INFO ]  Alert: End event with ID 12
+2022-08-11 22:09:26,671 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 12
+2022-08-11 22:09:26,677 [MainThread  ] [INFO ]  Alert: End event with ID 12
+2022-08-11 22:09:56,775 [MainThread  ] [INFO ]  Store feedback for event 12
+2022-08-11 22:09:57,175 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 12
+2022-08-11 22:27:13,059 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 22
+2022-08-11 22:27:13,301 [Thread-94   ] [INFO ]  Trigger optical alert
+2022-08-11 22:27:31,362 [Thread-94   ] [INFO ]  Stop optical alert
+2022-08-11 22:27:31,590 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 22
+2022-08-11 22:27:31,675 [MainThread  ] [INFO ]  Alert: End event with ID 22
+2022-08-11 22:27:54,099 [Thread-7    ] [INFO ]  Main: Event with ID 16 was missed because feedback collection from previous alarm was still running
+2022-08-11 22:27:55,007 [MainThread  ] [INFO ]  Store feedback for event 22
+2022-08-11 22:27:55,136 [Thread-7    ] [INFO ]  Main: Event with ID 16 was rescheduled for 61 minutes
+2022-08-11 22:27:55,437 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 22
+2022-08-11 22:33:58,339 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 6
+2022-08-11 22:33:58,772 [Thread-96   ] [INFO ]  Trigger optical alert
+2022-08-11 22:33:59,467 [Thread-97   ] [INFO ]  Trigger SMS alert
+2022-08-11 22:34:01,169 [Thread-99   ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-11 22:34:19,364 [Thread-96   ] [INFO ]  Stop optical alert
+2022-08-11 22:34:19,370 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 6
+2022-08-11 22:34:19,457 [MainThread  ] [INFO ]  Alert: End event with ID 6
+2022-08-11 22:34:20,326 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 6
+2022-08-11 22:34:20,326 [MainThread  ] [INFO ]  Alert: End event with ID 6
+2022-08-11 22:35:10,246 [MainThread  ] [INFO ]  Store feedback for event 6
+2022-08-11 22:35:10,506 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 6
+2022-08-11 22:56:54,919 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 2
+2022-08-11 22:56:55,517 [Thread-101  ] [INFO ]  Trigger optical alert
+2022-08-11 23:01:26,815 [Thread-101  ] [INFO ]  Stop optical alert
+2022-08-11 23:01:26,816 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 2
+2022-08-11 23:01:27,254 [MainThread  ] [INFO ]  Alert: End event with ID 2
+2022-08-11 23:01:28,121 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 2
+2022-08-11 23:01:28,127 [MainThread  ] [INFO ]  Alert: End event with ID 2
+2022-08-11 23:01:28,297 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 2
+2022-08-11 23:01:28,302 [MainThread  ] [INFO ]  Alert: End event with ID 2
+2022-08-11 23:01:59,322 [MainThread  ] [INFO ]  Store feedback for event 2
+2022-08-11 23:01:59,823 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 2
+2022-08-11 23:16:57,676 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 20
+2022-08-11 23:16:58,297 [Thread-103  ] [INFO ]  Trigger optical alert
+2022-08-11 23:16:58,338 [Thread-104  ] [INFO ]  Trigger SMS alert
+2022-08-11 23:16:58,453 [Thread-105  ] [INFO ]  Trigger acoustic alert
+2022-08-11 23:16:59,535 [Thread-107  ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-11 23:17:10,351 [Thread-103  ] [INFO ]  Stop optical alert
+2022-08-11 23:17:10,620 [Thread-105  ] [INFO ]  Stop acoustic alert
+2022-08-11 23:17:10,626 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 20
+2022-08-11 23:17:10,885 [MainThread  ] [INFO ]  Alert: End event with ID 20
+2022-08-11 23:17:11,803 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 20
+2022-08-11 23:17:11,897 [MainThread  ] [INFO ]  Alert: End event with ID 20
+2022-08-11 23:17:28,676 [MainThread  ] [INFO ]  Store feedback for event 20
+2022-08-11 23:17:28,800 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 20
+2022-08-11 23:20:00,105 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 19
+2022-08-11 23:20:00,937 [Thread-109  ] [INFO ]  Trigger optical alert
+2022-08-11 23:20:00,993 [Thread-110  ] [INFO ]  Trigger acoustic alert
+2022-08-11 23:20:20,176 [Thread-109  ] [INFO ]  Stop optical alert
+2022-08-11 23:20:20,413 [Thread-110  ] [INFO ]  Stop acoustic alert
+2022-08-11 23:20:20,414 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 19
+2022-08-11 23:20:21,083 [MainThread  ] [INFO ]  Alert: End event with ID 19
+2022-08-11 23:20:45,422 [MainThread  ] [INFO ]  Store feedback for event 19
+2022-08-11 23:20:46,105 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 19
+2022-08-11 23:28:55,351 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 16
+2022-08-11 23:28:56,170 [Thread-112  ] [INFO ]  Trigger optical alert
+2022-08-11 23:28:56,195 [Thread-113  ] [INFO ]  Trigger acoustic alert
+2022-08-11 23:29:04,346 [Thread-112  ] [INFO ]  Stop optical alert
+2022-08-11 23:29:08,877 [Thread-113  ] [INFO ]  Stop acoustic alert
+2022-08-11 23:29:08,990 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 16
+2022-08-11 23:29:09,395 [MainThread  ] [INFO ]  Alert: End event with ID 16
+2022-08-11 23:29:09,649 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 16
+2022-08-11 23:29:09,650 [MainThread  ] [INFO ]  Alert: End event with ID 16
+2022-08-11 23:29:10,101 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 16
+2022-08-11 23:29:10,165 [MainThread  ] [INFO ]  Alert: End event with ID 16
+2022-08-11 23:29:10,768 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 16
+2022-08-11 23:29:10,773 [MainThread  ] [INFO ]  Alert: End event with ID 16
+2022-08-11 23:29:30,698 [MainThread  ] [INFO ]  Store feedback for event 16
+2022-08-11 23:29:30,989 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 16
+2022-08-11 23:39:54,249 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 23
+2022-08-11 23:39:54,761 [Thread-115  ] [INFO ]  Trigger optical alert
+2022-08-11 23:39:55,000 [Thread-116  ] [INFO ]  Trigger SMS alert
+2022-08-11 23:39:56,326 [Thread-118  ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-11 23:40:02,855 [Thread-115  ] [INFO ]  Stop optical alert
+2022-08-11 23:40:02,866 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 23
+2022-08-11 23:40:03,183 [MainThread  ] [INFO ]  Alert: End event with ID 23
+2022-08-11 23:40:27,047 [MainThread  ] [INFO ]  Store feedback for event 23
+2022-08-11 23:40:27,202 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 23
+2022-08-12 00:11:14,790 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 13
+2022-08-12 00:11:15,771 [Thread-120  ] [INFO ]  Trigger optical alert
+2022-08-12 00:11:15,921 [Thread-121  ] [INFO ]  Trigger SMS alert
+2022-08-12 00:11:16,339 [Thread-122  ] [INFO ]  Trigger acoustic alert
+2022-08-12 00:11:17,520 [Thread-124  ] [INFO ]  SMS_Alert: Start thread waiting for feedback...
+2022-08-12 00:11:28,712 [Thread-122  ] [INFO ]  Stop acoustic alert
+2022-08-12 00:11:29,717 [Thread-120  ] [INFO ]  Stop optical alert
+2022-08-12 00:11:29,733 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 13
+2022-08-12 00:11:29,789 [MainThread  ] [INFO ]  Alert: End event with ID 13
+2022-08-12 00:11:30,795 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 13
+2022-08-12 00:11:30,810 [MainThread  ] [INFO ]  Alert: End event with ID 13
+2022-08-12 00:11:55,589 [MainThread  ] [INFO ]  Store feedback for event 13
+2022-08-12 00:11:55,842 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 13
+2022-08-12 00:50:54,411 [Thread-7    ] [INFO ]  Alert: Dispatch event with ID 24
+2022-08-12 00:50:55,517 [Thread-126  ] [INFO ]  Trigger optical alert
+2022-08-12 00:50:57,551 [Thread-7    ] [INFO ]  Main: End program at 2022-08-12 00:50:57.551805
+2022-08-12 00:51:08,254 [Thread-126  ] [INFO ]  Stop optical alert
+2022-08-12 00:51:08,654 [MainThread  ] [INFO ]  Feedback: Start collecting feedback for event with ID 24
+2022-08-12 00:51:09,167 [MainThread  ] [INFO ]  Alert: End event with ID 24
+2022-08-12 00:51:52,694 [MainThread  ] [INFO ]  Store feedback for event 24
+2022-08-12 00:51:53,270 [MainThread  ] [INFO ]  Feedback: Finish collecting feedback for event with ID 24
+2022-08-12 00:17:20,404 [MainThread  ] [INFO ]  Main: Start program at 2022-08-12 00:17:20.404071
+2022-08-12 00:17:20,559 [MainThread  ] [INFO ]  Load simulation file: /home/pi/masterthesis/resources/simulations/TestSimulation.json
+2022-08-12 00:17:20,563 [MainThread  ] [INFO ]  Init feedback file: /home/pi/masterthesis/resources/feedback_22_1.csv
+2022-08-12 00:18:26,688 [MainThread  ] [INFO ]  Main: Start program at 2022-08-12 00:18:26.688392
+2022-08-12 00:18:26,820 [MainThread  ] [INFO ]  Load simulation file: /home/pi/masterthesis/resources/simulations/TestSimulation.json
+2022-08-12 00:18:26,825 [MainThread  ] [INFO ]  Init feedback file: /home/pi/masterthesis/resources/feedback_22_1.csv
