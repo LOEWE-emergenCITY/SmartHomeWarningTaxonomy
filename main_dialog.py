@@ -18,7 +18,6 @@ class Main_Dialog:
     state = "Studie läuft"
 
     def __init__(self):
-        #print("Main    : Start program at {}".format(dt.datetime.now()))
         self.block_execution = False
 
         # Logger
@@ -85,10 +84,6 @@ class Main_Dialog:
             self.missed_events.append(match)
             logger.info("Main: Event with ID {} was missed because feedback collection from previous alarm was still running".format(event["id"]))
             return
-        # Check if execution time is in the past
-        #if ((execution_date + dt.timedelta(seconds=2)) < dt.datetime.now()):
-        #    logger.info("Main: Event with ID {} was missed because the execution time is in the past".format(event["id"]))
-        #    return
         # Check if study is paused
         if (self.block_execution):
             self.missed_events.append(match)
@@ -107,9 +102,6 @@ class Main_Dialog:
 
         for match in matches:
             time_array = match[0]['timedelta'].split(':')
-            #date_array = match[0]['date'].split('-')
-            #execution_date = dt.datetime(year=int(date_array[0]), month=int(date_array[1]), day=int(date_array[2]),
-            #              hour=int(time_array[0]), minute=int(time_array[1]), second=int(time_array[2]))
             timedelta = dt.timedelta(hours=int(time_array[0]), minutes=int(time_array[1]), seconds=int(time_array[2]))
             schedule.once(timedelta, self.dispatch_alarm, args=(match, schedule, False))
 
@@ -195,7 +187,6 @@ class Main_Dialog:
 
         self.img_label.pack(pady=10)
 
-        #self.start_button.pack(side=LEFT, pady=10, padx=10)
         self.trigger_button.pack(side=LEFT, padx=10)
 
 

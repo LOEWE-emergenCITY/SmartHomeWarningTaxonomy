@@ -110,9 +110,3 @@ class Feedback_Dialog():
         self.progress_bar.pack()
 
         self.progress_label.pack()
-
-#question = "Wie finden sie das das so und so läuft?"
-#dialog = Feedback_Dialog()
-#time.sleep(2)
-#dialog.collect_feedback()
-#time.sleep(5)

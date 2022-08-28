@@ -153,9 +153,3 @@ class Alert_Dialog:
 
         abort_button = Button(button_frame, command=lambda : self.abort_alert(), text="Abbruch", background="red", foreground="white", font=("Calibri", 25))   
         abort_button.pack(side=LEFT, padx=20)
-
-#root = tk.Tk()
-#root.withdraw()
-#event = {"id": 1, "categorie": "highest", "time": "17:02:20", "alerts": ["acoustic"], "message": "Die Sicherung der Kaffeemaschine ist durchgebrannt!"}
-#dialog = Alert_Dialog()
-#dialog.dispatch_event(event)
