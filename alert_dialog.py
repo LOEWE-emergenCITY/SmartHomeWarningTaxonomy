@@ -148,7 +148,7 @@ class Alert_Dialog:
         button_frame = tk.Frame(center_frame, width=300)
         button_frame.pack(ipady=20)
 
-        acknowledge_button = Button(button_frame, command=lambda : self.perception_acknowledged('display'), text="Alarm wahrgenommen", background="green", foreground="white", font=("Calibri", 25))   
+        acknowledge_button = Button(button_frame, command=lambda : self.perception_acknowledged('display'), text="Alarm perceived", background="green", foreground="white", font=("Calibri", 25))   
         acknowledge_button.pack(side=LEFT, padx=20)
 
         abort_button = Button(button_frame, command=lambda : self.abort_alert(), text="Abbruch", background="red", foreground="white", font=("Calibri", 25))   

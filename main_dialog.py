@@ -47,7 +47,7 @@ class Main_Dialog:
         self.feedback_file_name = init_feedback_file(self.simulation_file_name)
 
         # For demonstration
-        event = {"id": 1, "categorie": "highest", "time": "14:03:10", "alerts": ['optic_bl_white', 'acoustic', 'sms'], "message": "Die Sicherung der Kaffeemaschine \n ist durchgebrannt!"}
+        event = {"id": 1, "categorie": "highest", "time": "14:03:10", "alerts": ['optic_bl_white', 'acoustic', 'sms'], "message": "The fuse of the coffee machine \n is blown!"}
         self.trigger_button = Button(self.center_frame, command=lambda: self.test_warning(), text="Test warning", height=2, background="#000000", foreground="white", font=("Calibri", 25))
 
         self.alert_dialog = Alert_Dialog(self.simulation_file_name, self.feedback_file_name)
@@ -151,7 +151,7 @@ class Main_Dialog:
 
     def test_warning(self):
         # Trigger test event
-        event = {"id": 0, "alerts": ['optic_red', 'acoustic', 'sms'], "message": "Das ist ein Test Event. \n Im folgenden können Sie sich mit den \n Feedback Fragen vertraut machen."}
+        event = {"id": 0, "alerts": ['optic_red', 'acoustic', 'sms'], "message": "This is a test event. \n Below you can familiarize yourself with the \n feedback questions."}
         match = [{}, event]
         self.dispatch_alarm(match, {}, True)
 
