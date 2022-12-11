@@ -151,5 +151,5 @@ class Alert_Dialog:
         acknowledge_button = Button(button_frame, command=lambda : self.perception_acknowledged('display'), text="Alarm perceived", background="green", foreground="white", font=("Calibri", 25))   
         acknowledge_button.pack(side=LEFT, padx=20)
 
-        abort_button = Button(button_frame, command=lambda : self.abort_alert(), text="Abbruch", background="red", foreground="white", font=("Calibri", 25))   
+        abort_button = Button(button_frame, command=lambda : self.abort_alert(), text="Abort", background="red", foreground="white", font=("Calibri", 25))   
         abort_button.pack(side=LEFT, padx=20)

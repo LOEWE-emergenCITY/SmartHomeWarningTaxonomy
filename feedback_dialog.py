@@ -6,7 +6,7 @@ import json
 import time
 import logging
 
-QUESTIONS_FILE_NAME = "/home/pi/masterthesis/questions.json"
+QUESTIONS_FILE_NAME = "/home/pi/shws/questions.json"
 #QUESTIONS_FILE_NAME = "questions.json"
 
 class Feedback_Dialog():
@@ -16,7 +16,7 @@ class Feedback_Dialog():
         self.simulation_file_name = simulation_file_name
         self.feedback_file_name = feedback_file_name
         self.questions = self.load_questions()
-        self.event = {"id": 0, "categorie": "", "time": "", "alerts": [], "message": ""}
+        self.event = {"id": 0, "category": "", "time": "", "alerts": [], "message": ""}
         self.step = 1
         self.total_steps = len(self.questions)
         self.progress_value = 1/self.total_steps * 100

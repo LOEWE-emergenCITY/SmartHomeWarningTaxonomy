@@ -11,8 +11,8 @@ The prototype runs on a Raspberry Pi 4 using Raspberry Pi OS, a debian-based ope
 ## Autostart
 To ensure the code runs as soon as the Raspberry Pi boots, the main_dialog.py file needs to be added to the autostart. This can be done by executing the following steps:
 1. Open the terminal and create a .desktop file in the autostart directory
-2. Add the following line to the .desktop file:  `[Desktop Entry] python3.9 /home/pi/masterthesis/main_dialog.py`
+2. Add the following line to the .desktop file:  `[Desktop Entry] python3.9 /home/pi/shws/main_dialog.py`
 3. Save the file and reboot the Pi afterwardsf
 
 ## Files
-The log files created by the application can be found at /home/pi/masterthesis/resources/log.log. The evaluation of the user is stored at /home/pi/masterthesis/resources/feedback. The paths can be configured by changing the corresponding variables in the class util.py.
+The log files created by the application can be found at /home/pi/shws/resources/log.log. The evaluation of the user is stored at /home/pi/shws/resources/feedback. The paths can be configured by changing the corresponding variables in the class util.py.

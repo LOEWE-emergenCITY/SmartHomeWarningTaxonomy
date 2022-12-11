@@ -3,13 +3,13 @@
     "config": {
         "start_date": "2022-08-05",
         "gmail": {
-            "email": "mw.rpi.alerts@gmail.com",
+            "email": "adress@server",
             "password": "apJWRpg2WXqwxwe"
         }
     },
     "user_data": {
         "id": 14,
-        "email": "marcwendelborn@web.de",
+        "email": "adress@server",
         "phone": "+4915786181628",
         "rest_time_start": "22:00:00",
         "rest_time_end": "08:00:00"
@@ -49,37 +49,37 @@
         {"date_id": 30, "timedelta": "58:32:10"}
     ],
     "events": [
-        {"id": 1, "alerts": ["optic_bl_white"], "message": "Die Tulpen im Garten brauchen \n dringend Wasser"},
-        {"id": 2, "alerts": ["optic_bl_white"], "message": "Der Saugroboter ist defekt \n und kann nicht weiterarbeiten"},
-        {"id": 3, "alerts": ["optic_white"], "message": "Das Abwasserrohr ist stark verkalkt"},
-        {"id": 4, "alerts": ["optic_white"], "message": "Niedriger Füllstand im Heizöltank"},
-        {"id": 5, "alerts": ["optic_bl_white"], "message": "Außenbeleuchtung des Gartenhauses \n ist defekt"},
-        {"id": 6, "alerts": ["optic_bl_red", "sms"], "message": "Druck in den Wasserleitungen im Haus \n ist extrem niedrig"},
-        {"id": 7, "alerts": ["optic_bl_red", "sms", "acoustic"], "message": "Ein schweres Unwetter (Starkregen und Gewitter) \n wird in wenigen Stunden erwartet"},
-        {"id": 8, "alerts": ["optic_bl_red", "sms", "acoustic"], "message": "Verdächtiger Datenverkehr im Heimnetzwerk \n (potentieller Cyberangriff)"},
-        {"id": 9, "alerts": ["optic_bl_red", "sms", "acoustic"], "message": "Wassereinbruch im Keller"},
-        {"id": 10, "alerts": ["optic_bl_red", "sms", "acoustic"], "message": "Mehrere Dachziegel sind beschädigt"},
-        {"id": 11, "alerts": ["optic_bl_red", "sms", "acoustic_alarm"], "message": "Großbrand in Kirche in der Nähe \n (starke Rauchentwicklung)"},
-        {"id": 12, "alerts": ["optic_bl_red", "sms", "acoustic_alarm"], "message": "Im Heizungsraum tritt Gas aus"},
-        {"id": 13, "alerts": ["optic_bl_red", "sms", "acoustic_alarm"], "message": "Erdbebenalarm \n (Warnung durch Frühwarnsystem)"},
-        {"id": 14, "alerts": ["optic_bl_red", "sms", "acoustic_alarm"], "message": "Hochwassergefahr in den nächsten \n Stunden (schwere Überflutungen)"},
-        {"id": 15, "alerts": ["optic_bl_red", "sms", "acoustic_alarm"], "message": "Feuer in der Garage"},
+        {"id": 1, "alerts": ["optic_bl_white"], "message": "The tulips in the garden \n urgently need water"},
+        {"id": 2, "alerts": ["optic_bl_white"], "message": "Robotic vacuum cleaner is defective \n and can not continue to work"},
+        {"id": 3, "alerts": ["optic_white"], "message": "The sewage pipe is heavily calcified"},
+        {"id": 4, "alerts": ["optic_white"], "message": "Low level in the heating oil tank"},
+        {"id": 5, "alerts": ["optic_bl_white"], "message": "Exterior lighting of the garden house is defective"},
+        {"id": 6, "alerts": ["optic_bl_red", "sms"], "message": "Pressure in the water pipes in the house \n  is extremely low"},
+        {"id": 7, "alerts": ["optic_bl_red", "sms", "acoustic"], "message": "A severe storm (heavy rain and thunderstorms) \n is expected in a few hours"},
+        {"id": 8, "alerts": ["optic_bl_red", "sms", "acoustic"], "message": "Suspicious data traffic in the home network \n (potential cyber attack)"},
+        {"id": 9, "alerts": ["optic_bl_red", "sms", "acoustic"], "message": "Water intrusion in the basement"},
+        {"id": 10, "alerts": ["optic_bl_red", "sms", "acoustic"], "message": "Several roof tiles damaged"},
+        {"id": 11, "alerts": ["optic_bl_red", "sms", "acoustic_alarm"], "message": "Large fire in nearby church \n (heavy smoke)"},
+        {"id": 12, "alerts": ["optic_bl_red", "sms", "acoustic_alarm"], "message": "Gas leaks in boiler room"},
+        {"id": 13, "alerts": ["optic_bl_red", "sms", "acoustic_alarm"], "message": "Earthquake (warning by early warning system)"},
+        {"id": 14, "alerts": ["optic_bl_red", "sms", "acoustic_alarm"], "message": "Danger of flooding in the next few hours \n (severe flooding)"},
+        {"id": 15, "alerts": ["optic_bl_red", "sms", "acoustic_alarm"], "message": "Fire in the garage"},
 
-        {"id": 16, "alerts": ["optic_bl_red", "acoustic_alarm"], "message": "Die Tulpen im Garten brauchen \n dringend Wasser"},
-        {"id": 17, "alerts": ["optic_bl_red", "sms", "acoustic_alarm"], "message": "Der Saugroboter ist defekt \n und kann nicht weiterarbeiten"},
-        {"id": 18, "alerts": ["optic_blue", "sms", "acoustic_alarm"], "message": "Das Abwasserrohr ist stark verkalkt"},
-        {"id": 19, "alerts": ["optic_bl_blue", "acoustic"], "message": "Niedriger Füllstand im Heizöltank"},
-        {"id": 20, "alerts": ["optic_bl_red", "sms", "acoustic_alarm"], "message": "Außenbeleuchtung des Gartenhauses \n ist defekt"},
-        {"id": 21, "alerts": ["optic_bl_white"], "message": "Druck in den Wasserleitungen im Haus \n ist extrem niedrig"},
-        {"id": 22, "alerts": ["optic_white"], "message": "Ein schweres Unwetter (Starkregen und Gewitter) \n wird in wenigen Stunden erwartet"},
-        {"id": 23, "alerts": ["optic_bl_blue", "sms"], "message": "Verdächtiger Datenverkehr im Heimnetzwerk \n (potentieller Cyberangriff)"},
-        {"id": 24, "alerts": ["optic_blue"], "message": "Wassereinbruch im Keller"},
-        {"id": 25, "alerts": ["acoustic"], "message": "Mehrere Dachziegel sind beschädigt"},
-        {"id": 26, "alerts": ["acoustic"], "message": "Großbrand in Kirche in der Nähe \n (starke Rauchentwicklung)"},
-        {"id": 27, "alerts": ["optic_bl_blue"], "message": "Im Heizungsraum tritt Gas aus"},
-        {"id": 28, "alerts": ["optic_white"], "message": "Erdbebenalarm \n (Warnung durch Frühwarnsystem)"},
-        {"id": 29, "alerts": ["optic_red", "acoustic"], "message": "Hochwassergefahr in den nächsten \n Stunden (schwere Überflutungen)"},
-        {"id": 30, "alerts": ["optic_bl_white", "sms"], "message": "Feuer in der Garage"}
+        {"id": 16, "alerts": ["optic_bl_red", "acoustic_alarm"], "message": "The tulips in the garden \n urgently need water"},
+        {"id": 17, "alerts": ["optic_bl_red", "sms", "acoustic_alarm"], "message": "Robotic vacuum cleaner is defective \n and can not continue to work"},
+        {"id": 18, "alerts": ["optic_blue", "sms", "acoustic_alarm"], "message": "The sewage pipe is heavily calcified"},
+        {"id": 19, "alerts": ["optic_bl_blue", "acoustic"], "message": "Low level in the heating oil tank"},
+        {"id": 20, "alerts": ["optic_bl_red", "sms", "acoustic_alarm"], "message": "Exterior lighting of the garden house is defective"},
+        {"id": 21, "alerts": ["optic_bl_white"], "message": "Pressure in the water pipes in the house \n  is extremely low"},
+        {"id": 22, "alerts": ["optic_white"], "message": "A severe storm (heavy rain and thunderstorms) \n is expected in a few hours"},
+        {"id": 23, "alerts": ["optic_bl_blue", "sms"], "message": "Suspicious data traffic in the home network \n (potential cyber attack)"},
+        {"id": 24, "alerts": ["optic_blue"], "message": "Water intrusion in the basement"},
+        {"id": 25, "alerts": ["acoustic"], "message": "Several roof tiles damaged"},
+        {"id": 26, "alerts": ["acoustic"], "message": "Large fire in nearby church \n (heavy smoke)"},
+        {"id": 27, "alerts": ["optic_bl_blue"], "message": "Gas leaks in boiler room"},
+        {"id": 28, "alerts": ["optic_white"], "message": "Earthquake (warning by early warning system)"},
+        {"id": 29, "alerts": ["optic_red", "acoustic"], "message": "Danger of flooding in the next few hours \n (severe flooding)"},
+        {"id": 30, "alerts": ["optic_bl_white", "sms"], "message": "Fire in the garage"}
     ]
 }
 

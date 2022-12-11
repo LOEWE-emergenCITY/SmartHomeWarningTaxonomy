@@ -8,7 +8,7 @@ from os.path import exists
 from random import shuffle
 
 logger = logging.getLogger('main')
-simulation_file_path = '/home/pi/masterthesis/resources/simulations/'
+simulation_file_path = '/home/pi/shws/resources/simulations/'
 #file_name = 'resources/simulations/TestSimulation.json'
 
 def load_simulation(simulation_file_name):
@@ -22,7 +22,7 @@ def setup_logger():
     rootLogger.setLevel(logging.INFO)
 
     #fileHandler = logging.FileHandler("{0}/{1}.log".format('resources', 'log'))
-    fileHandler = logging.FileHandler("{0}/{1}.log".format('/home/pi/masterthesis/resources', 'log'))
+    fileHandler = logging.FileHandler("{0}/{1}.log".format('/home/pi/shws/resources', 'log'))
     fileHandler.setFormatter(logFormatter)
     rootLogger.addHandler(fileHandler)
 
@@ -44,16 +44,16 @@ def init_feedback_file(simulation_file_name):
     user_id = simulation['user_data']['id']
     headers = ['user_id', 'event_id', 'answer', 'time_triggerd', 'time_acknowledge', 'missed', 'ack_medium']
 
-    file_name = '/home/pi/masterthesis/resources/feedback_{}.csv'.format(user_id)
+    file_name = '/home/pi/shws/resources/feedback_{}.csv'.format(user_id)
     if exists(file_name):
         for i in range(100):
-            file_name = '/home/pi/masterthesis/resources/feedback_{}_{}.csv'.format(user_id, i+1)
+            file_name = '/home/pi/shws/resources/feedback_{}_{}.csv'.format(user_id, i+1)
             if not exists(file_name):
                 break
     
     logger.info("Init feedback file: " + file_name)
 
-    file = open('/home/pi/masterthesis/resources/feedback_{}.csv'.format(user_id), 'w')
+    file = open('/home/pi/shws/resources/feedback_{}.csv'.format(user_id), 'w')
     writer = csv.writer(file)
     writer.writerow(headers)
     file.close()

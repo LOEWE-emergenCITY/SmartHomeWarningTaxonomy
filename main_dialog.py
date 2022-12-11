@@ -31,8 +31,7 @@ class Main_Dialog:
         self.label1 = Label(self.text_frame, text="Status: ", font=("Calibri", 20))
         self.label2 = Label(self.text_frame, text="Study is running", fg="green", font=("Calibri", 20))
         self.checkout_button = Button(self.center_frame, command=lambda: self.change_study_status(), text="Check-Out", height=2, background="#000000", foreground="white", font=("Calibri", 25))
-        self.img = PhotoImage(file='/home/pi/masterthesis/peasec_logo.png')
-        #self.img = PhotoImage(file='executors\gui\peasec_logo.png')
+        self.img = PhotoImage(file='/home/pi/shws/logo.png')
         self.start_button = Button(self.center_frame, command=lambda: self.run_simulation_threat(), text="Start the study", height=2, background="#000000", foreground="white", font=("Calibri", 25))
         self.img_label = Label(self.center_frame, image=self.img)
         self.error_label = Label(self.center_frame)
@@ -61,7 +60,7 @@ class Main_Dialog:
 
     def get_file_name(self):
         today_date = datetime.datetime.today().strftime('%Y%m%d')
-        simulations = [f for f in listdir('/home/pi/masterthesis/resources/simulations')]
+        simulations = [f for f in listdir('/home/pi/shws/resources/simulations')]
         for simulation in simulations:
             if today_date in str(simulation):
                 self.logger.info("Load simulation file: {}".format(simulation_file_path + 'simulation_' + today_date + '.json'))

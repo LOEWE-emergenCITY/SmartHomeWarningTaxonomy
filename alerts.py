@@ -10,7 +10,7 @@ from gsmHat import GSMHat
 from requests import post
 
 ip = "192.168.178.73"
-username = "marcwendelborn@web.de"
+username = "adress@server"
 password = "Pinguin1"
 
 HOME_ASSISTANT_TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJkZTIxODNjMzk0NDE0NjM1OTg0NmNmZDhiOWNlMTU2NCIsImlhdCI6MTY1NzE4MTE2MiwiZXhwIjoxOTcyNTQxMTYyfQ.I2jlxAbumbuLndSRmMLlxC6ek0YfPVRo2k82uhGOExc'
@@ -22,9 +22,9 @@ def trigger_acoustic_alert(id, stop, is_alarm):
     try:
         logger.info("Trigger acoustic alert")
         if is_alarm:
-            song = AudioSegment.from_wav("/home/pi/masterthesis/sound_alarm.wav")
+            song = AudioSegment.from_wav("/home/pi/shws/sound_alarm.wav")
         else:
-            song = AudioSegment.from_wav("/home/pi/masterthesis/sound_normal.wav")
+            song = AudioSegment.from_wav("/home/pi/shws/sound_normal.wav")
         while True:
             play(song)
             if stop():
