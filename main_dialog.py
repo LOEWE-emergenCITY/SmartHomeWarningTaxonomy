@@ -15,7 +15,7 @@ import random
 
 class Main_Dialog:
 
-    state = "Studie läuft"
+    state = "Study is running"
 
     def __init__(self):
         self.block_execution = False
@@ -29,14 +29,14 @@ class Main_Dialog:
         self.center_frame = tk.Frame(self.window, width=400, height=300)
         self.text_frame = tk.Frame(self.center_frame)
         self.label1 = Label(self.text_frame, text="Status: ", font=("Calibri", 20))
-        self.label2 = Label(self.text_frame, text="Studie läuft", fg="green", font=("Calibri", 20))
+        self.label2 = Label(self.text_frame, text="Study is running", fg="green", font=("Calibri", 20))
         self.checkout_button = Button(self.center_frame, command=lambda: self.change_study_status(), text="Check-Out", height=2, background="#000000", foreground="white", font=("Calibri", 25))
         self.img = PhotoImage(file='/home/pi/masterthesis/peasec_logo.png')
         #self.img = PhotoImage(file='executors\gui\peasec_logo.png')
-        self.start_button = Button(self.center_frame, command=lambda: self.run_simulation_threat(), text="Studie starten", height=2, background="#000000", foreground="white", font=("Calibri", 25))
+        self.start_button = Button(self.center_frame, command=lambda: self.run_simulation_threat(), text="Start the study", height=2, background="#000000", foreground="white", font=("Calibri", 25))
         self.img_label = Label(self.center_frame, image=self.img)
         self.error_label = Label(self.center_frame)
-        self.finish_label = Label(self.center_frame, text="Die Studie ist abgeschlossen. Vielen Dank für Ihre Teilnahme! \n Die Box kann nun von der Stromversorgung getrennt werden.", font=("Calibri", 17))
+        self.finish_label = Label(self.center_frame, text="The study is completed. Thank you for your participation! \n The box can now be disconnected from the power supply.", font=("Calibri", 17))
 
          # Load Simulation
         self.simulation_file_name = self.get_file_name()
@@ -48,7 +48,7 @@ class Main_Dialog:
 
         # For demonstration
         event = {"id": 1, "categorie": "highest", "time": "14:03:10", "alerts": ['optic_bl_white', 'acoustic', 'sms'], "message": "Die Sicherung der Kaffeemaschine \n ist durchgebrannt!"}
-        self.trigger_button = Button(self.center_frame, command=lambda: self.test_warning(), text="Warnung testen", height=2, background="#000000", foreground="white", font=("Calibri", 25))
+        self.trigger_button = Button(self.center_frame, command=lambda: self.test_warning(), text="Test warning", height=2, background="#000000", foreground="white", font=("Calibri", 25))
 
         self.alert_dialog = Alert_Dialog(self.simulation_file_name, self.feedback_file_name)
         self.feedback_dialog = Feedback_Dialog(self.simulation_file_name, self.feedback_file_name)
@@ -163,13 +163,13 @@ class Main_Dialog:
         if (not self.block_execution):
             self.logger.info("Main: Study paused at {}".format(dt.datetime.now()))
             self.block_execution = True
-            self.label2["text"] = "Studie unterbrochen"
+            self.label2["text"] = "Study paused"
             self.checkout_button["text"] = "Check In"
             self.label2.config(fg="red")
         else:
             self.logger.info("Main: Study continued at {}".format(dt.datetime.now()))
             self.block_execution = False
-            self.label2["text"] = "Studie läuft"
+            self.label2["text"] = "Study is running"
             self.label2.config(fg="green")
             self.checkout_button["text"] = "Check Out"
         self.window.update()

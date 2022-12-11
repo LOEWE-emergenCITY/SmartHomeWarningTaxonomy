@@ -71,7 +71,7 @@ class Alert_Dialog:
         self.terminate_alert()
 
     def abort_alert(self):
-        if askyesno("Alarm ausschalten", "Diese Funktion ist nur für Unbeteiligte gedacht, die sich durch den Alarm gestört fühlen. \n \n Sicher, dass der Alarm ausgeschaltet werden soll?"):
+        if askyesno("Switch off alarm", "This function is only intended for bystanders who feel disturbed by the alarm. \n Sure that the alarm should be turned off?"):
             self.logger.warning("Alert: Alarm was stopped by a third person")
             self.terminate_alert()
         
