@@ -1,10 +1,10 @@
 {
     "questions": [
-        {"id": 1, "question": "Fühlten Sie sich durch die Warnung gestört?", "scale_start": "Hat mich gar nicht gestört", "scale_end": "Hat mich sehr stark gestört"},
-        {"id": 2, "question": "Würden Sie sich für das gleiche Event in Zukunft weitere \n Warnkanäle wünschen (z.B. zusätzlich per SMS oder Alarmsound)?" , "scale_start": "Viel weniger", "scale_end": "Viel mehr"},
-        {"id": 3, "question": "Würden Sie sich für das gleiche Event in Zukunft eine \n intensivere Warnung (z.B. zusätzlicher Kanal, lauter/heller) wünschen?", "scale_start": "Viel weniger intensiv", "scale_end": "Viel mehr intensiv"},
-        {"id": 4, "question": "War die Darbietung der optischen Warnung \n (Farbe, Blinken vs. nicht blinken) angemessen?", "scale_start": "Gar nicht angemessen", "scale_end": "Sehr angemessen"},
-        {"id": 5, "question": "War die Darbietung von Sound/kein Sound angemessen?", "scale_start": "Gar nicht angemessen", "scale_end": "Sehr angemessen"},
-        {"id": 6, "question": "War die Darbietung der \n mobilen Warnung /keine mobile Warnung angemessen?", "scale_start": "Gar nicht angemessen", "scale_end": "Sehr angemessen"}
+        {"id": 1, "question": "Did you feel disturbed by the warning?", "scale_start": "Didn't disturb me at all", "scale_end": "Disturbed me a lot"},
+        {"id": 2, "question": "Would you like to have more \n warning channels for the same event in the future (e.g. additionally via SMS or alarm sound)?" , "scale_start": "Much less", "scale_end": "Much more"},
+        {"id": 3, "question": "Would you like to see a \n more intense warning (e.g. additional channel, louder/brighter) for the same event in the future?", "scale_start": "Much less intense", "scale_end": "Much more intense"},
+        {"id": 4, "question": "Was the presentation of the visual warning \n (color, flashing vs. not flashing) appropriate?", "scale_start": "Not at all appropriate", "scale_end": "Very appropriate"},
+        {"id": 5, "question": "Was the presentation of sound/no sound appropriate?", "scale_start": "Not at all appropriate", "scale_end": "Very appropriate"},
+        {"id": 6, "question": "Was the presentation of \n mobile warning/no mobile warning appropriate?", "scale_start": "Not at all appropriate", "scale_end": "Very appropriate"}
     ]
 }
