@@ -36,3 +36,6 @@ After each alarm, participants can give immediate feedback. The ESM questions ca
 
 ## Files
 The log files created by the application can be found at /home/pi/shws/resources/log.log. The evaluation of the user is stored at /home/pi/shws/resources/feedback. The paths can be configured by changing the corresponding variables in the class util.py.
+
+## Contact
+https://peasec.de/team/haesler/
