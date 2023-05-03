@@ -1,7 +1,7 @@
 # Smart Home Warning System Prototype for user studies
 
-![Prototype](prototype.jpg)
-![Start Screen](startscreen.png)
+![Prototype](figures/prototype.jpg)
+![Start Screen](figures/startscreen.png)
 
 ## Background
 The code provided in this repository represents the software for the prototype of the Smart Home Warning System described in the Paper **"Getting the Residents' Attention: The Perception of Warning Channels in Smart Home Warning Systems."** currently in preparation.
@@ -10,10 +10,8 @@ Abstract:
 
 The Public URL to the paper will be provided upon final acceptance.
 
-##
-
 ## Hardware of the prototype:
-![Hardware](hardware.png)
+![Hardware](figures/hardware.png)
 The prototype runs on a Raspberry Pi 4 using Raspberry Pi OS, a debian-based operating system. Several components are connected to the Pi:
 - 5-inch touch display with a resolution of 800x480
 - USB speaker
@@ -27,11 +25,11 @@ To ensure the code runs as soon as the Raspberry Pi boots, the main_dialog.py fi
 3. Save the file and reboot the Pi afterwardsf
 
 ## Warnings
-![Warning](warning.png)
+![Warning](figures/warning.png)
 The warnings presented can be configured in resources/simulations/TestSimulation.json
 
 ## ESM ratings
-![ESM Ratings](esmrating.png)
+![ESM Ratings](figures/esmrating.png)
 After each alarm, participants can give immediate feedback. The ESM questions can be configured in questions.json.
 
 ## Files
