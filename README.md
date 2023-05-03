@@ -1,5 +1,5 @@
-# Smart Home Warning System Prototype
-(A taxonomy for warning stimuli)
+# Smart Home Warning System Prototype for user studies
+
 ![Prototype](prototype.jpg)
 ![Start Screen](startscreen.png)
 
