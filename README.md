@@ -1,4 +1,5 @@
 # Readme
+![Prototype](prototype.png)
 ![Start Screen](startscreen.png)
 
 ## Background
