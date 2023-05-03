@@ -1,4 +1,5 @@
-# Smart Home Warning System Prototype to evaluate a taxonomy for warning stimuli
+# Smart Home Warning System Prototype
+(A taxonomy for warning stimuli)
 ![Prototype](prototype.jpg)
 ![Start Screen](startscreen.png)
 
