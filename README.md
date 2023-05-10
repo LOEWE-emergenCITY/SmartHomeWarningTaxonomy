@@ -8,7 +8,8 @@ The code provided in this repository represents the software for the prototype o
 Abstract:
 >About half a billion households are expected to use smart home systems by 2025. Although many IoT sensors, such as smoke detectors or security cameras, are available and governmental crisis warning systems are in place, little is known about how to warn appropriately in smart home environments. We created a Raspberry Pi based prototype with a speaker, a display, and a connected smart light bulb. Together with a focus group, we developed a taxonomy for warning messages in smart home environments, dividing them into five classes with different stimuli. We evaluated the taxonomy using the Experience Sampling Method (ESM) in a field study at participants' (N = 13) homes testing 331 warnings. The results show that taxonomy-based warning stimuli are perceived to be appropriate and participants could imagine using such a warning system. We propose a deeper integration of warning capabilities into smart home environments to enhance the safety of citizens.
 
-The Public URL to the paper will be provided upon final acceptance.
+The Public URL to the paper will be accessable upon final publication.
+https://doi.org/10.1145/3563657.3596076
 
 ## Hardware of the prototype:
 ![Hardware](figures/hardware.png)
